@@ -1,12 +1,5 @@
 # AMS Library
 
-[Homepage](http://sketchucation.com/forums/viewtopic.php?f=323&t=55067#p499835)
-
-[GitHub](https://github.com/AntonSynytsia/AMS-Library)
-
-[Documentation](http://www.rubydoc.info/github/AntonSynytsia/AMS-Library/master/index)
-
-
 ## Description
 
 AMS Library is a collection of functions and utilities for interacting with
@@ -70,3 +63,9 @@ provides developers with functionality not achievable with SketchUp Ruby API.
 * Microsoft Windows XP, Vista, 7, 8, 10.
 * Mac OS X 10.5+ (Limited)
 * SketchUp 6 or later.
+
+
+## Usage
+
+Copy <tt>ams_Lib</tt> folder and <tt>ams_Lib.rb</tt>, located at <tt>/RubyExtension/</tt>,
+to your plugins folder.

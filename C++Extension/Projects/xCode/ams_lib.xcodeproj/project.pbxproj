@@ -1,0 +1,1349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A1A21311DC715BF0056E819 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF691DC6C37A0005F195 /* AudioUnit.framework */; };
+		3A1A21321DC715BF0056E819 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF671DC6C3740005F195 /* AudioToolbox.framework */; };
+		3A1A21331DC715CD0056E819 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF691DC6C37A0005F195 /* AudioUnit.framework */; };
+		3A1A21341DC715CD0056E819 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF671DC6C3740005F195 /* AudioToolbox.framework */; };
+		3A1E4A4720F7AB3600702AEC /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1B20F7AB3600702AEC /* dynamic_array.h */; };
+		3A1E4A4820F7AB3600702AEC /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1B20F7AB3600702AEC /* dynamic_array.h */; };
+		3A1E4A4920F7AB3600702AEC /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1B20F7AB3600702AEC /* dynamic_array.h */; };
+		3A1E4A4A20F7AB3600702AEC /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1C20F7AB3600702AEC /* fast_queue.h */; };
+		3A1E4A4B20F7AB3600702AEC /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1C20F7AB3600702AEC /* fast_queue.h */; };
+		3A1E4A4C20F7AB3600702AEC /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1C20F7AB3600702AEC /* fast_queue.h */; };
+		3A1E4A4D20F7AB3600702AEC /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1D20F7AB3600702AEC /* geom.cpp */; };
+		3A1E4A4E20F7AB3600702AEC /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1D20F7AB3600702AEC /* geom.cpp */; };
+		3A1E4A4F20F7AB3600702AEC /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1D20F7AB3600702AEC /* geom.cpp */; };
+		3A1E4A5020F7AB3600702AEC /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1E20F7AB3600702AEC /* geom.h */; };
+		3A1E4A5120F7AB3600702AEC /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1E20F7AB3600702AEC /* geom.h */; };
+		3A1E4A5220F7AB3600702AEC /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1E20F7AB3600702AEC /* geom.h */; };
+		3A1E4A5320F7AB3600702AEC /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1F20F7AB3600702AEC /* geom_bounding_box.cpp */; };
+		3A1E4A5420F7AB3600702AEC /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1F20F7AB3600702AEC /* geom_bounding_box.cpp */; };
+		3A1E4A5520F7AB3600702AEC /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1F20F7AB3600702AEC /* geom_bounding_box.cpp */; };
+		3A1E4A5620F7AB3600702AEC /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2020F7AB3600702AEC /* geom_bounding_box.h */; };
+		3A1E4A5720F7AB3600702AEC /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2020F7AB3600702AEC /* geom_bounding_box.h */; };
+		3A1E4A5820F7AB3600702AEC /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2020F7AB3600702AEC /* geom_bounding_box.h */; };
+		3A1E4A5920F7AB3600702AEC /* geom_box_space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2120F7AB3600702AEC /* geom_box_space.cpp */; };
+		3A1E4A5A20F7AB3600702AEC /* geom_box_space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2120F7AB3600702AEC /* geom_box_space.cpp */; };
+		3A1E4A5B20F7AB3600702AEC /* geom_box_space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2120F7AB3600702AEC /* geom_box_space.cpp */; };
+		3A1E4A5C20F7AB3600702AEC /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2220F7AB3600702AEC /* geom_box_space.h */; };
+		3A1E4A5D20F7AB3600702AEC /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2220F7AB3600702AEC /* geom_box_space.h */; };
+		3A1E4A5E20F7AB3600702AEC /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2220F7AB3600702AEC /* geom_box_space.h */; };
+		3A1E4A5F20F7AB3600702AEC /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2320F7AB3600702AEC /* geom_color.cpp */; };
+		3A1E4A6020F7AB3600702AEC /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2320F7AB3600702AEC /* geom_color.cpp */; };
+		3A1E4A6120F7AB3600702AEC /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2320F7AB3600702AEC /* geom_color.cpp */; };
+		3A1E4A6220F7AB3600702AEC /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2420F7AB3600702AEC /* geom_color.h */; };
+		3A1E4A6320F7AB3600702AEC /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2420F7AB3600702AEC /* geom_color.h */; };
+		3A1E4A6420F7AB3600702AEC /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2420F7AB3600702AEC /* geom_color.h */; };
+		3A1E4A6520F7AB3600702AEC /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2520F7AB3600702AEC /* geom_quaternion.cpp */; };
+		3A1E4A6620F7AB3600702AEC /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2520F7AB3600702AEC /* geom_quaternion.cpp */; };
+		3A1E4A6720F7AB3600702AEC /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2520F7AB3600702AEC /* geom_quaternion.cpp */; };
+		3A1E4A6820F7AB3600702AEC /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2620F7AB3600702AEC /* geom_quaternion.h */; };
+		3A1E4A6920F7AB3600702AEC /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2620F7AB3600702AEC /* geom_quaternion.h */; };
+		3A1E4A6A20F7AB3600702AEC /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2620F7AB3600702AEC /* geom_quaternion.h */; };
+		3A1E4A6B20F7AB3600702AEC /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2720F7AB3600702AEC /* geom_transformation.cpp */; };
+		3A1E4A6C20F7AB3600702AEC /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2720F7AB3600702AEC /* geom_transformation.cpp */; };
+		3A1E4A6D20F7AB3600702AEC /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2720F7AB3600702AEC /* geom_transformation.cpp */; };
+		3A1E4A6E20F7AB3600702AEC /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2820F7AB3600702AEC /* geom_transformation.h */; };
+		3A1E4A6F20F7AB3600702AEC /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2820F7AB3600702AEC /* geom_transformation.h */; };
+		3A1E4A7020F7AB3600702AEC /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2820F7AB3600702AEC /* geom_transformation.h */; };
+		3A1E4A7120F7AB3600702AEC /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2920F7AB3600702AEC /* geom_vector3d.cpp */; };
+		3A1E4A7220F7AB3600702AEC /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2920F7AB3600702AEC /* geom_vector3d.cpp */; };
+		3A1E4A7320F7AB3600702AEC /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2920F7AB3600702AEC /* geom_vector3d.cpp */; };
+		3A1E4A7420F7AB3600702AEC /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2A20F7AB3600702AEC /* geom_vector3d.h */; };
+		3A1E4A7520F7AB3600702AEC /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2A20F7AB3600702AEC /* geom_vector3d.h */; };
+		3A1E4A7620F7AB3600702AEC /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2A20F7AB3600702AEC /* geom_vector3d.h */; };
+		3A1E4A7720F7AB3600702AEC /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2B20F7AB3600702AEC /* ruby_prep.h */; };
+		3A1E4A7820F7AB3600702AEC /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2B20F7AB3600702AEC /* ruby_prep.h */; };
+		3A1E4A7920F7AB3600702AEC /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2B20F7AB3600702AEC /* ruby_prep.h */; };
+		3A1E4A7A20F7AB3600702AEC /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2C20F7AB3600702AEC /* ruby_util.cpp */; };
+		3A1E4A7B20F7AB3600702AEC /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2C20F7AB3600702AEC /* ruby_util.cpp */; };
+		3A1E4A7C20F7AB3600702AEC /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2C20F7AB3600702AEC /* ruby_util.cpp */; };
+		3A1E4A7D20F7AB3600702AEC /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2D20F7AB3600702AEC /* ruby_util.h */; };
+		3A1E4A7E20F7AB3600702AEC /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2D20F7AB3600702AEC /* ruby_util.h */; };
+		3A1E4A7F20F7AB3600702AEC /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2D20F7AB3600702AEC /* ruby_util.h */; };
+		3A1E4A8620F7AB3600702AEC /* ams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3120F7AB3600702AEC /* ams.cpp */; };
+		3A1E4A8720F7AB3600702AEC /* ams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3120F7AB3600702AEC /* ams.cpp */; };
+		3A1E4A8820F7AB3600702AEC /* ams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3120F7AB3600702AEC /* ams.cpp */; };
+		3A1E4A8920F7AB3600702AEC /* ams.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3220F7AB3600702AEC /* ams.h */; };
+		3A1E4A8A20F7AB3600702AEC /* ams.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3220F7AB3600702AEC /* ams.h */; };
+		3A1E4A8B20F7AB3600702AEC /* ams.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3220F7AB3600702AEC /* ams.h */; };
+		3A1E4A8C20F7AB3600702AEC /* ams_geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3320F7AB3600702AEC /* ams_geometry.cpp */; };
+		3A1E4A8D20F7AB3600702AEC /* ams_geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3320F7AB3600702AEC /* ams_geometry.cpp */; };
+		3A1E4A8E20F7AB3600702AEC /* ams_geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3320F7AB3600702AEC /* ams_geometry.cpp */; };
+		3A1E4A8F20F7AB3600702AEC /* ams_geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3420F7AB3600702AEC /* ams_geometry.h */; };
+		3A1E4A9020F7AB3600702AEC /* ams_geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3420F7AB3600702AEC /* ams_geometry.h */; };
+		3A1E4A9120F7AB3600702AEC /* ams_geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3420F7AB3600702AEC /* ams_geometry.h */; };
+		3A1E4A9220F7AB3600702AEC /* ams_group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3520F7AB3600702AEC /* ams_group.cpp */; };
+		3A1E4A9320F7AB3600702AEC /* ams_group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3520F7AB3600702AEC /* ams_group.cpp */; };
+		3A1E4A9420F7AB3600702AEC /* ams_group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3520F7AB3600702AEC /* ams_group.cpp */; };
+		3A1E4A9520F7AB3600702AEC /* ams_group.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3620F7AB3600702AEC /* ams_group.h */; };
+		3A1E4A9620F7AB3600702AEC /* ams_group.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3620F7AB3600702AEC /* ams_group.h */; };
+		3A1E4A9720F7AB3600702AEC /* ams_group.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3620F7AB3600702AEC /* ams_group.h */; };
+		3A1E4A9820F7AB3600702AEC /* ams_multi_line_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3720F7AB3600702AEC /* ams_multi_line_text.cpp */; };
+		3A1E4A9920F7AB3600702AEC /* ams_multi_line_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3720F7AB3600702AEC /* ams_multi_line_text.cpp */; };
+		3A1E4A9A20F7AB3600702AEC /* ams_multi_line_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3720F7AB3600702AEC /* ams_multi_line_text.cpp */; };
+		3A1E4A9B20F7AB3600702AEC /* ams_multi_line_text.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3820F7AB3600702AEC /* ams_multi_line_text.h */; };
+		3A1E4A9C20F7AB3600702AEC /* ams_multi_line_text.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3820F7AB3600702AEC /* ams_multi_line_text.h */; };
+		3A1E4A9D20F7AB3600702AEC /* ams_multi_line_text.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3820F7AB3600702AEC /* ams_multi_line_text.h */; };
+		3A1E4A9E20F7AB3600702AEC /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3A20F7AB3600702AEC /* ams_cursor.cpp */; };
+		3A1E4A9F20F7AB3600702AEC /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3A20F7AB3600702AEC /* ams_cursor.cpp */; };
+		3A1E4AA020F7AB3600702AEC /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3A20F7AB3600702AEC /* ams_cursor.cpp */; };
+		3A1E4AA120F7AB3600702AEC /* ams_cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3B20F7AB3600702AEC /* ams_cursor.h */; };
+		3A1E4AA220F7AB3600702AEC /* ams_cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3B20F7AB3600702AEC /* ams_cursor.h */; };
+		3A1E4AA320F7AB3600702AEC /* ams_cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3B20F7AB3600702AEC /* ams_cursor.h */; };
+		3A1E4AA420F7AB3600702AEC /* ams_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3C20F7AB3600702AEC /* ams_ext.cpp */; };
+		3A1E4AA520F7AB3600702AEC /* ams_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3C20F7AB3600702AEC /* ams_ext.cpp */; };
+		3A1E4AA620F7AB3600702AEC /* ams_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3C20F7AB3600702AEC /* ams_ext.cpp */; };
+		3A1E4AA720F7AB3600702AEC /* ams_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3D20F7AB3600702AEC /* ams_ext.h */; };
+		3A1E4AA820F7AB3600702AEC /* ams_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3D20F7AB3600702AEC /* ams_ext.h */; };
+		3A1E4AA920F7AB3600702AEC /* ams_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3D20F7AB3600702AEC /* ams_ext.h */; };
+		3A1E4AAA20F7AB3600702AEC /* ams_keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3E20F7AB3600702AEC /* ams_keyboard.cpp */; };
+		3A1E4AAB20F7AB3600702AEC /* ams_keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3E20F7AB3600702AEC /* ams_keyboard.cpp */; };
+		3A1E4AAC20F7AB3600702AEC /* ams_keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3E20F7AB3600702AEC /* ams_keyboard.cpp */; };
+		3A1E4AAD20F7AB3600702AEC /* ams_keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3F20F7AB3600702AEC /* ams_keyboard.h */; };
+		3A1E4AAE20F7AB3600702AEC /* ams_keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3F20F7AB3600702AEC /* ams_keyboard.h */; };
+		3A1E4AAF20F7AB3600702AEC /* ams_keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3F20F7AB3600702AEC /* ams_keyboard.h */; };
+		3A1E4AB020F7AB3600702AEC /* ams_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4020F7AB3600702AEC /* ams_lib.cpp */; };
+		3A1E4AB120F7AB3600702AEC /* ams_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4020F7AB3600702AEC /* ams_lib.cpp */; };
+		3A1E4AB220F7AB3600702AEC /* ams_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4020F7AB3600702AEC /* ams_lib.cpp */; };
+		3A1E4AB320F7AB3600702AEC /* ams_midi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4120F7AB3600702AEC /* ams_midi.cpp */; };
+		3A1E4AB420F7AB3600702AEC /* ams_midi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4120F7AB3600702AEC /* ams_midi.cpp */; };
+		3A1E4AB520F7AB3600702AEC /* ams_midi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4120F7AB3600702AEC /* ams_midi.cpp */; };
+		3A1E4AB620F7AB3600702AEC /* ams_midi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4220F7AB3600702AEC /* ams_midi.h */; };
+		3A1E4AB720F7AB3600702AEC /* ams_midi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4220F7AB3600702AEC /* ams_midi.h */; };
+		3A1E4AB820F7AB3600702AEC /* ams_midi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4220F7AB3600702AEC /* ams_midi.h */; };
+		3A1E4AB920F7AB3600702AEC /* ruby_util_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4320F7AB3600702AEC /* ruby_util_ext.cpp */; };
+		3A1E4ABA20F7AB3600702AEC /* ruby_util_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4320F7AB3600702AEC /* ruby_util_ext.cpp */; };
+		3A1E4ABB20F7AB3600702AEC /* ruby_util_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4320F7AB3600702AEC /* ruby_util_ext.cpp */; };
+		3A1E4ABC20F7AB3600702AEC /* ruby_util_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4420F7AB3600702AEC /* ruby_util_ext.h */; };
+		3A1E4ABD20F7AB3600702AEC /* ruby_util_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4420F7AB3600702AEC /* ruby_util_ext.h */; };
+		3A1E4ABE20F7AB3600702AEC /* ruby_util_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4420F7AB3600702AEC /* ruby_util_ext.h */; };
+		3A1E4ABF20F7AB3600702AEC /* user_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4520F7AB3600702AEC /* user_input.c */; };
+		3A1E4AC020F7AB3600702AEC /* user_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4520F7AB3600702AEC /* user_input.c */; };
+		3A1E4AC120F7AB3600702AEC /* user_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4520F7AB3600702AEC /* user_input.c */; };
+		3A1E4AC220F7AB3600702AEC /* user_input.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4620F7AB3600702AEC /* user_input.h */; };
+		3A1E4AC320F7AB3600702AEC /* user_input.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4620F7AB3600702AEC /* user_input.h */; };
+		3A1E4AC420F7AB3600702AEC /* user_input.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4620F7AB3600702AEC /* user_input.h */; };
+		3A2A4F36211042FD000B53C1 /* Ruby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3E45131DC495E900C15213 /* Ruby.framework */; };
+		3A2A4F372110430D000B53C1 /* Ruby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1590E61847A5A20084B06D /* Ruby.framework */; };
+		3A2A4F382110431A000B53C1 /* Ruby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1590E81847A5F10084B06D /* Ruby.framework */; };
+		3A34AC4B1DC5ED6F0017D83F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A34AC471DC5ED4C0017D83F /* Carbon.framework */; };
+		3A34AC4D1DC5F82B0017D83F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A34AC471DC5ED4C0017D83F /* Carbon.framework */; };
+		3A34AC4E1DC5F8310017D83F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A34AC471DC5ED4C0017D83F /* Carbon.framework */; };
+		3A4DC2C12136292D000EA18E /* ams_midi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4120F7AB3600702AEC /* ams_midi.cpp */; };
+		3A4DC2C22136292D000EA18E /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2720F7AB3600702AEC /* geom_transformation.cpp */; };
+		3A4DC2C32136292D000EA18E /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2920F7AB3600702AEC /* geom_vector3d.cpp */; };
+		3A4DC2C42136292D000EA18E /* ams_keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3E20F7AB3600702AEC /* ams_keyboard.cpp */; };
+		3A4DC2C52136292D000EA18E /* ams_multi_line_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3720F7AB3600702AEC /* ams_multi_line_text.cpp */; };
+		3A4DC2C62136292D000EA18E /* ams_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4020F7AB3600702AEC /* ams_lib.cpp */; };
+		3A4DC2C72136292D000EA18E /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1D20F7AB3600702AEC /* geom.cpp */; };
+		3A4DC2C82136292D000EA18E /* user_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4520F7AB3600702AEC /* user_input.c */; };
+		3A4DC2C92136292D000EA18E /* ams_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3C20F7AB3600702AEC /* ams_ext.cpp */; };
+		3A4DC2CA2136292D000EA18E /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2520F7AB3600702AEC /* geom_quaternion.cpp */; };
+		3A4DC2CB2136292D000EA18E /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3A20F7AB3600702AEC /* ams_cursor.cpp */; };
+		3A4DC2CC2136292D000EA18E /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2320F7AB3600702AEC /* geom_color.cpp */; };
+		3A4DC2CD2136292D000EA18E /* ams_geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3320F7AB3600702AEC /* ams_geometry.cpp */; };
+		3A4DC2CE2136292D000EA18E /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2C20F7AB3600702AEC /* ruby_util.cpp */; };
+		3A4DC2CF2136292D000EA18E /* ruby_util_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4320F7AB3600702AEC /* ruby_util_ext.cpp */; };
+		3A4DC2D02136292D000EA18E /* geom_box_space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2120F7AB3600702AEC /* geom_box_space.cpp */; };
+		3A4DC2D12136292D000EA18E /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1F20F7AB3600702AEC /* geom_bounding_box.cpp */; };
+		3A4DC2D22136292D000EA18E /* ams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3120F7AB3600702AEC /* ams.cpp */; };
+		3A4DC2D32136292D000EA18E /* ams_group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3520F7AB3600702AEC /* ams_group.cpp */; };
+		3A4DC2D52136292D000EA18E /* Ruby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3E45131DC495E900C15213 /* Ruby.framework */; };
+		3A4DC2D62136292D000EA18E /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF691DC6C37A0005F195 /* AudioUnit.framework */; };
+		3A4DC2D72136292D000EA18E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF671DC6C3740005F195 /* AudioToolbox.framework */; };
+		3A4DC2D82136292D000EA18E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A34AC471DC5ED4C0017D83F /* Carbon.framework */; };
+		3A4DC2DA2136292D000EA18E /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1E20F7AB3600702AEC /* geom.h */; };
+		3A4DC2DB2136292D000EA18E /* ams_multi_line_text.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3820F7AB3600702AEC /* ams_multi_line_text.h */; };
+		3A4DC2DC2136292D000EA18E /* ams_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3D20F7AB3600702AEC /* ams_ext.h */; };
+		3A4DC2DD2136292D000EA18E /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2820F7AB3600702AEC /* geom_transformation.h */; };
+		3A4DC2DE2136292D000EA18E /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1C20F7AB3600702AEC /* fast_queue.h */; };
+		3A4DC2DF2136292D000EA18E /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2B20F7AB3600702AEC /* ruby_prep.h */; };
+		3A4DC2E02136292D000EA18E /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2420F7AB3600702AEC /* geom_color.h */; };
+		3A4DC2E12136292D000EA18E /* ams_midi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4220F7AB3600702AEC /* ams_midi.h */; };
+		3A4DC2E22136292D000EA18E /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2620F7AB3600702AEC /* geom_quaternion.h */; };
+		3A4DC2E32136292D000EA18E /* ams.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3220F7AB3600702AEC /* ams.h */; };
+		3A4DC2E42136292D000EA18E /* ams_geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3420F7AB3600702AEC /* ams_geometry.h */; };
+		3A4DC2E52136292D000EA18E /* user_input.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4620F7AB3600702AEC /* user_input.h */; };
+		3A4DC2E62136292D000EA18E /* ams_keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3F20F7AB3600702AEC /* ams_keyboard.h */; };
+		3A4DC2E72136292D000EA18E /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2020F7AB3600702AEC /* geom_bounding_box.h */; };
+		3A4DC2E82136292D000EA18E /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2220F7AB3600702AEC /* geom_box_space.h */; };
+		3A4DC2E92136292D000EA18E /* ams_cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3B20F7AB3600702AEC /* ams_cursor.h */; };
+		3A4DC2EA2136292D000EA18E /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2D20F7AB3600702AEC /* ruby_util.h */; };
+		3A4DC2EB2136292D000EA18E /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1B20F7AB3600702AEC /* dynamic_array.h */; };
+		3A4DC2EC2136292D000EA18E /* ams_group.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3620F7AB3600702AEC /* ams_group.h */; };
+		3A4DC2ED2136292D000EA18E /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2A20F7AB3600702AEC /* geom_vector3d.h */; };
+		3A4DC2EE2136292D000EA18E /* ruby_util_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4420F7AB3600702AEC /* ruby_util_ext.h */; };
+		3AAEFF681DC6C3740005F195 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF671DC6C3740005F195 /* AudioToolbox.framework */; };
+		3AAEFF6A1DC6C37A0005F195 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF691DC6C37A0005F195 /* AudioUnit.framework */; };
+		3AEFA32721104CE4002C7DE9 /* ams_midi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4120F7AB3600702AEC /* ams_midi.cpp */; };
+		3AEFA32821104CE4002C7DE9 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2720F7AB3600702AEC /* geom_transformation.cpp */; };
+		3AEFA32921104CE4002C7DE9 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2920F7AB3600702AEC /* geom_vector3d.cpp */; };
+		3AEFA32A21104CE4002C7DE9 /* ams_keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3E20F7AB3600702AEC /* ams_keyboard.cpp */; };
+		3AEFA32B21104CE4002C7DE9 /* ams_multi_line_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3720F7AB3600702AEC /* ams_multi_line_text.cpp */; };
+		3AEFA32C21104CE4002C7DE9 /* ams_lib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4020F7AB3600702AEC /* ams_lib.cpp */; };
+		3AEFA32D21104CE4002C7DE9 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1D20F7AB3600702AEC /* geom.cpp */; };
+		3AEFA32E21104CE4002C7DE9 /* user_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4520F7AB3600702AEC /* user_input.c */; };
+		3AEFA32F21104CE4002C7DE9 /* ams_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3C20F7AB3600702AEC /* ams_ext.cpp */; };
+		3AEFA33021104CE4002C7DE9 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2520F7AB3600702AEC /* geom_quaternion.cpp */; };
+		3AEFA33121104CE4002C7DE9 /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3A20F7AB3600702AEC /* ams_cursor.cpp */; };
+		3AEFA33221104CE4002C7DE9 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2320F7AB3600702AEC /* geom_color.cpp */; };
+		3AEFA33321104CE4002C7DE9 /* ams_geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3320F7AB3600702AEC /* ams_geometry.cpp */; };
+		3AEFA33421104CE4002C7DE9 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2C20F7AB3600702AEC /* ruby_util.cpp */; };
+		3AEFA33521104CE4002C7DE9 /* ruby_util_ext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A4320F7AB3600702AEC /* ruby_util_ext.cpp */; };
+		3AEFA33621104CE4002C7DE9 /* geom_box_space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A2120F7AB3600702AEC /* geom_box_space.cpp */; };
+		3AEFA33721104CE4002C7DE9 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A1F20F7AB3600702AEC /* geom_bounding_box.cpp */; };
+		3AEFA33821104CE4002C7DE9 /* ams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3120F7AB3600702AEC /* ams.cpp */; };
+		3AEFA33921104CE4002C7DE9 /* ams_group.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E4A3520F7AB3600702AEC /* ams_group.cpp */; };
+		3AEFA33B21104CE4002C7DE9 /* Ruby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1590E61847A5A20084B06D /* Ruby.framework */; };
+		3AEFA33C21104CE4002C7DE9 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF691DC6C37A0005F195 /* AudioUnit.framework */; };
+		3AEFA33D21104CE4002C7DE9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEFF671DC6C3740005F195 /* AudioToolbox.framework */; };
+		3AEFA33E21104CE4002C7DE9 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A34AC471DC5ED4C0017D83F /* Carbon.framework */; };
+		3AEFA34021104CE4002C7DE9 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1E20F7AB3600702AEC /* geom.h */; };
+		3AEFA34121104CE4002C7DE9 /* ams_multi_line_text.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3820F7AB3600702AEC /* ams_multi_line_text.h */; };
+		3AEFA34221104CE4002C7DE9 /* ams_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3D20F7AB3600702AEC /* ams_ext.h */; };
+		3AEFA34321104CE4002C7DE9 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2820F7AB3600702AEC /* geom_transformation.h */; };
+		3AEFA34421104CE4002C7DE9 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1C20F7AB3600702AEC /* fast_queue.h */; };
+		3AEFA34521104CE4002C7DE9 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2B20F7AB3600702AEC /* ruby_prep.h */; };
+		3AEFA34621104CE4002C7DE9 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2420F7AB3600702AEC /* geom_color.h */; };
+		3AEFA34721104CE4002C7DE9 /* ams_midi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4220F7AB3600702AEC /* ams_midi.h */; };
+		3AEFA34821104CE4002C7DE9 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2620F7AB3600702AEC /* geom_quaternion.h */; };
+		3AEFA34921104CE4002C7DE9 /* ams.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3220F7AB3600702AEC /* ams.h */; };
+		3AEFA34A21104CE4002C7DE9 /* ams_geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3420F7AB3600702AEC /* ams_geometry.h */; };
+		3AEFA34B21104CE4002C7DE9 /* user_input.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4620F7AB3600702AEC /* user_input.h */; };
+		3AEFA34C21104CE4002C7DE9 /* ams_keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3F20F7AB3600702AEC /* ams_keyboard.h */; };
+		3AEFA34D21104CE4002C7DE9 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2020F7AB3600702AEC /* geom_bounding_box.h */; };
+		3AEFA34E21104CE4002C7DE9 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2220F7AB3600702AEC /* geom_box_space.h */; };
+		3AEFA34F21104CE4002C7DE9 /* ams_cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3B20F7AB3600702AEC /* ams_cursor.h */; };
+		3AEFA35021104CE4002C7DE9 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2D20F7AB3600702AEC /* ruby_util.h */; };
+		3AEFA35121104CE4002C7DE9 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A1B20F7AB3600702AEC /* dynamic_array.h */; };
+		3AEFA35221104CE4002C7DE9 /* ams_group.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A3620F7AB3600702AEC /* ams_group.h */; };
+		3AEFA35321104CE4002C7DE9 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A2A20F7AB3600702AEC /* geom_vector3d.h */; };
+		3AEFA35421104CE4002C7DE9 /* ruby_util_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1E4A4420F7AB3600702AEC /* ruby_util_ext.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		33CDE5E5182703B200F7C6E8 /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1E4A1B20F7AB3600702AEC /* dynamic_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamic_array.h; sourceTree = "<group>"; };
+		3A1E4A1C20F7AB3600702AEC /* fast_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fast_queue.h; sourceTree = "<group>"; };
+		3A1E4A1D20F7AB3600702AEC /* geom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom.cpp; sourceTree = "<group>"; };
+		3A1E4A1E20F7AB3600702AEC /* geom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom.h; sourceTree = "<group>"; };
+		3A1E4A1F20F7AB3600702AEC /* geom_bounding_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_bounding_box.cpp; sourceTree = "<group>"; };
+		3A1E4A2020F7AB3600702AEC /* geom_bounding_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_bounding_box.h; sourceTree = "<group>"; };
+		3A1E4A2120F7AB3600702AEC /* geom_box_space.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_box_space.cpp; sourceTree = "<group>"; };
+		3A1E4A2220F7AB3600702AEC /* geom_box_space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_box_space.h; sourceTree = "<group>"; };
+		3A1E4A2320F7AB3600702AEC /* geom_color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_color.cpp; sourceTree = "<group>"; };
+		3A1E4A2420F7AB3600702AEC /* geom_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_color.h; sourceTree = "<group>"; };
+		3A1E4A2520F7AB3600702AEC /* geom_quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_quaternion.cpp; sourceTree = "<group>"; };
+		3A1E4A2620F7AB3600702AEC /* geom_quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_quaternion.h; sourceTree = "<group>"; };
+		3A1E4A2720F7AB3600702AEC /* geom_transformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_transformation.cpp; sourceTree = "<group>"; };
+		3A1E4A2820F7AB3600702AEC /* geom_transformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_transformation.h; sourceTree = "<group>"; };
+		3A1E4A2920F7AB3600702AEC /* geom_vector3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_vector3d.cpp; sourceTree = "<group>"; };
+		3A1E4A2A20F7AB3600702AEC /* geom_vector3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_vector3d.h; sourceTree = "<group>"; };
+		3A1E4A2B20F7AB3600702AEC /* ruby_prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruby_prep.h; sourceTree = "<group>"; };
+		3A1E4A2C20F7AB3600702AEC /* ruby_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ruby_util.cpp; sourceTree = "<group>"; };
+		3A1E4A2D20F7AB3600702AEC /* ruby_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruby_util.h; sourceTree = "<group>"; };
+		3A1E4A3120F7AB3600702AEC /* ams.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams.cpp; sourceTree = "<group>"; };
+		3A1E4A3220F7AB3600702AEC /* ams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams.h; sourceTree = "<group>"; };
+		3A1E4A3320F7AB3600702AEC /* ams_geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_geometry.cpp; sourceTree = "<group>"; };
+		3A1E4A3420F7AB3600702AEC /* ams_geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_geometry.h; sourceTree = "<group>"; };
+		3A1E4A3520F7AB3600702AEC /* ams_group.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_group.cpp; sourceTree = "<group>"; };
+		3A1E4A3620F7AB3600702AEC /* ams_group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_group.h; sourceTree = "<group>"; };
+		3A1E4A3720F7AB3600702AEC /* ams_multi_line_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_multi_line_text.cpp; sourceTree = "<group>"; };
+		3A1E4A3820F7AB3600702AEC /* ams_multi_line_text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_multi_line_text.h; sourceTree = "<group>"; };
+		3A1E4A3A20F7AB3600702AEC /* ams_cursor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_cursor.cpp; sourceTree = "<group>"; };
+		3A1E4A3B20F7AB3600702AEC /* ams_cursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_cursor.h; sourceTree = "<group>"; };
+		3A1E4A3C20F7AB3600702AEC /* ams_ext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_ext.cpp; sourceTree = "<group>"; };
+		3A1E4A3D20F7AB3600702AEC /* ams_ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_ext.h; sourceTree = "<group>"; };
+		3A1E4A3E20F7AB3600702AEC /* ams_keyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_keyboard.cpp; sourceTree = "<group>"; };
+		3A1E4A3F20F7AB3600702AEC /* ams_keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_keyboard.h; sourceTree = "<group>"; };
+		3A1E4A4020F7AB3600702AEC /* ams_lib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_lib.cpp; sourceTree = "<group>"; };
+		3A1E4A4120F7AB3600702AEC /* ams_midi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_midi.cpp; sourceTree = "<group>"; };
+		3A1E4A4220F7AB3600702AEC /* ams_midi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_midi.h; sourceTree = "<group>"; };
+		3A1E4A4320F7AB3600702AEC /* ruby_util_ext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ruby_util_ext.cpp; sourceTree = "<group>"; };
+		3A1E4A4420F7AB3600702AEC /* ruby_util_ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruby_util_ext.h; sourceTree = "<group>"; };
+		3A1E4A4520F7AB3600702AEC /* user_input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = user_input.c; sourceTree = "<group>"; };
+		3A1E4A4620F7AB3600702AEC /* user_input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = user_input.h; sourceTree = "<group>"; };
+		3A2A4F30211041BC000B53C1 /* Ruby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ruby.framework; path = ../../ThirdParty/lib/mac/2.2/Ruby.framework; sourceTree = "<group>"; };
+		3A2A4F32211041D7000B53C1 /* Ruby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ruby.framework; path = ../../ThirdParty/lib/mac/2.0/Ruby.framework; sourceTree = "<group>"; };
+		3A2A4F34211041F1000B53C1 /* Ruby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ruby.framework; path = ../../ThirdParty/lib/mac/1.8/Ruby.framework; sourceTree = "<group>"; };
+		3A33F1881DC47FF600CA768D /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A34AC471DC5ED4C0017D83F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		3A3E45131DC495E900C15213 /* Ruby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ruby.framework; path = ../../ThirdParty/RubyLib/lib/mac/2.2/Ruby.framework; sourceTree = "<group>"; };
+		3A4DC2F22136292D000EA18E /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAEFF671DC6C3740005F195 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3AAEFF691DC6C37A0005F195 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		3AEFA35821104CE4002C7DE9 /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1590E61847A5A20084B06D /* Ruby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ruby.framework; path = ../../ThirdParty/RubyLib/lib/mac/2.0/Ruby.framework; sourceTree = "<group>"; };
+		CE1590E81847A5F10084B06D /* Ruby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ruby.framework; path = ../../ThirdParty/RubyLib/lib/mac/1.8/Ruby.framework; sourceTree = "<group>"; };
+		CE405E8A184763D300A77187 /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33CDE5E2182703B100F7C6E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2A4F372110430D000B53C1 /* Ruby.framework in Frameworks */,
+				3AAEFF6A1DC6C37A0005F195 /* AudioUnit.framework in Frameworks */,
+				3AAEFF681DC6C3740005F195 /* AudioToolbox.framework in Frameworks */,
+				3A34AC4B1DC5ED6F0017D83F /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A33F15C1DC47FF600CA768D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2A4F36211042FD000B53C1 /* Ruby.framework in Frameworks */,
+				3A1A21311DC715BF0056E819 /* AudioUnit.framework in Frameworks */,
+				3A1A21321DC715BF0056E819 /* AudioToolbox.framework in Frameworks */,
+				3A34AC4E1DC5F8310017D83F /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4DC2D42136292D000EA18E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4DC2D52136292D000EA18E /* Ruby.framework in Frameworks */,
+				3A4DC2D62136292D000EA18E /* AudioUnit.framework in Frameworks */,
+				3A4DC2D72136292D000EA18E /* AudioToolbox.framework in Frameworks */,
+				3A4DC2D82136292D000EA18E /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEFA33A21104CE4002C7DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEFA33B21104CE4002C7DE9 /* Ruby.framework in Frameworks */,
+				3AEFA33C21104CE4002C7DE9 /* AudioUnit.framework in Frameworks */,
+				3AEFA33D21104CE4002C7DE9 /* AudioToolbox.framework in Frameworks */,
+				3AEFA33E21104CE4002C7DE9 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE405E82184763D300A77187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2A4F382110431A000B53C1 /* Ruby.framework in Frameworks */,
+				3A1A21331DC715CD0056E819 /* AudioUnit.framework in Frameworks */,
+				3A1A21341DC715CD0056E819 /* AudioToolbox.framework in Frameworks */,
+				3A34AC4D1DC5F82B0017D83F /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33CDE5DA182703B100F7C6E8 = {
+			isa = PBXGroup;
+			children = (
+				3A1E4A1920F7AB3600702AEC /* Source */,
+				33CDE7B11827091E00F7C6E8 /* ThirdParty Frameworks */,
+				33CDE5E6182703B200F7C6E8 /* Products */,
+				3A2A4F2F211041BC000B53C1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		33CDE5E6182703B200F7C6E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33CDE5E5182703B200F7C6E8 /* ams_lib.bundle */,
+				CE405E8A184763D300A77187 /* ams_lib.bundle */,
+				3A33F1881DC47FF600CA768D /* ams_lib.bundle */,
+				3AEFA35821104CE4002C7DE9 /* ams_lib.bundle */,
+				3A4DC2F22136292D000EA18E /* ams_lib.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33CDE7B11827091E00F7C6E8 /* ThirdParty Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEFF691DC6C37A0005F195 /* AudioUnit.framework */,
+				3AAEFF671DC6C3740005F195 /* AudioToolbox.framework */,
+				3A34AC471DC5ED4C0017D83F /* Carbon.framework */,
+				3AE10BAB1D2BCB2900E0F7D0 /* 1.8 */,
+				3AE10BAA1D2BCB0700E0F7D0 /* 2.0 */,
+				3A3E45121DC495E900C15213 /* 2.2 */,
+			);
+			name = "ThirdParty Frameworks";
+			sourceTree = "<group>";
+		};
+		3A1E4A1920F7AB3600702AEC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E4A1A20F7AB3600702AEC /* common */,
+				3A1E4A3020F7AB3600702AEC /* main */,
+				3A1E4A3920F7AB3600702AEC /* osx */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		3A1E4A1A20F7AB3600702AEC /* common */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E4A1B20F7AB3600702AEC /* dynamic_array.h */,
+				3A1E4A1C20F7AB3600702AEC /* fast_queue.h */,
+				3A1E4A1D20F7AB3600702AEC /* geom.cpp */,
+				3A1E4A1E20F7AB3600702AEC /* geom.h */,
+				3A1E4A1F20F7AB3600702AEC /* geom_bounding_box.cpp */,
+				3A1E4A2020F7AB3600702AEC /* geom_bounding_box.h */,
+				3A1E4A2120F7AB3600702AEC /* geom_box_space.cpp */,
+				3A1E4A2220F7AB3600702AEC /* geom_box_space.h */,
+				3A1E4A2320F7AB3600702AEC /* geom_color.cpp */,
+				3A1E4A2420F7AB3600702AEC /* geom_color.h */,
+				3A1E4A2520F7AB3600702AEC /* geom_quaternion.cpp */,
+				3A1E4A2620F7AB3600702AEC /* geom_quaternion.h */,
+				3A1E4A2720F7AB3600702AEC /* geom_transformation.cpp */,
+				3A1E4A2820F7AB3600702AEC /* geom_transformation.h */,
+				3A1E4A2920F7AB3600702AEC /* geom_vector3d.cpp */,
+				3A1E4A2A20F7AB3600702AEC /* geom_vector3d.h */,
+				3A1E4A2B20F7AB3600702AEC /* ruby_prep.h */,
+				3A1E4A2C20F7AB3600702AEC /* ruby_util.cpp */,
+				3A1E4A2D20F7AB3600702AEC /* ruby_util.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		3A1E4A3020F7AB3600702AEC /* main */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E4A3120F7AB3600702AEC /* ams.cpp */,
+				3A1E4A3220F7AB3600702AEC /* ams.h */,
+				3A1E4A3320F7AB3600702AEC /* ams_geometry.cpp */,
+				3A1E4A3420F7AB3600702AEC /* ams_geometry.h */,
+				3A1E4A3520F7AB3600702AEC /* ams_group.cpp */,
+				3A1E4A3620F7AB3600702AEC /* ams_group.h */,
+				3A1E4A3720F7AB3600702AEC /* ams_multi_line_text.cpp */,
+				3A1E4A3820F7AB3600702AEC /* ams_multi_line_text.h */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		3A1E4A3920F7AB3600702AEC /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E4A3A20F7AB3600702AEC /* ams_cursor.cpp */,
+				3A1E4A3B20F7AB3600702AEC /* ams_cursor.h */,
+				3A1E4A3C20F7AB3600702AEC /* ams_ext.cpp */,
+				3A1E4A3D20F7AB3600702AEC /* ams_ext.h */,
+				3A1E4A3E20F7AB3600702AEC /* ams_keyboard.cpp */,
+				3A1E4A3F20F7AB3600702AEC /* ams_keyboard.h */,
+				3A1E4A4020F7AB3600702AEC /* ams_lib.cpp */,
+				3A1E4A4120F7AB3600702AEC /* ams_midi.cpp */,
+				3A1E4A4220F7AB3600702AEC /* ams_midi.h */,
+				3A1E4A4320F7AB3600702AEC /* ruby_util_ext.cpp */,
+				3A1E4A4420F7AB3600702AEC /* ruby_util_ext.h */,
+				3A1E4A4520F7AB3600702AEC /* user_input.c */,
+				3A1E4A4620F7AB3600702AEC /* user_input.h */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		3A2A4F2F211041BC000B53C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A2A4F34211041F1000B53C1 /* Ruby.framework */,
+				3A2A4F32211041D7000B53C1 /* Ruby.framework */,
+				3A2A4F30211041BC000B53C1 /* Ruby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A3E45121DC495E900C15213 /* 2.2 */ = {
+			isa = PBXGroup;
+			children = (
+				3A3E45131DC495E900C15213 /* Ruby.framework */,
+			);
+			name = 2.2;
+			sourceTree = "<group>";
+		};
+		3AE10BAA1D2BCB0700E0F7D0 /* 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				CE1590E61847A5A20084B06D /* Ruby.framework */,
+			);
+			name = 2.0;
+			sourceTree = "<group>";
+		};
+		3AE10BAB1D2BCB2900E0F7D0 /* 1.8 */ = {
+			isa = PBXGroup;
+			children = (
+				CE1590E81847A5F10084B06D /* Ruby.framework */,
+			);
+			name = 1.8;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		33CDE5E3182703B100F7C6E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1E4A5120F7AB3600702AEC /* geom.h in Headers */,
+				3A1E4A9C20F7AB3600702AEC /* ams_multi_line_text.h in Headers */,
+				3A1E4AA820F7AB3600702AEC /* ams_ext.h in Headers */,
+				3A1E4A6F20F7AB3600702AEC /* geom_transformation.h in Headers */,
+				3A1E4A4B20F7AB3600702AEC /* fast_queue.h in Headers */,
+				3A1E4A7820F7AB3600702AEC /* ruby_prep.h in Headers */,
+				3A1E4A6320F7AB3600702AEC /* geom_color.h in Headers */,
+				3A1E4AB720F7AB3600702AEC /* ams_midi.h in Headers */,
+				3A1E4A6920F7AB3600702AEC /* geom_quaternion.h in Headers */,
+				3A1E4A8A20F7AB3600702AEC /* ams.h in Headers */,
+				3A1E4A9020F7AB3600702AEC /* ams_geometry.h in Headers */,
+				3A1E4AC320F7AB3600702AEC /* user_input.h in Headers */,
+				3A1E4AAE20F7AB3600702AEC /* ams_keyboard.h in Headers */,
+				3A1E4A5720F7AB3600702AEC /* geom_bounding_box.h in Headers */,
+				3A1E4A5D20F7AB3600702AEC /* geom_box_space.h in Headers */,
+				3A1E4AA220F7AB3600702AEC /* ams_cursor.h in Headers */,
+				3A1E4A7E20F7AB3600702AEC /* ruby_util.h in Headers */,
+				3A1E4A4820F7AB3600702AEC /* dynamic_array.h in Headers */,
+				3A1E4A9620F7AB3600702AEC /* ams_group.h in Headers */,
+				3A1E4A7520F7AB3600702AEC /* geom_vector3d.h in Headers */,
+				3A1E4ABD20F7AB3600702AEC /* ruby_util_ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A33F1621DC47FF600CA768D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1E4A5220F7AB3600702AEC /* geom.h in Headers */,
+				3A1E4A9D20F7AB3600702AEC /* ams_multi_line_text.h in Headers */,
+				3A1E4AA920F7AB3600702AEC /* ams_ext.h in Headers */,
+				3A1E4A7020F7AB3600702AEC /* geom_transformation.h in Headers */,
+				3A1E4A4C20F7AB3600702AEC /* fast_queue.h in Headers */,
+				3A1E4A7920F7AB3600702AEC /* ruby_prep.h in Headers */,
+				3A1E4A6420F7AB3600702AEC /* geom_color.h in Headers */,
+				3A1E4AB820F7AB3600702AEC /* ams_midi.h in Headers */,
+				3A1E4A6A20F7AB3600702AEC /* geom_quaternion.h in Headers */,
+				3A1E4A8B20F7AB3600702AEC /* ams.h in Headers */,
+				3A1E4A9120F7AB3600702AEC /* ams_geometry.h in Headers */,
+				3A1E4AC420F7AB3600702AEC /* user_input.h in Headers */,
+				3A1E4AAF20F7AB3600702AEC /* ams_keyboard.h in Headers */,
+				3A1E4A5820F7AB3600702AEC /* geom_bounding_box.h in Headers */,
+				3A1E4A5E20F7AB3600702AEC /* geom_box_space.h in Headers */,
+				3A1E4AA320F7AB3600702AEC /* ams_cursor.h in Headers */,
+				3A1E4A7F20F7AB3600702AEC /* ruby_util.h in Headers */,
+				3A1E4A4920F7AB3600702AEC /* dynamic_array.h in Headers */,
+				3A1E4A9720F7AB3600702AEC /* ams_group.h in Headers */,
+				3A1E4A7620F7AB3600702AEC /* geom_vector3d.h in Headers */,
+				3A1E4ABE20F7AB3600702AEC /* ruby_util_ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4DC2D92136292D000EA18E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4DC2DA2136292D000EA18E /* geom.h in Headers */,
+				3A4DC2DB2136292D000EA18E /* ams_multi_line_text.h in Headers */,
+				3A4DC2DC2136292D000EA18E /* ams_ext.h in Headers */,
+				3A4DC2DD2136292D000EA18E /* geom_transformation.h in Headers */,
+				3A4DC2DE2136292D000EA18E /* fast_queue.h in Headers */,
+				3A4DC2DF2136292D000EA18E /* ruby_prep.h in Headers */,
+				3A4DC2E02136292D000EA18E /* geom_color.h in Headers */,
+				3A4DC2E12136292D000EA18E /* ams_midi.h in Headers */,
+				3A4DC2E22136292D000EA18E /* geom_quaternion.h in Headers */,
+				3A4DC2E32136292D000EA18E /* ams.h in Headers */,
+				3A4DC2E42136292D000EA18E /* ams_geometry.h in Headers */,
+				3A4DC2E52136292D000EA18E /* user_input.h in Headers */,
+				3A4DC2E62136292D000EA18E /* ams_keyboard.h in Headers */,
+				3A4DC2E72136292D000EA18E /* geom_bounding_box.h in Headers */,
+				3A4DC2E82136292D000EA18E /* geom_box_space.h in Headers */,
+				3A4DC2E92136292D000EA18E /* ams_cursor.h in Headers */,
+				3A4DC2EA2136292D000EA18E /* ruby_util.h in Headers */,
+				3A4DC2EB2136292D000EA18E /* dynamic_array.h in Headers */,
+				3A4DC2EC2136292D000EA18E /* ams_group.h in Headers */,
+				3A4DC2ED2136292D000EA18E /* geom_vector3d.h in Headers */,
+				3A4DC2EE2136292D000EA18E /* ruby_util_ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEFA33F21104CE4002C7DE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEFA34021104CE4002C7DE9 /* geom.h in Headers */,
+				3AEFA34121104CE4002C7DE9 /* ams_multi_line_text.h in Headers */,
+				3AEFA34221104CE4002C7DE9 /* ams_ext.h in Headers */,
+				3AEFA34321104CE4002C7DE9 /* geom_transformation.h in Headers */,
+				3AEFA34421104CE4002C7DE9 /* fast_queue.h in Headers */,
+				3AEFA34521104CE4002C7DE9 /* ruby_prep.h in Headers */,
+				3AEFA34621104CE4002C7DE9 /* geom_color.h in Headers */,
+				3AEFA34721104CE4002C7DE9 /* ams_midi.h in Headers */,
+				3AEFA34821104CE4002C7DE9 /* geom_quaternion.h in Headers */,
+				3AEFA34921104CE4002C7DE9 /* ams.h in Headers */,
+				3AEFA34A21104CE4002C7DE9 /* ams_geometry.h in Headers */,
+				3AEFA34B21104CE4002C7DE9 /* user_input.h in Headers */,
+				3AEFA34C21104CE4002C7DE9 /* ams_keyboard.h in Headers */,
+				3AEFA34D21104CE4002C7DE9 /* geom_bounding_box.h in Headers */,
+				3AEFA34E21104CE4002C7DE9 /* geom_box_space.h in Headers */,
+				3AEFA34F21104CE4002C7DE9 /* ams_cursor.h in Headers */,
+				3AEFA35021104CE4002C7DE9 /* ruby_util.h in Headers */,
+				3AEFA35121104CE4002C7DE9 /* dynamic_array.h in Headers */,
+				3AEFA35221104CE4002C7DE9 /* ams_group.h in Headers */,
+				3AEFA35321104CE4002C7DE9 /* geom_vector3d.h in Headers */,
+				3AEFA35421104CE4002C7DE9 /* ruby_util_ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE405E84184763D300A77187 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1E4A5020F7AB3600702AEC /* geom.h in Headers */,
+				3A1E4A9B20F7AB3600702AEC /* ams_multi_line_text.h in Headers */,
+				3A1E4AA720F7AB3600702AEC /* ams_ext.h in Headers */,
+				3A1E4A6E20F7AB3600702AEC /* geom_transformation.h in Headers */,
+				3A1E4A4A20F7AB3600702AEC /* fast_queue.h in Headers */,
+				3A1E4A7720F7AB3600702AEC /* ruby_prep.h in Headers */,
+				3A1E4A6220F7AB3600702AEC /* geom_color.h in Headers */,
+				3A1E4AB620F7AB3600702AEC /* ams_midi.h in Headers */,
+				3A1E4A6820F7AB3600702AEC /* geom_quaternion.h in Headers */,
+				3A1E4A8920F7AB3600702AEC /* ams.h in Headers */,
+				3A1E4A8F20F7AB3600702AEC /* ams_geometry.h in Headers */,
+				3A1E4AC220F7AB3600702AEC /* user_input.h in Headers */,
+				3A1E4AAD20F7AB3600702AEC /* ams_keyboard.h in Headers */,
+				3A1E4A5620F7AB3600702AEC /* geom_bounding_box.h in Headers */,
+				3A1E4A5C20F7AB3600702AEC /* geom_box_space.h in Headers */,
+				3A1E4AA120F7AB3600702AEC /* ams_cursor.h in Headers */,
+				3A1E4A7D20F7AB3600702AEC /* ruby_util.h in Headers */,
+				3A1E4A4720F7AB3600702AEC /* dynamic_array.h in Headers */,
+				3A1E4A9520F7AB3600702AEC /* ams_group.h in Headers */,
+				3A1E4A7420F7AB3600702AEC /* geom_vector3d.h in Headers */,
+				3A1E4ABC20F7AB3600702AEC /* ruby_util_ext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		33CDE5E4182703B100F7C6E8 /* Ruby 2.0 64bit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33CDE5E9182703B200F7C6E8 /* Build configuration list for PBXNativeTarget "Ruby 2.0 64bit" */;
+			buildPhases = (
+				33CDE5E1182703B100F7C6E8 /* Sources */,
+				33CDE5E2182703B100F7C6E8 /* Frameworks */,
+				33CDE5E3182703B100F7C6E8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ruby 2.0 64bit";
+			productName = "MSPhysics Library";
+			productReference = 33CDE5E5182703B200F7C6E8 /* ams_lib.bundle */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		3A33F1351DC47FF600CA768D /* Ruby 2.2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A33F1851DC47FF600CA768D /* Build configuration list for PBXNativeTarget "Ruby 2.2" */;
+			buildPhases = (
+				3A33F13A1DC47FF600CA768D /* Sources */,
+				3A33F15C1DC47FF600CA768D /* Frameworks */,
+				3A33F1621DC47FF600CA768D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ruby 2.2";
+			productName = "MSPhysics Library";
+			productReference = 3A33F1881DC47FF600CA768D /* ams_lib.bundle */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		3A4DC2BF2136292D000EA18E /* Ruby 2.5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A4DC2EF2136292D000EA18E /* Build configuration list for PBXNativeTarget "Ruby 2.5" */;
+			buildPhases = (
+				3A4DC2C02136292D000EA18E /* Sources */,
+				3A4DC2D42136292D000EA18E /* Frameworks */,
+				3A4DC2D92136292D000EA18E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ruby 2.5";
+			productName = "MSPhysics Library";
+			productReference = 3A4DC2F22136292D000EA18E /* ams_lib.bundle */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		3AEFA32521104CE4002C7DE9 /* Ruby 2.0 32bit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AEFA35521104CE4002C7DE9 /* Build configuration list for PBXNativeTarget "Ruby 2.0 32bit" */;
+			buildPhases = (
+				3AEFA32621104CE4002C7DE9 /* Sources */,
+				3AEFA33A21104CE4002C7DE9 /* Frameworks */,
+				3AEFA33F21104CE4002C7DE9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ruby 2.0 32bit";
+			productName = "MSPhysics Library";
+			productReference = 3AEFA35821104CE4002C7DE9 /* ams_lib.bundle */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		CE405E7E184763D300A77187 /* Ruby 1.8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE405E87184763D300A77187 /* Build configuration list for PBXNativeTarget "Ruby 1.8" */;
+			buildPhases = (
+				CE405E7F184763D300A77187 /* Sources */,
+				CE405E82184763D300A77187 /* Frameworks */,
+				CE405E84184763D300A77187 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ruby 1.8";
+			productName = "MSPhysics Library";
+			productReference = CE405E8A184763D300A77187 /* ams_lib.bundle */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33CDE5DC182703B100F7C6E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = SketchUp;
+				TargetAttributes = {
+					33CDE5E4182703B100F7C6E8 = {
+						DevelopmentTeam = B5Q422W65M;
+					};
+					3A33F1351DC47FF600CA768D = {
+						DevelopmentTeam = B5Q422W65M;
+					};
+					3A4DC2BF2136292D000EA18E = {
+						DevelopmentTeam = B5Q422W65M;
+					};
+					3AEFA32521104CE4002C7DE9 = {
+						DevelopmentTeam = B5Q422W65M;
+					};
+					CE405E7E184763D300A77187 = {
+						DevelopmentTeam = B5Q422W65M;
+					};
+				};
+			};
+			buildConfigurationList = 33CDE5DF182703B100F7C6E8 /* Build configuration list for PBXProject "ams_lib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 33CDE5DA182703B100F7C6E8;
+			productRefGroup = 33CDE5E6182703B200F7C6E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE405E7E184763D300A77187 /* Ruby 1.8 */,
+				3AEFA32521104CE4002C7DE9 /* Ruby 2.0 32bit */,
+				33CDE5E4182703B100F7C6E8 /* Ruby 2.0 64bit */,
+				3A33F1351DC47FF600CA768D /* Ruby 2.2 */,
+				3A4DC2BF2136292D000EA18E /* Ruby 2.5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33CDE5E1182703B100F7C6E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1E4AB420F7AB3600702AEC /* ams_midi.cpp in Sources */,
+				3A1E4A6C20F7AB3600702AEC /* geom_transformation.cpp in Sources */,
+				3A1E4A7220F7AB3600702AEC /* geom_vector3d.cpp in Sources */,
+				3A1E4AAB20F7AB3600702AEC /* ams_keyboard.cpp in Sources */,
+				3A1E4A9920F7AB3600702AEC /* ams_multi_line_text.cpp in Sources */,
+				3A1E4AB120F7AB3600702AEC /* ams_lib.cpp in Sources */,
+				3A1E4A4E20F7AB3600702AEC /* geom.cpp in Sources */,
+				3A1E4AC020F7AB3600702AEC /* user_input.c in Sources */,
+				3A1E4AA520F7AB3600702AEC /* ams_ext.cpp in Sources */,
+				3A1E4A6620F7AB3600702AEC /* geom_quaternion.cpp in Sources */,
+				3A1E4A9F20F7AB3600702AEC /* ams_cursor.cpp in Sources */,
+				3A1E4A6020F7AB3600702AEC /* geom_color.cpp in Sources */,
+				3A1E4A8D20F7AB3600702AEC /* ams_geometry.cpp in Sources */,
+				3A1E4A7B20F7AB3600702AEC /* ruby_util.cpp in Sources */,
+				3A1E4ABA20F7AB3600702AEC /* ruby_util_ext.cpp in Sources */,
+				3A1E4A5A20F7AB3600702AEC /* geom_box_space.cpp in Sources */,
+				3A1E4A5420F7AB3600702AEC /* geom_bounding_box.cpp in Sources */,
+				3A1E4A8720F7AB3600702AEC /* ams.cpp in Sources */,
+				3A1E4A9320F7AB3600702AEC /* ams_group.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A33F13A1DC47FF600CA768D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1E4AB520F7AB3600702AEC /* ams_midi.cpp in Sources */,
+				3A1E4A6D20F7AB3600702AEC /* geom_transformation.cpp in Sources */,
+				3A1E4A7320F7AB3600702AEC /* geom_vector3d.cpp in Sources */,
+				3A1E4AAC20F7AB3600702AEC /* ams_keyboard.cpp in Sources */,
+				3A1E4A9A20F7AB3600702AEC /* ams_multi_line_text.cpp in Sources */,
+				3A1E4AB220F7AB3600702AEC /* ams_lib.cpp in Sources */,
+				3A1E4A4F20F7AB3600702AEC /* geom.cpp in Sources */,
+				3A1E4AC120F7AB3600702AEC /* user_input.c in Sources */,
+				3A1E4AA620F7AB3600702AEC /* ams_ext.cpp in Sources */,
+				3A1E4A6720F7AB3600702AEC /* geom_quaternion.cpp in Sources */,
+				3A1E4AA020F7AB3600702AEC /* ams_cursor.cpp in Sources */,
+				3A1E4A6120F7AB3600702AEC /* geom_color.cpp in Sources */,
+				3A1E4A8E20F7AB3600702AEC /* ams_geometry.cpp in Sources */,
+				3A1E4A7C20F7AB3600702AEC /* ruby_util.cpp in Sources */,
+				3A1E4ABB20F7AB3600702AEC /* ruby_util_ext.cpp in Sources */,
+				3A1E4A5B20F7AB3600702AEC /* geom_box_space.cpp in Sources */,
+				3A1E4A5520F7AB3600702AEC /* geom_bounding_box.cpp in Sources */,
+				3A1E4A8820F7AB3600702AEC /* ams.cpp in Sources */,
+				3A1E4A9420F7AB3600702AEC /* ams_group.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A4DC2C02136292D000EA18E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4DC2C12136292D000EA18E /* ams_midi.cpp in Sources */,
+				3A4DC2C22136292D000EA18E /* geom_transformation.cpp in Sources */,
+				3A4DC2C32136292D000EA18E /* geom_vector3d.cpp in Sources */,
+				3A4DC2C42136292D000EA18E /* ams_keyboard.cpp in Sources */,
+				3A4DC2C52136292D000EA18E /* ams_multi_line_text.cpp in Sources */,
+				3A4DC2C62136292D000EA18E /* ams_lib.cpp in Sources */,
+				3A4DC2C72136292D000EA18E /* geom.cpp in Sources */,
+				3A4DC2C82136292D000EA18E /* user_input.c in Sources */,
+				3A4DC2C92136292D000EA18E /* ams_ext.cpp in Sources */,
+				3A4DC2CA2136292D000EA18E /* geom_quaternion.cpp in Sources */,
+				3A4DC2CB2136292D000EA18E /* ams_cursor.cpp in Sources */,
+				3A4DC2CC2136292D000EA18E /* geom_color.cpp in Sources */,
+				3A4DC2CD2136292D000EA18E /* ams_geometry.cpp in Sources */,
+				3A4DC2CE2136292D000EA18E /* ruby_util.cpp in Sources */,
+				3A4DC2CF2136292D000EA18E /* ruby_util_ext.cpp in Sources */,
+				3A4DC2D02136292D000EA18E /* geom_box_space.cpp in Sources */,
+				3A4DC2D12136292D000EA18E /* geom_bounding_box.cpp in Sources */,
+				3A4DC2D22136292D000EA18E /* ams.cpp in Sources */,
+				3A4DC2D32136292D000EA18E /* ams_group.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEFA32621104CE4002C7DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEFA32721104CE4002C7DE9 /* ams_midi.cpp in Sources */,
+				3AEFA32821104CE4002C7DE9 /* geom_transformation.cpp in Sources */,
+				3AEFA32921104CE4002C7DE9 /* geom_vector3d.cpp in Sources */,
+				3AEFA32A21104CE4002C7DE9 /* ams_keyboard.cpp in Sources */,
+				3AEFA32B21104CE4002C7DE9 /* ams_multi_line_text.cpp in Sources */,
+				3AEFA32C21104CE4002C7DE9 /* ams_lib.cpp in Sources */,
+				3AEFA32D21104CE4002C7DE9 /* geom.cpp in Sources */,
+				3AEFA32E21104CE4002C7DE9 /* user_input.c in Sources */,
+				3AEFA32F21104CE4002C7DE9 /* ams_ext.cpp in Sources */,
+				3AEFA33021104CE4002C7DE9 /* geom_quaternion.cpp in Sources */,
+				3AEFA33121104CE4002C7DE9 /* ams_cursor.cpp in Sources */,
+				3AEFA33221104CE4002C7DE9 /* geom_color.cpp in Sources */,
+				3AEFA33321104CE4002C7DE9 /* ams_geometry.cpp in Sources */,
+				3AEFA33421104CE4002C7DE9 /* ruby_util.cpp in Sources */,
+				3AEFA33521104CE4002C7DE9 /* ruby_util_ext.cpp in Sources */,
+				3AEFA33621104CE4002C7DE9 /* geom_box_space.cpp in Sources */,
+				3AEFA33721104CE4002C7DE9 /* geom_bounding_box.cpp in Sources */,
+				3AEFA33821104CE4002C7DE9 /* ams.cpp in Sources */,
+				3AEFA33921104CE4002C7DE9 /* ams_group.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE405E7F184763D300A77187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1E4AB320F7AB3600702AEC /* ams_midi.cpp in Sources */,
+				3A1E4A6B20F7AB3600702AEC /* geom_transformation.cpp in Sources */,
+				3A1E4A7120F7AB3600702AEC /* geom_vector3d.cpp in Sources */,
+				3A1E4AAA20F7AB3600702AEC /* ams_keyboard.cpp in Sources */,
+				3A1E4A9820F7AB3600702AEC /* ams_multi_line_text.cpp in Sources */,
+				3A1E4AB020F7AB3600702AEC /* ams_lib.cpp in Sources */,
+				3A1E4A4D20F7AB3600702AEC /* geom.cpp in Sources */,
+				3A1E4ABF20F7AB3600702AEC /* user_input.c in Sources */,
+				3A1E4AA420F7AB3600702AEC /* ams_ext.cpp in Sources */,
+				3A1E4A6520F7AB3600702AEC /* geom_quaternion.cpp in Sources */,
+				3A1E4A9E20F7AB3600702AEC /* ams_cursor.cpp in Sources */,
+				3A1E4A5F20F7AB3600702AEC /* geom_color.cpp in Sources */,
+				3A1E4A8C20F7AB3600702AEC /* ams_geometry.cpp in Sources */,
+				3A1E4A7A20F7AB3600702AEC /* ruby_util.cpp in Sources */,
+				3A1E4AB920F7AB3600702AEC /* ruby_util_ext.cpp in Sources */,
+				3A1E4A5920F7AB3600702AEC /* geom_box_space.cpp in Sources */,
+				3A1E4A5320F7AB3600702AEC /* geom_bounding_box.cpp in Sources */,
+				3A1E4A8620F7AB3600702AEC /* ams.cpp in Sources */,
+				3A1E4A9220F7AB3600702AEC /* ams_group.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		33CDE5E7182703B200F7C6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)$(CURRENT_ARCH)/$(TARGET_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)$(CURRENT_ARCH)/$(TARGET_NAME)";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_EXTENSION = bundle;
+				EXPORTED_SYMBOLS_FILE = ams_lib_exports.txt;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					_MACOSX_VER,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ams_lib;
+				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		33CDE5E8182703B200F7C6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)$(CURRENT_ARCH)/$(TARGET_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)$(CURRENT_ARCH)/$(TARGET_NAME)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_EXTENSION = bundle;
+				EXPORTED_SYMBOLS_FILE = ams_lib_exports.txt;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					_MACOSX_VER,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = ams_lib;
+				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		33CDE5EA182703B200F7C6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.0\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION20,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.0/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.0/mac/universal-darwin12.5.0",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+			};
+			name = Debug;
+		};
+		33CDE5EB182703B200F7C6E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.0\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION20,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.0/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.0/mac/universal-darwin12.5.0",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+			};
+			name = Release;
+		};
+		3A33F1861DC47FF600CA768D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.2\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION22,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.2/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.2/mac/x86_64-darwin14",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+			};
+			name = Debug;
+		};
+		3A33F1871DC47FF600CA768D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.2\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION22,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.2/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.2/mac/x86_64-darwin14",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+			};
+			name = Release;
+		};
+		3A4DC2F02136292D000EA18E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.5\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION25,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.5/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.5/mac/x86_64-darwin17",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = ams_lib;
+			};
+			name = Debug;
+		};
+		3A4DC2F12136292D000EA18E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.5\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION25,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.5/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.5/mac/x86_64-darwin17",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = ams_lib;
+			};
+			name = Release;
+		};
+		3AEFA35621104CE4002C7DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.0\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION20,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.0/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.0/mac/universal-darwin12.5.0",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_MODULE_NAME = ams_lib;
+				PRODUCT_NAME = ams_lib;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		3AEFA35721104CE4002C7DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/2.0\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION20,
+				);
+				HEADER_SEARCH_PATHS = (
+					../../ThirdParty/RubyLib/include/ruby/2.0/mac,
+					"../../ThirdParty/RubyLib/include/ruby/2.0/mac/universal-darwin12.5.0",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_MODULE_NAME = ams_lib;
+				PRODUCT_NAME = ams_lib;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		CE405E88184763D300A77187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/1.8\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION18,
+				);
+				HEADER_SEARCH_PATHS = ../../ThirdParty/RubyLib/include/ruby/1.8/mac;
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		CE405E89184763D300A77187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = B5Q422W65M;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ThirdParty/RubyLib/lib/mac/1.8\"",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					RUBY_VERSION18,
+				);
+				HEADER_SEARCH_PATHS = ../../ThirdParty/RubyLib/include/ruby/1.8/mac;
+				LD_DYLIB_INSTALL_NAME = "$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33CDE5DF182703B100F7C6E8 /* Build configuration list for PBXProject "ams_lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CDE5E7182703B200F7C6E8 /* Debug */,
+				33CDE5E8182703B200F7C6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CDE5E9182703B200F7C6E8 /* Build configuration list for PBXNativeTarget "Ruby 2.0 64bit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CDE5EA182703B200F7C6E8 /* Debug */,
+				33CDE5EB182703B200F7C6E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A33F1851DC47FF600CA768D /* Build configuration list for PBXNativeTarget "Ruby 2.2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A33F1861DC47FF600CA768D /* Debug */,
+				3A33F1871DC47FF600CA768D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A4DC2EF2136292D000EA18E /* Build configuration list for PBXNativeTarget "Ruby 2.5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A4DC2F02136292D000EA18E /* Debug */,
+				3A4DC2F12136292D000EA18E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AEFA35521104CE4002C7DE9 /* Build configuration list for PBXNativeTarget "Ruby 2.0 32bit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEFA35621104CE4002C7DE9 /* Debug */,
+				3AEFA35721104CE4002C7DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE405E87184763D300A77187 /* Build configuration list for PBXNativeTarget "Ruby 1.8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE405E88184763D300A77187 /* Debug */,
+				CE405E89184763D300A77187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33CDE5DC182703B100F7C6E8 /* Project object */;
+}

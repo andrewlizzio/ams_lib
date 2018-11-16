@@ -1,0 +1,10 @@
+Documentation/ams.rb
+Documentation/ams/*.rb
+RubyExtension/ams_Lib.rb
+RubyExtension/ams_Lib/*.rb
+- README.md \
+  LICENCE.txt \
+  CHANGELOG.md \
+  TODO.md \
+  Keyboard.md
+-p YardTemplates

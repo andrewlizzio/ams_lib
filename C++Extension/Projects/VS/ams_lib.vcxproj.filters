@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{3e2e0a6a-b24c-43c5-8c3d-4f4519d3cf08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win">
+      <UniqueIdentifier>{a9bea5cc-0816-4f5f-b296-34d8d11dc172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{55b440cb-3c62-415c-b729-99f7967bb41f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RubyExtension.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\main\ams.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\main\ams_geometry.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\main\ams_group.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\main\ams_multi_line_text.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_bounding_box.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_color.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_quaternion.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_transformation.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_vector3d.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_vector4d.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\ruby_util.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\thread_hive.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_cursor.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_dll.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_ext.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_keyboard.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_lib.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_menu.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_midi.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_registry.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_screen.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_sketchup.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_socket.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_socket_client.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_socket_server.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_system.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_timer.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ams_window.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\ruby_util_ext.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\win\stdafx.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\main\ams.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\main\ams_geometry.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\main\ams_group.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\main\ams_multi_line_text.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\common.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\dynamic_array.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\fast_queue.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_bounding_box.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_box_space.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_color.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_quaternion.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_transformation.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_vector3d.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_vector4d.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\ruby_prep.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\ruby_util.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\thread_hive.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_cursor.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_dll.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_ext.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_keyboard.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_menu.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_midi.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_registry.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_screen.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_sketchup.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_socket.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_socket_client.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_socket_server.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_system.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_timer.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ams_window.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\ruby_util_ext.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\stdafx.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\win\targetver.h">
+      <Filter>win</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4 @@
+yard graph --dependencies --empty-mixins --full -f graph.dot
+
+./C:/graphviz/bin/dot -Tpng -oimage.png graph.dot
+./C:/graphviz/bin/dot -Tpdf -oimage.pdf graph.dot

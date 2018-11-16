@@ -65,7 +65,7 @@ provides developers with functionality not achievable with SketchUp Ruby API.
 * SketchUp 6 or later.
 
 
-## Usage
+## Installation
 
 Copy <tt>ams_Lib</tt> folder and <tt>ams_Lib.rb</tt>, located at <tt>/RubyExtension/</tt>,
 to your plugins folder.

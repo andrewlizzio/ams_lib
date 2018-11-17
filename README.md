@@ -1,4 +1,5 @@
 # AMS Library
+Documentation: https://www.rubydoc.info/github/AntonSynytsia/ams_lib/index
 
 ## Description
 

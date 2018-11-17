@@ -23,10 +23,10 @@ provides developers with functionality not achievable with SketchUp Ruby API.
 
 ## Usage
 
-AMS Library is intended to be used as a dependency extension for other extensions.
+AMS Library is intended to be a dependency extension for other extensions.
 Extensions planning to use AMS Library need to verify AMS Library, of a specific
-version, is installed, demonstrated in the following sample:
-
+version, is installed. A way to verify AMS Library is shown in the following sample:
+```ruby
     # FILE: main_entry.rb
 
     tload_me = true
@@ -60,16 +60,18 @@ version, is installed, demonstrated in the following sample:
       end
 
     end
+```
 
 When registering your extension, have it load the <tt>main_entry</tt> file:
-
+```ruby
     dir = ::File.expand_path(::File.dirname(__FILE__))
     fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
     extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
+```
 
 
 ## Synopsis
-
+```ruby
     # FILE: main.rb
 
     require 'ams_Lib/main'
@@ -106,7 +108,7 @@ When registering your extension, have it load the <tt>main_entry</tt> file:
     end # class MySketchupObserver
 
     AMS::Sketchup.add_observer(MySketchupObserver.new)
-
+```
 
 ## Requirements
 

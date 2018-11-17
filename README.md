@@ -70,6 +70,8 @@ fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
 extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
 ```
 
+Next section shows a few exmample of how the <tt>main</tt> file could be utilized.
+
 ## Examples
 The follwing sections shows a few examples regarding the use of AMS Library. All functions and utilities are available in the documentation.
 

@@ -21,7 +21,57 @@ geometry and entity hierarchy manipulation functions. In a way, AMS Library
 provides developers with functionality not achievable with SketchUp Ruby API.
 
 
+## Usage
+
+AMS Library is intended to be used as a dependency extension for other extensions.
+Extensions planning to use AMS Library need to verify AMS Library, of a specific
+version, is installed, demonstrated in the following sample:
+
+    # FILE: main_entry.rb
+
+    tload_me = true
+
+    # Load and verify AMS Library
+    begin
+
+      # Attempt to load
+      require 'ams_Lib/main'
+
+      # Verify version
+      tload_me = false if AMS::Lib::VERSION.to_f < 3.6
+
+    rescue LoadError
+      tload_me = false
+
+    end
+
+    if tload_me
+      # Load the main file
+      dir = File.dirname(__FILE__)
+      require File.join(dir, 'main')
+
+    else
+      msg = "[MY_EXTENSION_NAME] requires AMS Library, version 3.6.0 or later! "
+      msg << "This extension will not be loaded with the library not installed or outdated. "
+      msg << "Would you like to navigate to the library's download page?"
+      tload_me = false
+      if ::UI.messagebox(msg, MB_YESNO) == IDYES
+        ::UI.openURL('http://sketchucation.com/forums/viewtopic.php?f=323&t=55067#p499835')
+      end
+
+    end
+
+When registering your extension, have it load the <tt>main_entry</tt> file:
+
+    dir = ::File.expand_path(::File.dirname(__FILE__))
+    fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
+    extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
+
+
 ## Synopsis
+
+    # FILE: main.rb
+
     require 'ams_Lib/main'
 
     # Get handle to SketchUp window.
@@ -61,11 +111,13 @@ provides developers with functionality not achievable with SketchUp Ruby API.
 ## Requirements
 
 * Microsoft Windows XP, Vista, 7, 8, 10.
-* Mac OS X 10.5+ (Limited)
+* Mac OS X 10.6+ (Limited)
 * SketchUp 6 or later.
 
 
-## Installation
+## Installation Instructions
 
-Copy <tt>ams_Lib</tt> folder and <tt>ams_Lib.rb</tt>, located at <tt>/RubyExtension/</tt>,
-to your plugins folder.
+AMS Library releases are obtained from <i>Extension Warehouse</i> or <i>SketchUcation Extension Store</i>.
+
+To download from the repository, copy <tt>ams_Lib</tt> folder and <tt>ams_Lib.rb</tt>,
+located at <tt>RubyExtension/</tt>, to your plugins folder.

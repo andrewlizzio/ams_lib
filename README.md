@@ -26,6 +26,7 @@ provides developers with functionality not achievable with SketchUp Ruby API.
 AMS Library is intended to be a dependency extension for other extensions.
 Extensions planning to use AMS Library need to verify AMS Library, of a specific
 version, is installed, shown in the following sample:
+
 ```ruby
 # FILE: main_entry.rb
 
@@ -38,7 +39,7 @@ begin
 
   # Verify version
   tload_me = false if AMS::Lib::VERSION.to_f < 3.6
-  
+
 rescue LoadError
   tload_me = false
 
@@ -63,19 +64,21 @@ end
 ```
 
 When registering your extension, have it load the <tt>main_entry</tt> file:
+
 ```ruby
 dir = ::File.expand_path(::File.dirname(__FILE__))
 dir.force_encoding('UTF-8') if RUBY_VERSION !~ /^1.8/
-fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
+fpath = ::File.join(dir, "MY_EXTENSION_NAME/main_entry")
 extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
 ```
 
-Next section shows a few exmample of how the <tt>main</tt> file could be utilized.
+Next section shows a few examples of what could be utilized in the <tt>main</tt> file.
 
 ## Examples
-The follwing sections shows a few examples regarding the use of AMS Library. All functions and utilities are available in the documentation.
+The following sections show a few examples regarding the use of AMS Library. All functions and utilities are available in the documentation.
 
 ### Using Observers and Modifiers
+
 ```ruby
 # FILE: main.rb
 
@@ -105,7 +108,7 @@ end # class MySketchupObserver
 
 unless file_loaded?(__FILE__)
   file_loaded(__FILE__)
-  
+
   # Register the obsever
   AMS::Sketchup.add_observer(MySketchupObserver.new)
 end
@@ -118,12 +121,14 @@ AMS::Sketchup.switch_full_screen(true)
 ```
 
 ### Switching Full Screen on Multiple Monitors
+
 ```ruby
 # Setting SketchUp full screen on all monitors.
 AMS::Sketchup.switch_full_screen(true, 2, 2)
 ```
 
 ### Obtaining Handle to Main Window
+
 ```ruby
 # Get handle to SketchUp window.
 AMS::Sketchup.get_main_window

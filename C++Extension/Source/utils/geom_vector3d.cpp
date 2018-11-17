@@ -70,17 +70,17 @@ bool operator != (const Geom::Vector3d& lhs, const Geom::Vector3d& rhs) {
 }
 
 Geom::Vector3d operator * (Geom::Vector3d v, treal scalar) {
-	v.m_x *= scalar;
-	v.m_y *= scalar;
-	v.m_z *= scalar;
-	return v;
+    v.m_x *= scalar;
+    v.m_y *= scalar;
+    v.m_z *= scalar;
+    return v;
 }
 
 Geom::Vector3d operator * (treal scalar, Geom::Vector3d v) {
-	v.m_x *= scalar;
-	v.m_y *= scalar;
-	v.m_z *= scalar;
-	return v;
+    v.m_x *= scalar;
+    v.m_y *= scalar;
+    v.m_z *= scalar;
+    return v;
 }
 
 Geom::Vector3d operator + (Geom::Vector3d lhs, const Geom::Vector3d& rhs) {
@@ -115,10 +115,10 @@ const treal& Geom::Vector3d::operator [] (const int index) const {
 }
 
 Geom::Vector3d& Geom::Vector3d::operator *= (treal scalar) {
-	m_x *= scalar;
-	m_y *= scalar;
-	m_z *= scalar;
-	return *this;
+    m_x *= scalar;
+    m_y *= scalar;
+    m_z *= scalar;
+    return *this;
 }
 
 Geom::Vector3d& Geom::Vector3d::operator += (const Vector3d& other) {

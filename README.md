@@ -50,7 +50,7 @@ if tload_me
   # Load the main file
   dir = ::File.expand_path(::File.dirname(__FILE__))
   dir.force_encoding('UTF-8') if RUBY_VERSION !~ /^1.8/
-  require File.join(dir, "main")
+  require ::File.join(dir, "main")
 
 else
   msg = "[MY_EXTENSION_NAME] requires AMS Library, version 3.6.0 or later! "

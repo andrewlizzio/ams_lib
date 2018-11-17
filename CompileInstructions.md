@@ -8,7 +8,7 @@ Refer to the following instructions for compiling <tt>ams_lib.so</tt> with Visua
    to the appropriate binary folder:
    <tt>RubyExtension/ams_Lib/libraries/stage/[win32/win64]/[X.Y]/</tt>
 
-# Max OS X
+# Mac OS X
 Refer to the following instructions for compiling <tt>ams_lib.bundle</tt> with xCode:
 
 1. Set active scheme to <tt>Ruby (X.Y) - [32/64]</tt>

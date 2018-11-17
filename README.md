@@ -70,22 +70,14 @@ fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
 extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
 ```
 
-Next section shows an example of how the <tt>main</tt> file could be structured.
+## Examples
+The follwing sections shows a few examples regarding the use of AMS Library. All functions and utilities are available in the documentation.
 
-## Example
+### Using Observers and Modifiers
 ```ruby
 # FILE: main.rb
 
 require 'ams_Lib/main'
-
-# Get handle to SketchUp window.
-AMS::Sketchup.get_main_window
-
-# Setting SketchUp full screen on the monitor SU window is associated to.
-AMS::Sketchup.switch_full_screen(true)
-
-# Setting SketchUp full screen on all monitors.
-AMS::Sketchup.switch_full_screen(true, 2, 2)
 
 # Monitoring and processing SketchUp window events.
 class MySketchupObserver
@@ -115,6 +107,24 @@ unless file_loaded?(__FILE__)
   # Register the obsever
   AMS::Sketchup.add_observer(MySketchupObserver.new)
 end
+```
+
+### Switching Full Screen on Single Monitor
+```ruby
+# Setting SketchUp full screen on the monitor SU window is associated to.
+AMS::Sketchup.switch_full_screen(true)
+```
+
+### Switching Full Screen on Multiple Monitors
+```ruby
+# Setting SketchUp full screen on all monitors.
+AMS::Sketchup.switch_full_screen(true, 2, 2)
+```
+
+### Obtaining Handle to Main Window
+```ruby
+# Get handle to SketchUp window.
+AMS::Sketchup.get_main_window
 ```
 
 ## Requirements

@@ -70,6 +70,7 @@ fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
 extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
 ```
 
+Next section shows an example of how the <tt>main</tt> file could be structured.
 
 ## Example
 ```ruby
@@ -108,7 +109,12 @@ class MySketchupObserver
 
 end # class MySketchupObserver
 
-AMS::Sketchup.add_observer(MySketchupObserver.new)
+unless file_loaded?(__FILE__)
+  file_loaded(__FILE__)
+  
+  # Register the obsever
+  AMS::Sketchup.add_observer(MySketchupObserver.new)
+end
 ```
 
 ## Requirements

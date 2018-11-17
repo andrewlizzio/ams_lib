@@ -7,6 +7,7 @@
  */
 
 #include "thread_hive.h"
+#include <string.h>
 
 
 unsigned int ThreadHive::get_num_processors() {
@@ -15,7 +16,7 @@ unsigned int ThreadHive::get_num_processors() {
     GetNativeSystemInfo(&sinfo);
     return sinfo.dwNumberOfProcessors;
 #else
-    return sysconf(_SC_NPROCESSORS_ONLN);
+    return static_cast<unsigned int>(sysconf(_SC_NPROCESSORS_ONLN));
 #endif
 }
 
@@ -80,7 +81,7 @@ ThreadHive::~ThreadHive() {
 
     pthread_mutex_lock(&m_sem_mutex);
 	m_sem_val = 2; // terminate
-	pthread_mutex_broadcast(&m_sem_cond);
+	pthread_cond_broadcast(&m_sem_cond);
     pthread_mutex_unlock(&m_sem_mutex);
 
     for (i = 0; i < m_num_bees; ++i) {

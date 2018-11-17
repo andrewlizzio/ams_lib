@@ -41,18 +41,18 @@ private:
     HANDLE* m_bees;
     CRITICAL_SECTION m_queue_mutex;
     CRITICAL_SECTION m_user_mutex;
-	CRITICAL_SECTION m_sem_mutex;
+    CRITICAL_SECTION m_sem_mutex;
     CONDITION_VARIABLE m_all_idle_cond;
-	CONDITION_VARIABLE m_sem_cond;
+    CONDITION_VARIABLE m_sem_cond;
 #else
     pthread_t* m_bees;
     pthread_mutex_t m_queue_mutex;
     pthread_mutex_t m_user_mutex;
-	pthread_mutex_t m_sem_mutex;
+    pthread_mutex_t m_sem_mutex;
     pthread_cond_t m_all_idle_cond;
-	pthread_cond_t m_sem_cond;
+    pthread_cond_t m_sem_cond;
 #endif
-	volatile unsigned int m_sem_val;
+    volatile unsigned int m_sem_val;
     unsigned int m_num_bees;
     unsigned int m_num_working;
 

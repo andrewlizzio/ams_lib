@@ -38,7 +38,7 @@ public:
 
     // Operators
     friend Geom::Transformation (::operator *) (const Geom::Transformation& tP, const Geom::Transformation& tC);
-	friend Geom::Vector4d (::operator *) (const Geom::Transformation& t, const Geom::Vector4d& v);
+    friend Geom::Vector4d (::operator *) (const Geom::Transformation& t, const Geom::Vector4d& v);
 
     Transformation& operator = (const Transformation& other);
     Vector4d& operator [] (const int index);

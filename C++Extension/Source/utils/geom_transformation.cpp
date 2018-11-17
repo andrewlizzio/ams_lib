@@ -200,11 +200,11 @@ Geom::Transformation operator * (const Geom::Transformation& tP, const Geom::Tra
 }
 
 Geom::Vector4d operator * (const Geom::Transformation& t, const Geom::Vector4d& v) {
-	return Geom::Vector4d(
-		t[0][0] * v[0] + t[0][1] * v[1] + t[0][2] * v[2] + t[0][3] * v[3],
-		t[1][0] * v[0] + t[1][1] * v[1] + t[1][2] * v[2] + t[1][3] * v[3],
-		t[2][0] * v[0] + t[2][1] * v[1] + t[2][2] * v[2] + t[2][3] * v[3],
-		t[3][0] * v[0] + t[3][1] * v[1] + t[3][2] * v[2] + t[3][3] * v[3]);
+    return Geom::Vector4d(
+        t[0][0] * v[0] + t[0][1] * v[1] + t[0][2] * v[2] + t[0][3] * v[3],
+        t[1][0] * v[0] + t[1][1] * v[1] + t[1][2] * v[2] + t[1][3] * v[3],
+        t[2][0] * v[0] + t[2][1] * v[1] + t[2][2] * v[2] + t[2][3] * v[3],
+        t[3][0] * v[0] + t[3][1] * v[1] + t[3][2] * v[2] + t[3][3] * v[3]);
 }
 
 

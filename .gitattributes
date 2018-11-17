@@ -1,15 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-*.txt -crlf filter=spabs
-*.c -crlf filter=spabs
-*.cpp -crlf filter=spabs
-*.h -crlf filter=spabs
-*.rb -crlf filter=spabs
-*.js -crlf filter=spabs
-*.css -crlf filter=spabs
-*.html -crlf filter=spabs
-*.md -crlf filter=spabs
+*.txt -crlf filter=spabs text eol=lf
+*.c -crlf filter=spabs text eol=lf
+*.cpp -crlf filter=spabs text eol=lf
+*.h -crlf filter=spabs text eol=lf
+*.rb -crlf filter=spabs text eol=lf
+*.js -crlf filter=spabs text eol=lf
+*.css -crlf filter=spabs text eol=lf
+*.html -crlf filter=spabs text eol=lf
+*.md -crlf filter=spabs text eol=lf
 
 # Custom for Visual Studio
 *.cs     diff=csharp
@@ -30,3 +30,12 @@
 *.PDF    diff=astextplain
 *.rtf    diff=astextplain
 *.RTF    diff=astextplain
+
+
+*.png binary
+*.jpg binary
+*.skp binary
+*.so binary
+*.bundle binary
+*.dll binary
+*.dylib binary

@@ -7,9 +7,9 @@ SketchUp window and its input procedures via the Microsoft Windows API. Features
 include switching SketchUp fullscreen, monitoring window state changes,
 monitoring keyboard and mouse events, and preventing the interference of
 SketchUp keyboard and mouse shortcut accelerators. Such features provide
-extension developers with additional control for their tool. In addition to
-utilizing SketchUp tool events, a developer can utilize AMS Library's keyboard
-and mouse callback events to receive input of all the messages, including the
+extension developers with additional control over their tool. In addition to
+utilizing Sketchup::Tool events, a developer can utilize AMS Library's keyboard
+and mouse callback functions to receive input of all the messages, including the
 mouse wheel. AMS Library's callback events are registered in form of observers
 (although they are also modifiers), meaning a tool does not necessarily have to
 be an active tool in order to receive input events. This allows for operating

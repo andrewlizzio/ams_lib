@@ -33,13 +33,12 @@ tload_me = true
 
 # Load and verify AMS Library
 begin
-
   # Attempt to load
   require 'ams_Lib/main'
 
   # Verify version
   tload_me = false if AMS::Lib::VERSION.to_f < 3.6
-
+  
 rescue LoadError
   tload_me = false
 

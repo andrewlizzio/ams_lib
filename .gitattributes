@@ -1,15 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-*.txt -crlf
-*.c -crlf
-*.cpp -crlf
-*.h -crlf
-*.rb -crlf
-*.js -crlf
-*.css -crlf
-*.html -crlf
-*.md -crlf
+*.txt -crlf filter=tabspace
+*.c -crlf filter=tabspace
+*.cpp -crlf filter=tabspace
+*.h -crlf filter=tabspace
+*.rb -crlf filter=tabspace
+*.js -crlf filter=tabspace
+*.css -crlf filter=tabspace
+*.html -crlf filter=tabspace
+*.md -crlf filter=tabspace
 
 # Custom for Visual Studio
 *.cs     diff=csharp

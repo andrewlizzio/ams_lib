@@ -71,7 +71,7 @@ extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
 ```
 
 
-## Synopsis
+## Example
 ```ruby
 # FILE: main.rb
 

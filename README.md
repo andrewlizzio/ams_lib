@@ -25,89 +25,91 @@ provides developers with functionality not achievable with SketchUp Ruby API.
 
 AMS Library is intended to be a dependency extension for other extensions.
 Extensions planning to use AMS Library need to verify AMS Library, of a specific
-version, is installed. A way to verify AMS Library is shown in the following sample:
+version, is installed, shown in the following sample:
 ```ruby
-    # FILE: main_entry.rb
+# FILE: main_entry.rb
 
-    tload_me = true
+tload_me = true
 
-    # Load and verify AMS Library
-    begin
+# Load and verify AMS Library
+begin
 
-      # Attempt to load
-      require 'ams_Lib/main'
+  # Attempt to load
+  require 'ams_Lib/main'
 
-      # Verify version
-      tload_me = false if AMS::Lib::VERSION.to_f < 3.6
+  # Verify version
+  tload_me = false if AMS::Lib::VERSION.to_f < 3.6
 
-    rescue LoadError
-      tload_me = false
+rescue LoadError
+  tload_me = false
 
-    end
+end
 
-    if tload_me
-      # Load the main file
-      dir = File.dirname(__FILE__)
-      require File.join(dir, 'main')
+if tload_me
+  # Load the main file
+  dir = ::File.expand_path(::File.dirname(__FILE__))
+  dir.force_encoding('UTF-8') if RUBY_VERSION !~ /^1.8/
+  require File.join(dir, "main")
 
-    else
-      msg = "[MY_EXTENSION_NAME] requires AMS Library, version 3.6.0 or later! "
-      msg << "This extension will not be loaded with the library not installed or outdated. "
-      msg << "Would you like to navigate to the library's download page?"
-      tload_me = false
-      if ::UI.messagebox(msg, MB_YESNO) == IDYES
-        ::UI.openURL('http://sketchucation.com/forums/viewtopic.php?f=323&t=55067#p499835')
-      end
+else
+  msg = "[MY_EXTENSION_NAME] requires AMS Library, version 3.6.0 or later! "
+  msg << "This extension will not be loaded with the library not installed or outdated. "
+  msg << "Would you like to navigate to the library's download page?"
+  tload_me = false
+  if ::UI.messagebox(msg, MB_YESNO) == IDYES
+    ::UI.openURL('http://sketchucation.com/forums/viewtopic.php?f=323&t=55067#p499835')
+  end
 
-    end
+end
 ```
 
 When registering your extension, have it load the <tt>main_entry</tt> file:
 ```ruby
-    dir = ::File.expand_path(::File.dirname(__FILE__))
-    fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
-    extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
+dir = ::File.expand_path(::File.dirname(__FILE__))
+dir.force_encoding('UTF-8') if RUBY_VERSION !~ /^1.8/
+fpath = :File.join(dir, "MY_EXTENSION_NAME/main_entry")
+extension = ::SketchupExtension.new(MY_EXTENSION_NAME, fpath)
 ```
 
 
 ## Synopsis
 ```ruby
-    # FILE: main.rb
+# FILE: main.rb
 
-    require 'ams_Lib/main'
+require 'ams_Lib/main'
 
-    # Get handle to SketchUp window.
-    AMS::Sketchup.get_main_window
+# Get handle to SketchUp window.
+AMS::Sketchup.get_main_window
 
-    # Setting SketchUp full screen on the monitor SU window is associated to.
-    AMS::Sketchup.switch_full_screen(true)
+# Setting SketchUp full screen on the monitor SU window is associated to.
+AMS::Sketchup.switch_full_screen(true)
 
-    # Setting SketchUp full screen on all monitors.
-    AMS::Sketchup.switch_full_screen(true, 2, 2)
+# Setting SketchUp full screen on all monitors.
+AMS::Sketchup.switch_full_screen(true, 2, 2)
 
-    # Monitoring and processing SketchUp window events.
-    class MySketchupObserver
+# Monitoring and processing SketchUp window events.
+class MySketchupObserver
 
-      def swo_on_switch_full_screen(state)
-        if state
-          puts 'Main window switched full screen!'
-        else
-          puts 'Main window switched to original placement.'
-        end
-      end
+  def swo_on_switch_full_screen(state)
+    if state
+      puts 'Main window switched full screen!'
+    else
+      puts 'Main window switched to original placement.'
+    end
+  end
 
-      def swp_on_mouse_wheel_rotate(x,y, dir)
-        puts "mouse wheel rotated - pos : (#{x}, #{y}), dir : #{dir}"
-        # Prevent mouse wheel from interacting with SU window. Returning 1 means
-        # mouse wheel zoom in/out operation would be blocked, which might be
-        # handy for those seeking more control over SketchUp window. Returning
-        # any other value won't block the event.
-        return 1
-      end
+  def swp_on_mouse_wheel_rotate(x,y, dir)
+    puts "mouse wheel rotated - pos : (#{x}, #{y}), dir : #{dir}"
+    # Prevent mouse wheel from interacting with SU window. Returning 1 means
+    # mouse wheel zoom in/out operation would be blocked, which might be
+    # handy for those seeking more control over SketchUp window. Returning
+    # any other value won't block the event.
+    return 1
+  end
 
-    end # class MySketchupObserver
+end # class MySketchupObserver
 
-    AMS::Sketchup.add_observer(MySketchupObserver.new)
+AMS::Sketchup.add_observer(MySketchupObserver.new)
 ```
 
 ## Requirements
@@ -119,7 +121,7 @@ When registering your extension, have it load the <tt>main_entry</tt> file:
 
 ## Installation Instructions
 
-AMS Library releases are obtained from <i>Extension Warehouse</i> or <i>SketchUcation Extension Store</i>.
+AMS Library releases are available at <i>Extension Warehouse</i> or <i>SketchUcation Extension Store</i>.
 
 To download from the repository, copy <tt>ams_Lib</tt> folder and <tt>ams_Lib.rb</tt>,
 located at <tt>RubyExtension/</tt>, to your plugins folder.

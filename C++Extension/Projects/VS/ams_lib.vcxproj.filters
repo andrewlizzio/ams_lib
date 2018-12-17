@@ -12,7 +12,7 @@
       <UniqueIdentifier>{a9bea5cc-0816-4f5f-b296-34d8d11dc172}</UniqueIdentifier>
     </Filter>
     <Filter Include="utils">
-      <UniqueIdentifier>{55b440cb-3c62-415c-b729-99f7967bb41f}</UniqueIdentifier>
+      <UniqueIdentifier>{9daa586f-9c0b-405f-9ebe-f91b6c09e19d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,33 +30,6 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\main\ams_multi_line_text.cpp">
       <Filter>main</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\geom.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\geom_bounding_box.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\geom_color.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\geom_quaternion.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\geom_transformation.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\geom_vector3d.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\geom_vector4d.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\ruby_util.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\utils\thread_hive.cpp">
-      <Filter>utils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\win\ams_cursor.cpp">
       <Filter>win</Filter>
@@ -112,6 +85,33 @@
     <ClCompile Include="..\..\Source\win\stdafx.cpp">
       <Filter>win</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_bounding_box.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_color.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_quaternion.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_transformation.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_vector3d.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\geom_vector4d.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\ruby_util.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\thread_hive.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\main\ams.h">
@@ -125,48 +125,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\main\ams_multi_line_text.h">
       <Filter>main</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\common.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\dynamic_array.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\fast_queue.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom_bounding_box.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom_box_space.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom_color.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom_quaternion.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom_transformation.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom_vector3d.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\geom_vector4d.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\ruby_prep.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\ruby_util.h">
-      <Filter>utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\utils\thread_hive.h">
-      <Filter>utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\win\ams_cursor.h">
       <Filter>win</Filter>
@@ -221,6 +179,51 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\win\targetver.h">
       <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\buffer.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\common.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\dynamic_array.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\fast_queue.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_bounding_box.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_box_space.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_color.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_quaternion.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_transformation.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_vector3d.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\geom_vector4d.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\ruby_prep.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\ruby_util.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\thread_hive.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

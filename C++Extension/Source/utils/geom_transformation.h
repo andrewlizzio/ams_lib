@@ -11,7 +11,7 @@
 
 #include "geom_vector4d.h"
 
-Geom::Transformation operator * (const Geom::Transformation& tP, const Geom::Transformation& tC);
+Geom::Transformation operator * (const Geom::Transformation& a, const Geom::Transformation& b);
 Geom::Vector4d operator * (const Geom::Transformation& t, const Geom::Vector4d& v);
 
 class Geom::Transformation
@@ -36,8 +36,13 @@ public:
     Transformation(const treal* matrix);
     Transformation(const Geom::Vector3d& origin, const Geom::Vector3d& normal, treal angle);
 
+    static Transformation rotate(const Geom::Vector3d& axis, treal angle);
+    static Transformation rotatex(treal angle);
+    static Transformation rotatey(treal angle);
+    static Transformation rotatez(treal angle);
+
     // Operators
-    friend Geom::Transformation (::operator *) (const Geom::Transformation& tP, const Geom::Transformation& tC);
+    friend Geom::Transformation (::operator *) (const Geom::Transformation& a, const Geom::Transformation& b);
     friend Geom::Vector4d (::operator *) (const Geom::Transformation& t, const Geom::Vector4d& v);
 
     Transformation& operator = (const Transformation& other);
@@ -58,11 +63,9 @@ public:
     Transformation uniform_normal_transition_to(const Transformation& other, treal ratio) const;
     Transformation uniform_transition_to(const Transformation& other, treal ratio) const;
     Vector3d transform_vector(const Vector3d& v) const;
-    Vector3d rotate_vector(const Vector3d& v) const;
+    Vector3d transform_vector(const Vector3d& v, treal det) const;
     Vector3d transform_vector2(const Vector3d& v) const;
-    Vector3d rotate_vector2(const Vector3d& v) const;
-    Vector3d transform_vector3(const Vector3d& v, treal det) const;
-    Vector3d rotate_vector3(const Vector3d& v, treal det) const;
+    Vector3d rotate_vector(const Vector3d& v) const;
 
     treal get_determinant() const;
     void extract_w_factor();

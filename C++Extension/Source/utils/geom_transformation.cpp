@@ -150,6 +150,130 @@ Geom::Transformation::Transformation(const Geom::Vector3d& origin, const Geom::V
     m_origin = transform_vector(origin.reverse());
 }
 
+Geom::Transformation Geom::Transformation::rotate(const Geom::Vector3d& axis, treal angle) {
+    treal m[16];
+
+    treal cosa = cos(angle);
+    treal sina = sin(angle);
+    treal cosar = (treal)(1.0) - cosa;
+
+    treal q00 = axis[0] * axis[0];
+    treal q01 = axis[0] * axis[1];
+    treal q02 = axis[0] * axis[2];
+    treal q11 = axis[1] * axis[1];
+    treal q12 = axis[1] * axis[2];
+    treal q22 = axis[2] * axis[2];
+
+    m[0] = q00 * cosar + cosa;
+    m[1] = q01 * cosar + axis.m_z * sina;
+    m[2] = q02 * cosar - axis.m_y * sina;
+    m[3] = 0.0;
+
+    m[4] = q01 * cosar - axis.m_z * sina;
+    m[5] = q11 * cosar + cosa;
+    m[6] = q12 * cosar + axis.m_x * sina;
+    m[7] = 0.0;
+
+    m[8] = q02 * cosar + axis.m_y * sina;
+    m[9] = q12 * cosar - axis.m_x * sina;
+    m[10] = q22 * cosar + cosa;
+    m[11] = 0.0;
+
+    m[12] = 0.0;
+    m[13] = 0.0;
+    m[14] = 0.0;
+    m[15] = 1.0;
+
+    return Geom::Transformation(m);
+}
+
+Geom::Transformation Geom::Transformation::rotatex(treal angle) {
+    treal m[16];
+
+    treal cosa = cos(angle);
+    treal sina = sin(angle);
+
+    m[0] = 1.0;
+    m[1] = 0.0;
+    m[2] = 0.0;
+    m[3] = 0.0;
+
+    m[4] = 0.0;
+    m[5] = cosa;
+    m[6] = sina;
+    m[7] = 0.0;
+
+    m[8] = 0.0;
+    m[9] = -sina;
+    m[10] = cosa;
+    m[11] = 0.0;
+
+    m[12] = 0.0;
+    m[13] = 0.0;
+    m[14] = 0.0;
+    m[15] = 1.0;
+
+    return Geom::Transformation(m);
+}
+
+Geom::Transformation Geom::Transformation::rotatey(treal angle) {
+    treal m[16];
+
+    treal cosa = cos(angle);
+    treal sina = sin(angle);
+
+    m[0] = cosa;
+    m[1] = 0.0;
+    m[2] = -sina;
+    m[3] = 0.0;
+
+    m[4] = 0.0;
+    m[5] = 1.0;
+    m[6] = 0.0;
+    m[7] = 0.0;
+
+    m[8] = sina;
+    m[9] = 0.0;
+    m[10] = cosa;
+    m[11] = 0.0;
+
+    m[12] = 0.0;
+    m[13] = 0.0;
+    m[14] = 0.0;
+    m[15] = 1.0;
+
+    return Geom::Transformation(m);
+}
+
+Geom::Transformation Geom::Transformation::rotatez(treal angle) {
+    treal m[16];
+
+    treal cosa = cos(angle);
+    treal sina = sin(angle);
+
+    m[0] = cosa;
+    m[1] = sina;
+    m[2] = 0.0;
+    m[3] = 0.0;
+
+    m[4] = -sina;
+    m[5] = cosa;
+    m[6] = 0.0;
+    m[7] = 0.0;
+
+    m[8] = 0.0;
+    m[9] = 0.0;
+    m[10] = 1.0;
+    m[11] = 0.0;
+
+    m[12] = 0.0;
+    m[13] = 0.0;
+    m[14] = 0.0;
+    m[15] = 1.0;
+
+    return Geom::Transformation(m);
+}
+
 
 /*
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -175,36 +299,36 @@ const Geom::Vector4d& Geom::Transformation::operator [] (const int index) const 
     return (&m_xaxis)[index];
 }
 
-Geom::Transformation operator * (const Geom::Transformation& tP, const Geom::Transformation& tC) {
+Geom::Transformation operator * (const Geom::Transformation& a, const Geom::Transformation& b) {
     return Geom::Transformation(
         Geom::Vector4d(
-            tP[0][0] * tC[0][0] + tP[0][1] * tC[1][0] + tP[0][2] * tC[2][0] + tP[0][3] * tC[3][0],
-            tP[0][0] * tC[0][1] + tP[0][1] * tC[1][1] + tP[0][2] * tC[2][1] + tP[0][3] * tC[3][1],
-            tP[0][0] * tC[0][2] + tP[0][1] * tC[1][2] + tP[0][2] * tC[2][2] + tP[0][3] * tC[3][2],
-            tP[0][0] * tC[0][3] + tP[0][1] * tC[1][3] + tP[0][2] * tC[2][3] + tP[0][3] * tC[3][3]),
+            a[0][0] * b[0][0] + a[1][0] * b[0][1] + a[2][0] * b[0][2] + a[3][0] * b[0][3],
+            a[0][1] * b[0][0] + a[1][1] * b[0][1] + a[2][1] * b[0][2] + a[3][1] * b[0][3],
+            a[0][2] * b[0][0] + a[1][2] * b[0][1] + a[2][2] * b[0][2] + a[3][2] * b[0][3],
+            a[0][3] * b[0][0] + a[1][3] * b[0][1] + a[2][3] * b[0][2] + a[3][3] * b[0][3]),
         Geom::Vector4d(
-            tP[1][0] * tC[0][0] + tP[1][1] * tC[1][0] + tP[1][2] * tC[2][0] + tP[1][3] * tC[3][0],
-            tP[1][0] * tC[0][1] + tP[1][1] * tC[1][1] + tP[1][2] * tC[2][1] + tP[1][3] * tC[3][1],
-            tP[1][0] * tC[0][2] + tP[1][1] * tC[1][2] + tP[1][2] * tC[2][2] + tP[1][3] * tC[3][2],
-            tP[1][0] * tC[0][3] + tP[1][1] * tC[1][3] + tP[1][2] * tC[2][3] + tP[1][3] * tC[3][3]),
+            a[0][0] * b[1][0] + a[1][0] * b[1][1] + a[2][0] * b[1][2] + a[3][0] * b[1][3],
+            a[0][1] * b[1][0] + a[1][1] * b[1][1] + a[2][1] * b[1][2] + a[3][1] * b[1][3],
+            a[0][2] * b[1][0] + a[1][2] * b[1][1] + a[2][2] * b[1][2] + a[3][2] * b[1][3],
+            a[0][3] * b[1][0] + a[1][3] * b[1][1] + a[2][3] * b[1][2] + a[3][3] * b[1][3]),
         Geom::Vector4d(
-            tP[2][0] * tC[0][0] + tP[2][1] * tC[1][0] + tP[2][2] * tC[2][0] + tP[2][3] * tC[3][0],
-            tP[2][0] * tC[0][1] + tP[2][1] * tC[1][1] + tP[2][2] * tC[2][1] + tP[2][3] * tC[3][1],
-            tP[2][0] * tC[0][2] + tP[2][1] * tC[1][2] + tP[2][2] * tC[2][2] + tP[2][3] * tC[3][2],
-            tP[2][0] * tC[0][3] + tP[2][1] * tC[1][3] + tP[2][2] * tC[2][3] + tP[2][3] * tC[3][3]),
+            a[0][0] * b[2][0] + a[1][0] * b[2][1] + a[2][0] * b[2][2] + a[3][0] * b[2][3],
+            a[0][1] * b[2][0] + a[1][1] * b[2][1] + a[2][1] * b[2][2] + a[3][1] * b[2][3],
+            a[0][2] * b[2][0] + a[1][2] * b[2][1] + a[2][2] * b[2][2] + a[3][2] * b[2][3],
+            a[0][3] * b[2][0] + a[1][3] * b[2][1] + a[2][3] * b[2][2] + a[3][3] * b[2][3]),
         Geom::Vector4d(
-            tP[3][0] * tC[0][0] + tP[3][1] * tC[1][0] + tP[3][2] * tC[2][0] + tP[3][3] * tC[3][0],
-            tP[3][0] * tC[0][1] + tP[3][1] * tC[1][1] + tP[3][2] * tC[2][1] + tP[3][3] * tC[3][1],
-            tP[3][0] * tC[0][2] + tP[3][1] * tC[1][2] + tP[3][2] * tC[2][2] + tP[3][3] * tC[3][2],
-            tP[3][0] * tC[0][3] + tP[3][1] * tC[1][3] + tP[3][2] * tC[2][3] + tP[3][3] * tC[3][3]));
+            a[0][0] * b[3][0] + a[1][0] * b[3][1] + a[2][0] * b[3][2] + a[3][0] * b[3][3],
+            a[0][1] * b[3][0] + a[1][1] * b[3][1] + a[2][1] * b[3][2] + a[3][1] * b[3][3],
+            a[0][2] * b[3][0] + a[1][2] * b[3][1] + a[2][2] * b[3][2] + a[3][2] * b[3][3],
+            a[0][3] * b[3][0] + a[1][3] * b[3][1] + a[2][3] * b[3][2] + a[3][3] * b[3][3]));
 }
 
 Geom::Vector4d operator * (const Geom::Transformation& t, const Geom::Vector4d& v) {
     return Geom::Vector4d(
-        t[0][0] * v[0] + t[0][1] * v[1] + t[0][2] * v[2] + t[0][3] * v[3],
-        t[1][0] * v[0] + t[1][1] * v[1] + t[1][2] * v[2] + t[1][3] * v[3],
-        t[2][0] * v[0] + t[2][1] * v[1] + t[2][2] * v[2] + t[2][3] * v[3],
-        t[3][0] * v[0] + t[3][1] * v[1] + t[3][2] * v[2] + t[3][3] * v[3]);
+        t[0][0] * v[0] + t[1][0] * v[1] + t[2][0] * v[2] + t[3][0] * v[3],
+        t[0][1] * v[0] + t[1][1] * v[1] + t[2][1] * v[2] + t[3][1] * v[3],
+        t[0][2] * v[0] + t[1][2] * v[1] + t[2][2] * v[2] + t[3][2] * v[3],
+        t[0][3] * v[0] + t[1][3] * v[1] + t[2][3] * v[2] + t[3][3] * v[3]);
 }
 
 
@@ -427,7 +551,7 @@ Geom::Transformation Geom::Transformation::rotate_xaxis_to(const Vector3d& dir) 
     Transformation t2(dir2, yaxis2, normal);
     // Unrotate matrix with respect to t1.
     // Then rotate the result with respect to t2.
-    Transformation result(((*this) * t1.inverse()) * t2);
+    Transformation result(t2 * t1.inverse() * (*this));
     result.m_origin = m_origin;
 
     return result;
@@ -458,7 +582,7 @@ Geom::Transformation Geom::Transformation::rotate_yaxis_to(const Vector3d& dir) 
     Transformation t2(dir2, yaxis2, normal);
     // Unrotate matrix with respect to t1.
     // Then rotate the result with respect to t2.
-    Transformation result(((*this) * t1.inverse()) * t2);
+    Transformation result(t2 * t1.inverse() * (*this));
     result.m_origin = m_origin;
 
     return result;
@@ -489,7 +613,7 @@ Geom::Transformation Geom::Transformation::rotate_zaxis_to(const Vector3d& dir) 
     Transformation t2(dir2, yaxis2, normal);
     // Unrotate matrix with respect to t1.
     // Then rotate the result with respect to t2.
-    Transformation result(((*this) * t1.inverse()) * t2);
+    Transformation result(t2 * t1.inverse() * (*this));
     result.m_origin = m_origin;
 
     return result;
@@ -599,54 +723,36 @@ Geom::Transformation Geom::Transformation::uniform_transition_to(const Transform
 
 Geom::Vector3d Geom::Transformation::transform_vector(const Vector3d& v) const {
     treal det;
-    if (fabs(m_origin.m_w) > M_EPSILON)
-        det = (treal)(1.0) / m_origin.m_w;
+    if (fabs(m_origin[3]) > M_EPSILON)
+        det = (treal)(1.0) / m_origin[3];
     else
         det = (treal)(0.0);
-    return Vector3d(
-        (v.m_x * m_xaxis.m_x + v.m_y * m_yaxis.m_x + v.m_z * m_zaxis.m_x + m_origin.m_x) * det,
-        (v.m_x * m_xaxis.m_y + v.m_y * m_yaxis.m_y + v.m_z * m_zaxis.m_y + m_origin.m_y) * det,
-        (v.m_x * m_xaxis.m_z + v.m_y * m_yaxis.m_z + v.m_z * m_zaxis.m_z + m_origin.m_z) * det);
+
+    return Geom::Vector3d(
+        (m_xaxis[0] * v[0] + m_yaxis[0] * v[1] + m_zaxis[0] * v[2] + m_origin[0]) * det,
+        (m_xaxis[1] * v[0] + m_yaxis[1] * v[1] + m_zaxis[1] * v[2] + m_origin[1]) * det,
+        (m_xaxis[2] * v[0] + m_yaxis[2] * v[1] + m_zaxis[2] * v[2] + m_origin[2]) * det);
 }
 
 Geom::Vector3d Geom::Transformation::rotate_vector(const Vector3d& v) const {
-    treal det;
-    if (fabs(m_origin.m_w) > M_EPSILON)
-        det = (treal)(1.0) / m_origin.m_w;
-    else
-        det = (treal)(0.0);
-    return Vector3d(
-        (v.m_x * m_xaxis.m_x + v.m_y * m_yaxis.m_x + v.m_z * m_zaxis.m_x) * det,
-        (v.m_x * m_xaxis.m_y + v.m_y * m_yaxis.m_y + v.m_z * m_zaxis.m_y) * det,
-        (v.m_x * m_xaxis.m_z + v.m_y * m_yaxis.m_z + v.m_z * m_zaxis.m_z) * det);
+    return Geom::Vector3d(
+        m_xaxis[0] * v[0] + m_yaxis[0] * v[1] + m_zaxis[0] * v[2],
+        m_xaxis[1] * v[0] + m_yaxis[1] * v[1] + m_zaxis[1] * v[2],
+        m_xaxis[2] * v[0] + m_yaxis[2] * v[1] + m_zaxis[2] * v[2]);
 }
 
 Geom::Vector3d Geom::Transformation::transform_vector2(const Vector3d& v) const {
-    return Vector3d(
-        (v.m_x * m_xaxis.m_x + v.m_y * m_yaxis.m_x + v.m_z * m_zaxis.m_x + m_origin.m_x),
-        (v.m_x * m_xaxis.m_y + v.m_y * m_yaxis.m_y + v.m_z * m_zaxis.m_y + m_origin.m_y),
-        (v.m_x * m_xaxis.m_z + v.m_y * m_yaxis.m_z + v.m_z * m_zaxis.m_z + m_origin.m_z));
+    return Geom::Vector3d(
+        m_xaxis[0] * v[0] + m_yaxis[0] * v[1] + m_zaxis[0] * v[2] + m_origin[0],
+        m_xaxis[1] * v[0] + m_yaxis[1] * v[1] + m_zaxis[1] * v[2] + m_origin[1],
+        m_xaxis[2] * v[0] + m_yaxis[2] * v[1] + m_zaxis[2] * v[2] + m_origin[2]);
 }
 
-Geom::Vector3d Geom::Transformation::rotate_vector2(const Vector3d& v) const {
-    return Vector3d(
-        (v.m_x * m_xaxis.m_x + v.m_y * m_yaxis.m_x + v.m_z * m_zaxis.m_x),
-        (v.m_x * m_xaxis.m_y + v.m_y * m_yaxis.m_y + v.m_z * m_zaxis.m_y),
-        (v.m_x * m_xaxis.m_z + v.m_y * m_yaxis.m_z + v.m_z * m_zaxis.m_z));
-}
-
-Geom::Vector3d Geom::Transformation::transform_vector3(const Vector3d& v, treal det) const {
-    return Vector3d(
-        (v.m_x * m_xaxis.m_x + v.m_y * m_yaxis.m_x + v.m_z * m_zaxis.m_x + m_origin.m_x) * det,
-        (v.m_x * m_xaxis.m_y + v.m_y * m_yaxis.m_y + v.m_z * m_zaxis.m_y + m_origin.m_y) * det,
-        (v.m_x * m_xaxis.m_z + v.m_y * m_yaxis.m_z + v.m_z * m_zaxis.m_z + m_origin.m_z) * det);
-}
-
-Geom::Vector3d Geom::Transformation::rotate_vector3(const Vector3d& v, treal det) const {
-    return Vector3d(
-        (v.m_x * m_xaxis.m_x + v.m_y * m_yaxis.m_x + v.m_z * m_zaxis.m_x) * det,
-        (v.m_x * m_xaxis.m_y + v.m_y * m_yaxis.m_y + v.m_z * m_zaxis.m_y) * det,
-        (v.m_x * m_xaxis.m_z + v.m_y * m_yaxis.m_z + v.m_z * m_zaxis.m_z) * det);
+Geom::Vector3d Geom::Transformation::transform_vector(const Vector3d& v, treal det) const {
+    return Geom::Vector3d(
+        (m_xaxis[0] * v[0] + m_yaxis[0] * v[1] + m_zaxis[0] * v[2] + m_origin[0]) * det,
+        (m_xaxis[1] * v[0] + m_yaxis[1] * v[1] + m_zaxis[1] * v[2] + m_origin[1]) * det,
+        (m_xaxis[2] * v[0] + m_yaxis[2] * v[1] + m_zaxis[2] * v[2] + m_origin[2]) * det);
 }
 
 treal Geom::Transformation::get_determinant() const {

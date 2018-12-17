@@ -4,6 +4,7 @@
 /C++Extension/Projects/xCode/Release
 /C++Extension/Projects/xCode/Debug
 
+*.vspx
 *.user
 *.DS_Store
 .yardoc

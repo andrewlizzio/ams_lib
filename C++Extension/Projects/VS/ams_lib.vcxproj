@@ -638,6 +638,7 @@
     <ClInclude Include="..\..\Source\main\ams_geometry.h" />
     <ClInclude Include="..\..\Source\main\ams_group.h" />
     <ClInclude Include="..\..\Source\main\ams_multi_line_text.h" />
+    <ClInclude Include="..\..\Source\utils\buffer.h" />
     <ClInclude Include="..\..\Source\utils\common.h" />
     <ClInclude Include="..\..\Source\utils\dynamic_array.h" />
     <ClInclude Include="..\..\Source\utils\fast_queue.h" />

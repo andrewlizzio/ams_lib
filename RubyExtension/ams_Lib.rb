@@ -10,13 +10,13 @@ module AMS
 
     MAJOR_VERSION = 3.freeze
     MINOR_VERSION = 6.freeze
-    PATCH_VERSION = 0.freeze
-    DEVEL_VERSION = 7.freeze
+    PATCH_VERSION = 1.freeze
+    DEVEL_VERSION = 0.freeze
 
     VERSION_INT = (MAJOR_VERSION * 1000 + MINOR_VERSION * 100 + PATCH_VERSION * 10 + DEVEL_VERSION).to_i
     VERSION = sprintf("%d.%d.%d%c", MAJOR_VERSION, MINOR_VERSION, PATCH_VERSION, DEVEL_VERSION + 0x61).freeze
 
-    RELEASE_DATE = 'November 15, 2018'.freeze
+    RELEASE_DATE = 'December 17, 2018'.freeze
 
 
     # Create the extension.

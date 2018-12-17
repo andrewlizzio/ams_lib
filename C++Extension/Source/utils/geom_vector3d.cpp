@@ -76,6 +76,14 @@ Geom::Vector3d operator * (Geom::Vector3d v, treal scalar) {
     return v;
 }
 
+Geom::Vector3d operator / (Geom::Vector3d v, treal scalar) {
+    treal is = (treal)(1.0) / scalar;
+    v.m_x *= is;
+    v.m_y *= is;
+    v.m_z *= is;
+    return v;
+}
+
 Geom::Vector3d operator * (treal scalar, Geom::Vector3d v) {
     v.m_x *= scalar;
     v.m_y *= scalar;
@@ -118,6 +126,28 @@ Geom::Vector3d& Geom::Vector3d::operator *= (treal scalar) {
     m_x *= scalar;
     m_y *= scalar;
     m_z *= scalar;
+    return *this;
+}
+
+Geom::Vector3d& Geom::Vector3d::operator /= (treal scalar) {
+    treal is = (treal)(1.0) / scalar;
+    m_x *= is;
+    m_y *= is;
+    m_z *= is;
+    return *this;
+}
+
+Geom::Vector3d& Geom::Vector3d::operator *= (const Vector3d& other) {
+    m_x *= other.m_x;
+    m_y *= other.m_y;
+    m_z *= other.m_z;
+    return *this;
+}
+
+Geom::Vector3d& Geom::Vector3d::operator /= (const Vector3d& other) {
+    m_x /= other.m_x;
+    m_y /= other.m_y;
+    m_z /= other.m_z;
     return *this;
 }
 

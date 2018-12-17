@@ -29,8 +29,10 @@ ThreadHive::ThreadHive(unsigned int num_bees) :
     m_bees = (HANDLE*)malloc(sizeof(HANDLE) * m_num_bees);
     memset(m_bees, 0, sizeof(HANDLE) * m_num_bees);
 
-    InitializeCriticalSectionAndSpinCount(&m_queue_mutex, 0x00000400);
-    InitializeCriticalSectionAndSpinCount(&m_user_mutex, 0x00000400);
+    //InitializeCriticalSectionAndSpinCount(&m_queue_mutex, 0x00000400);
+    //InitializeCriticalSectionAndSpinCount(&m_user_mutex, 0x00000400);
+    InitializeCriticalSection(&m_queue_mutex);
+    InitializeCriticalSection(&m_user_mutex);
     InitializeCriticalSection(&m_sem_mutex);
     InitializeConditionVariable(&m_all_idle_cond);
     InitializeConditionVariable(&m_sem_cond);

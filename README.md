@@ -137,9 +137,9 @@ AMS::Sketchup.get_main_window
 
 ## Requirements
 
-* Microsoft Windows XP, Vista, 7, 8, 10.
-* Mac OS X 10.6+ (Limited)
-* SketchUp 6 or later.
+* Microsoft Windows XP or later
+* Mac OS X 10.8 or later, 64bit only
+* SketchUp 6 or later
 
 
 ## Installation Instructions

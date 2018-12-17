@@ -306,47 +306,50 @@ void Geom::BoxSpace<T>::partition_aspects(unsigned int node_index, const char ax
         m_items[m2] = t;
     }
 
-    // Make this node a leaf node if left and right nodes are empty
-    if (m1 != node.m_head || m2 != node.m_tail) {
-        Node* znode;
+    // Make this node a leaf node if less than two nodes are filled.
+    if ((node.m_head == m1 && (m1 == m2 || m2 == node.m_tail)) ||
+        (node.m_tail == m2 && (node.m_head == m1 || m1 == m2)))
+        return;
 
-        // Allocate space for nodes if necessary
-        if (m_num_nodes + 3 > m_nodes_capacity) {
-            znode = m_nodes;
-            m_nodes_capacity <<= 1;
-            m_nodes = reinterpret_cast<Node*>(malloc(sizeof(Node) * m_nodes_capacity));
-            memcpy(m_nodes, znode, sizeof(Node) * m_num_nodes);
-            free(znode);
-        }
+    // Otherwise, create child nodes
+    Node* znode;
 
-        m_nodes[node_index].m_next = m_num_nodes;
-
-        znode = m_nodes + m_num_nodes;
-        znode->m_head = node.m_head;
-        znode->m_tail = m1;
-        znode->m_next = 0;
-        znode->m_bb.clear();
-        for (i = node.m_head; i < m1; ++i)
-            znode->m_bb.add(m_items[i].m_bb);
-
-        ++znode;
-        znode->m_head = m1;
-        znode->m_tail = m2;
-        znode->m_next = 0;
-        znode->m_bb.clear();
-        for (i = m1; i < m2; ++i)
-            znode->m_bb.add(m_items[i].m_bb);
-
-        ++znode;
-        znode->m_head = m2;
-        znode->m_tail = node.m_tail;
-        znode->m_next = 0;
-        znode->m_bb.clear();
-        for (i = m2; i < node.m_tail; ++i)
-            znode->m_bb.add(m_items[i].m_bb);
-
-        m_num_nodes += 3;
+    // Allocate space for nodes if necessary
+    if (m_num_nodes + 3 > m_nodes_capacity) {
+        znode = m_nodes;
+        m_nodes_capacity <<= 1;
+        m_nodes = reinterpret_cast<Node*>(malloc(sizeof(Node) * m_nodes_capacity));
+        memcpy(m_nodes, znode, sizeof(Node) * m_num_nodes);
+        free(znode);
     }
+
+    m_nodes[node_index].m_next = m_num_nodes;
+
+    znode = m_nodes + m_num_nodes;
+    znode->m_head = node.m_head;
+    znode->m_tail = m1;
+    znode->m_next = 0;
+    znode->m_bb.clear();
+    for (i = node.m_head; i < m1; ++i)
+        znode->m_bb.add(m_items[i].m_bb);
+
+    ++znode;
+    znode->m_head = m1;
+    znode->m_tail = m2;
+    znode->m_next = 0;
+    znode->m_bb.clear();
+    for (i = m1; i < m2; ++i)
+        znode->m_bb.add(m_items[i].m_bb);
+
+    ++znode;
+    znode->m_head = m2;
+    znode->m_tail = node.m_tail;
+    znode->m_next = 0;
+    znode->m_bb.clear();
+    for (i = m2; i < node.m_tail; ++i)
+        znode->m_bb.add(m_items[i].m_bb);
+
+    m_num_nodes += 3;
 }
 
 template <class T>

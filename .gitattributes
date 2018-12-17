@@ -14,6 +14,7 @@
 # Custom for Visual Studio
 *.cs        text eol=crlf diff=csharp
 *.sln       text eol=crlf merge=union
+*.vcxproj   text eol=crlf merge=union
 *.csproj    text eol=crlf merge=union
 *.vbproj    text eol=crlf merge=union
 *.fsproj    text eol=crlf merge=union
@@ -39,3 +40,7 @@
 *.bundle    binary
 *.dll       binary
 *.dylib     binary
+
+# Remove third party from linguist
+/C++Extension/ThirdParty/* linguist-vendored
+/RubyExtension/ams_Lib/thirdparty/* linguist-vendored

@@ -17,6 +17,7 @@
 
 VALUE RU::SU_SKETCHUP;
 VALUE RU::SU_GEOM;
+VALUE RU::SU_MODEL;
 VALUE RU::SU_CAMERA;
 VALUE RU::SU_COLOR;
 VALUE RU::SU_POINT3D;
@@ -665,6 +666,7 @@ void RU::init_ruby() {
     SU_DRAWING_ELEMENT = rb_const_get_at(SU_SKETCHUP, rb_intern("Drawingelement"));
     SU_COMPONENT_INSTANCE = rb_const_get_at(SU_SKETCHUP, rb_intern("ComponentInstance"));
     SU_COMPONENT_DEFINITION = rb_const_get_at(SU_SKETCHUP, rb_intern("ComponentDefinition"));
+    SU_MODEL = rb_const_get_at(SU_SKETCHUP, rb_intern("Model"));
     SU_CAMERA = rb_const_get_at(SU_SKETCHUP, rb_intern("Camera"));
     SU_TEXT = rb_const_get_at(SU_SKETCHUP, rb_intern("Text"));
     SU_FACE = rb_const_get_at(SU_SKETCHUP, rb_intern("Face"));
@@ -858,7 +860,7 @@ void RU::init_ruby() {
     // Obtain SU version for the future use
     VALUE v_str_version = rb_funcall(SU_SKETCHUP, INTERN_VERSION, 0);
     VALUE v_int_version = rb_funcall(v_str_version, INTERN_TO_I, 0);
-    su_version = FIX2INT(v_int_version);
+    su_version = RU::value_to_int(v_int_version);
 
     // Determine if SU is 64bit
     su_b64bit = (rb_respond_to(SU_SKETCHUP, INTERN_IS_64BIT) == 1 && rb_funcall(SU_SKETCHUP, INTERN_IS_64BIT, 0) == Qtrue);
@@ -873,13 +875,13 @@ void RU::init_ruby() {
         SU_FACE_POINT_NOT_ON_PLANE = rb_const_get_at(SU_FACE, rb_intern("PointNotOnPlane"));
     }
     else {
-        SU_FACE_POINT_UNKNOWN = INT2FIX(0);
-        SU_FACE_POINT_INSIDE = INT2FIX(1);
-        SU_FACE_POINT_ON_VERTEX = INT2FIX(2);
-        SU_FACE_POINT_ON_EDGE = INT2FIX(4);
-        SU_FACE_POINT_ON_FACE = INT2FIX(8);
-        SU_FACE_POINT_ON_OUTSIDE = INT2FIX(16);
-        SU_FACE_POINT_NOT_ON_PLANE = INT2FIX(32);
+        SU_FACE_POINT_UNKNOWN = RU::to_value(0);
+        SU_FACE_POINT_INSIDE = RU::to_value(1);
+        SU_FACE_POINT_ON_VERTEX = RU::to_value(2);
+        SU_FACE_POINT_ON_EDGE = RU::to_value(4);
+        SU_FACE_POINT_ON_FACE = RU::to_value(8);
+        SU_FACE_POINT_ON_OUTSIDE = RU::to_value(16);
+        SU_FACE_POINT_NOT_ON_PLANE = RU::to_value(32);
     }
 
     SU_GL_POINTS = rb_const_get(rb_cObject, rb_intern("GL_POINTS"));

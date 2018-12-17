@@ -464,7 +464,7 @@ VALUE AMS::Group::c_split(VALUE self, VALUE v_entity, const Geom::Vector3d& poin
     pl_tra = Geom::Transformation(center + normal.scale(x), normal);
 
     // Compute local transformation of plane group
-    pl_tra_loc = pl_tra * gtra.inverse();
+    pl_tra_loc = gtra.inverse() * pl_tra;
 
     // Obtain normal point and direction
     pl_tra_loc.get_normal_origin(loc_point);

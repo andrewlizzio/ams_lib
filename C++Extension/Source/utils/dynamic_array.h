@@ -20,6 +20,7 @@ public:
     unsigned int m_size;
 
     void grow();
+    void ensure_capacity(unsigned int s);
 
     DynamicArray();
     DynamicArray(unsigned int init_capacity);
@@ -124,6 +125,20 @@ template <class T>
 void DynamicArray<T>::grow() {
     if (m_size == m_capacity) {
         m_capacity <<= 1;
+        T* orig_data = m_data;
+
+        m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+        memcpy(m_data, orig_data, sizeof(T) * m_size);
+
+        free(orig_data);
+    }
+}
+
+template <class T>
+void DynamicArray<T>::ensure_capacity(unsigned int s) {
+    if (m_capacity < s) {
+        while (m_capacity < s)
+            m_capacity <<= 1;
         T* orig_data = m_data;
 
         m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));

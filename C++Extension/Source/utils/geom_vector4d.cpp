@@ -88,6 +88,15 @@ Geom::Vector4d operator * (Geom::Vector4d v, treal scalar) {
     return v;
 }
 
+Geom::Vector4d operator / (Geom::Vector4d v, treal scalar) {
+    treal is = (treal)(1.0) / scalar;
+    v.m_x *= is;
+    v.m_y *= is;
+    v.m_z *= is;
+    v.m_w *= is;
+    return v;
+}
+
 Geom::Vector4d operator * (treal scalar, Geom::Vector4d v) {
     v.m_x *= scalar;
     v.m_y *= scalar;
@@ -116,6 +125,30 @@ Geom::Vector4d& Geom::Vector4d::operator *= (treal scalar) {
     m_x *= scalar;
     m_y *= scalar;
     m_z *= scalar;
+    return *this;
+}
+
+Geom::Vector4d& Geom::Vector4d::operator /= (treal scalar) {
+    treal is = (treal)(1.0) / scalar;
+    m_x *= is;
+    m_y *= is;
+    m_z *= is;
+    return *this;
+}
+
+Geom::Vector4d& Geom::Vector4d::operator *= (const Vector4d& other) {
+    m_x *= other.m_x;
+    m_y *= other.m_y;
+    m_z *= other.m_z;
+    m_w *= other.m_w;
+    return *this;
+}
+
+Geom::Vector4d& Geom::Vector4d::operator /= (const Vector4d& other) {
+    m_x /= other.m_x;
+    m_y /= other.m_y;
+    m_z /= other.m_z;
+    m_w /= other.m_w;
     return *this;
 }
 

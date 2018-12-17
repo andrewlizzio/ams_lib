@@ -20,6 +20,7 @@
 #include "geom_bounding_box.h"
 #include "geom_box_space.h"
 
+#include "buffer.h"
 #include "dynamic_array.h"
 #include "fast_queue.h"
 #include "thread_hive.h"
@@ -28,6 +29,7 @@ namespace RU {
     // Variables
     extern VALUE SU_SKETCHUP;
     extern VALUE SU_GEOM;
+    extern VALUE SU_MODEL;
     extern VALUE SU_CAMERA;
     extern VALUE SU_COLOR;
     extern VALUE SU_POINT3D;

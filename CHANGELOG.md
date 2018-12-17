@@ -1,3 +1,6 @@
+## 3.6.1 - December 17, 2018
+- Updated target platforms and updated thirdparty
+
 ## 3.6.0 - November 15, 2018
 - Added <tt>AMS::SU_MAJOR_VERSION</tt>
 - Added <tt>AMS::SU_PLUGINS_LOCATION</tt>

@@ -59,16 +59,6 @@ Geom::Vector3d::Vector3d(const treal* values) :
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-bool operator == (const Geom::Vector3d& lhs, const Geom::Vector3d& rhs) {
-    return (fabs(lhs.m_x - rhs.m_x) < M_EPSILON &&
-        fabs(lhs.m_y - rhs.m_y) < M_EPSILON &&
-        fabs(lhs.m_z - rhs.m_z) < M_EPSILON);
-}
-
-bool operator != (const Geom::Vector3d& lhs, const Geom::Vector3d& rhs) {
-    return !(lhs == rhs);
-}
-
 Geom::Vector3d operator * (Geom::Vector3d v, treal scalar) {
     v.m_x *= scalar;
     v.m_y *= scalar;
@@ -112,14 +102,6 @@ Geom::Vector3d& Geom::Vector3d::operator =(const Vector3d& other) {
         m_z = other.m_z;
     }
     return *this;
-}
-
-treal& Geom::Vector3d::operator [] (const int index) {
-    return (&m_x)[index];
-}
-
-const treal& Geom::Vector3d::operator [] (const int index) const {
-    return (&m_x)[index];
 }
 
 Geom::Vector3d& Geom::Vector3d::operator *= (treal scalar) {
@@ -191,10 +173,6 @@ Geom::Vector3d& Geom::Vector3d::set_length(treal length) {
     return *this;
 }
 
-Geom::Vector3d& Geom::Vector3d::normalize_self() {
-    return set_length(1.0);
-}
-
 Geom::Vector3d Geom::Vector3d::normalize() const {
     treal mag_sq = m_x * m_x + m_y * m_y + m_z * m_z;
     if (mag_sq > M_EPSILON_SQ) {
@@ -210,10 +188,6 @@ Geom::Vector3d& Geom::Vector3d::scale_self(treal s) {
     m_y *= s;
     m_z *= s;
     return *this;
-}
-
-Geom::Vector3d Geom::Vector3d::scale(treal s) const {
-    return Vector3d(m_x * s, m_y * s, m_z * s);
 }
 
 Geom::Vector3d& Geom::Vector3d::reverse_self() {
@@ -388,20 +362,8 @@ treal Geom::Vector3d::angle_between(const Vector3d& other, const Vector3d& norma
     return theta;
 }
 
-bool Geom::Vector3d::is_valid() const {
-    return m_x == m_x && m_y == m_y && m_z == m_z;
-}
-
 bool Geom::Vector3d::is_parallel_to(const Vector3d& other) const {
     Vector3d v1(normalize());
     Vector3d v2(other.normalize());
     return v1 == v2 || v1 == v2.reverse();
-}
-
-bool Geom::Vector3d::is_same_direction_as(const Vector3d& other) const {
-    return normalize() == other.normalize();
-}
-
-bool Geom::Vector3d::is_aniparallel_to(const Vector3d& other) const {
-    return normalize() == other.normalize().reverse();
 }

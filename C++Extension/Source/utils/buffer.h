@@ -13,17 +13,19 @@
 
 template <class T>
 class Buffer {
-public:
+protected:
     T* m_data;
     unsigned int m_capacity;
 
+public:
     Buffer();
     Buffer(unsigned int init_capacity);
     Buffer(const Buffer<T>& other);
     Buffer<T>& operator=(const Buffer<T>& other);
-    ~Buffer();
+    virtual ~Buffer();
 
     void ensure_capacity(unsigned int s);
+    void ensure_capacity_pow2(unsigned int s);
 
     T* pat(unsigned int index) const;
     T& operator[](unsigned int index); // does not perform boundary checks
@@ -93,17 +95,34 @@ void Buffer<T>::ensure_capacity(unsigned int s) {
 }
 
 template <class T>
-T* Buffer<T>::pat(unsigned int index) const {
+void Buffer<T>::ensure_capacity_pow2(unsigned int s) {
+    if (m_capacity < s) {
+        unsigned int orig_cap = m_capacity;
+        T* orig_data = m_data;
+
+        m_capacity = 1;
+        while (m_capacity < s)
+            m_capacity <<= 1;
+
+        m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+        memcpy(m_data, orig_data, sizeof(T) * orig_cap);
+
+        free(orig_data);
+    }
+}
+
+template <class T>
+inline T* Buffer<T>::pat(unsigned int index) const {
     return m_data + index;
 }
 
 template <class T>
-T& Buffer<T>::operator[](unsigned int index) {
+inline T& Buffer<T>::operator[](unsigned int index) {
     return m_data[index];
 }
 
 template <class T>
-const T& Buffer<T>::operator[](unsigned int index) const {
+inline const T& Buffer<T>::operator[](unsigned int index) const {
     return m_data[index];
 }
 

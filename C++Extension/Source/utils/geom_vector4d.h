@@ -54,4 +54,18 @@ public:
     Vector4d& operator -= (const Vector4d& other);
 };
 
+
+// Define inline functions
+
+inline bool operator == (const Geom::Vector4d& lhs, const Geom::Vector4d& rhs) {
+    return (fabs(lhs.m_x - rhs.m_x) < M_EPSILON &&
+        fabs(lhs.m_y - rhs.m_y) < M_EPSILON &&
+        fabs(lhs.m_z - rhs.m_z) < M_EPSILON &&
+        fabs(lhs.m_w - rhs.m_w) < M_EPSILON);
+}
+
+inline bool operator != (const Geom::Vector4d& lhs, const Geom::Vector4d& rhs) {
+    return !(lhs == rhs);
+}
+
 #endif /* GEOM_VECTOR4D_H */

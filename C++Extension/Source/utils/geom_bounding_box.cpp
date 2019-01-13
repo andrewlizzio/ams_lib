@@ -8,6 +8,7 @@
 
 #include "geom_bounding_box.h"
 #include "geom_vector3d.h"
+#include "geom_transformation.h"
 
 
 /*
@@ -148,6 +149,8 @@ bool Geom::BoundingBox::is_within(const BoundingBox& other) const {
 }
 
 bool Geom::BoundingBox::intersects_ray(const Geom::Vector3d& ray_point, const Geom::Vector3d& ray_vector) const {
+    if (is_point_inside(ray_point)) return true;
+
     Geom::Vector3d v1, v2, pt;
     treal si;
 
@@ -211,36 +214,42 @@ bool Geom::BoundingBox::intersects_ray(const Geom::Vector3d& ray_point, const Ge
     return false;
 }
 
-treal Geom::BoundingBox::get_width() const {
-    return m_max.m_x - m_min.m_x;
-}
+bool Geom::BoundingBox::intersects_ray(const Geom::Vector3d& ray_point, const Geom::Vector3d& ray_vector, treal cone_angle) const {
+    Geom::Vector3d center((m_min + m_max).scale(0.5));
+    Geom::Vector3d dir(center - ray_point);
 
-treal Geom::BoundingBox::get_height() const {
-    return m_max.m_y - m_min.m_y;
-}
+    treal dg_sq = dir.get_length_squared();
+    if (dg_sq < M_EPSILON_SQ)
+        return intersects_ray(ray_point, ray_vector);
 
-treal Geom::BoundingBox::get_depth() const {
-    return m_max.m_z - m_min.m_z;
-}
+    Geom::Vector3d n(ray_vector.cross(dir));
+    treal ng_sq = n.get_length_squared();
+    if (ng_sq < M_EPSILON_SQ)
+        return intersects_ray(ray_point, ray_vector);
 
-treal Geom::BoundingBox::get_diagonal() const {
-    return (m_max - m_min).get_length();
-}
+    treal ng = sqrt(ng_sq);
+    treal ng_inv = (treal)(1.0) / ng;
+    n.scale_self(ng_inv);
 
-treal Geom::BoundingBox::get_min_max_difference_at(unsigned int axis) const {
-    return m_max[axis] - m_min[axis];
-}
+    treal dg = sqrt(dg_sq);
+    treal dg_inv = (treal)(1.0) / dg;
 
-treal Geom::BoundingBox::get_min_max_sum_at(unsigned int axis) const {
-    return m_min[axis] + m_max[axis];
-}
+    treal cosa = dir.dot(ray_vector) * dg_inv;
+    treal ang;
+    if (cosa < 0.0)
+        ang = M_SPI;
+    else if (cosa > 1.0)
+        ang = 0.0;
+    else
+        ang = acos(cosa);
 
-treal Geom::BoundingBox::get_center_at(unsigned int axis) const {
-    return (m_min[axis] + m_max[axis]) * (treal)(0.5);
-}
+    treal ang2 = Geom::min_treal(ang, cone_angle);
 
-void Geom::BoundingBox::get_center(Geom::Vector3d& center_out) const {
-    center_out = (m_min + m_max).scale(0.5);
+    Geom::Transformation rot(Geom::Transformation::rotate(n, ang2));
+
+    Geom::Vector3d ray_vector2(rot.rotate_vector(ray_vector));
+
+    return intersects_ray(ray_point, ray_vector2);
 }
 
 void Geom::BoundingBox::get_corner(unsigned int i, Geom::Vector3d& corner_out) const {
@@ -300,12 +309,4 @@ void Geom::BoundingBox::pad_out(treal value) {
     m_max.m_x += value;
     m_max.m_y += value;
     m_max.m_z += value;
-}
-
-bool Geom::BoundingBox::is_valid() const {
-    return m_max.m_x >= m_min.m_x && m_max.m_y >= m_min.m_y && m_max.m_z >= m_min.m_z;
-}
-
-bool Geom::BoundingBox::is_invalid() const {
-    return m_max.m_x < m_min.m_x || m_max.m_y < m_min.m_y || m_max.m_z < m_min.m_z;
 }

@@ -43,6 +43,7 @@ public:
     bool overlaps_with(const BoundingBox& other) const;
     bool is_within(const BoundingBox& other) const;
     bool intersects_ray(const Geom::Vector3d& ray_point, const Geom::Vector3d& ray_vector) const;
+    bool intersects_ray(const Geom::Vector3d& ray_point, const Geom::Vector3d& ray_vector, treal cone_angle) const; // Assuming ray_vector is normal
     treal get_width() const;
     treal get_height() const;
     treal get_depth() const;
@@ -57,5 +58,49 @@ public:
     bool is_valid() const;
     bool is_invalid() const;
 };
+
+
+// Define inline functions
+
+inline treal Geom::BoundingBox::get_width() const {
+    return m_max.m_x - m_min.m_x;
+}
+
+inline treal Geom::BoundingBox::get_height() const {
+    return m_max.m_y - m_min.m_y;
+}
+
+inline treal Geom::BoundingBox::get_depth() const {
+    return m_max.m_z - m_min.m_z;
+}
+
+inline treal Geom::BoundingBox::get_diagonal() const {
+    return (m_max - m_min).get_length();
+}
+
+inline treal Geom::BoundingBox::get_min_max_difference_at(unsigned int axis) const {
+    return m_max[axis] - m_min[axis];
+}
+
+inline treal Geom::BoundingBox::get_min_max_sum_at(unsigned int axis) const {
+    return m_min[axis] + m_max[axis];
+}
+
+inline treal Geom::BoundingBox::get_center_at(unsigned int axis) const {
+    return (m_min[axis] + m_max[axis]) * (treal)(0.5);
+}
+
+inline void Geom::BoundingBox::get_center(Geom::Vector3d& center_out) const {
+    center_out = (m_min + m_max).scale(0.5);
+}
+
+inline bool Geom::BoundingBox::is_valid() const {
+    return m_max.m_x >= m_min.m_x && m_max.m_y >= m_min.m_y && m_max.m_z >= m_min.m_z;
+}
+
+inline bool Geom::BoundingBox::is_invalid() const {
+    return m_max.m_x < m_min.m_x || m_max.m_y < m_min.m_y || m_max.m_z < m_min.m_z;
+}
+
 
 #endif /* GEOM_BOUNDING_BOX_H */

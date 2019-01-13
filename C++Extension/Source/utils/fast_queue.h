@@ -26,7 +26,7 @@ public:
     FastQueue(unsigned int init_capacity);
     FastQueue(const FastQueue<T>& other);
     FastQueue<T>& operator=(const FastQueue<T>& other);
-    ~FastQueue();
+    virtual ~FastQueue();
 
     unsigned int size() const;
     bool empty() const;
@@ -168,7 +168,7 @@ void FastQueue<T>::grow() {
 }
 
 template <class T>
-unsigned int FastQueue<T>::size() const {
+inline unsigned int FastQueue<T>::size() const {
     if (m_head > m_tail)
         return m_tail + m_capacity - m_head;
     else
@@ -176,7 +176,7 @@ unsigned int FastQueue<T>::size() const {
 }
 
 template <class T>
-bool FastQueue<T>::empty() const {
+inline bool FastQueue<T>::empty() const {
     return m_head == m_tail;
 }
 

@@ -291,14 +291,6 @@ Geom::Transformation& Geom::Transformation::operator = (const Transformation& ot
     return *this;
 }
 
-Geom::Vector4d& Geom::Transformation::operator [] (const int index) {
-    return (&m_xaxis)[index];
-}
-
-const Geom::Vector4d& Geom::Transformation::operator [] (const int index) const {
-    return (&m_xaxis)[index];
-}
-
 Geom::Transformation operator * (const Geom::Transformation& a, const Geom::Transformation& b) {
     return Geom::Transformation(
         Geom::Vector4d(
@@ -773,18 +765,6 @@ void Geom::Transformation::extract_w_factor() {
     }
 }
 
-void Geom::Transformation::get_normal_xaxis(Geom::Vector3d& res) const {
-    res = m_xaxis.normalize();
-}
-
-void Geom::Transformation::get_normal_yaxis(Geom::Vector3d& res) const {
-    res = m_yaxis.normalize();
-}
-
-void Geom::Transformation::get_normal_zaxis(Geom::Vector3d& res) const {
-    res = m_zaxis.normalize();
-}
-
 void Geom::Transformation::get_normal_origin(Geom::Vector3d& res) const {
     if (fabs(m_origin.m_w) > M_EPSILON) {
         treal det = (treal)(1.0) / m_origin.m_w;
@@ -792,18 +772,6 @@ void Geom::Transformation::get_normal_origin(Geom::Vector3d& res) const {
     }
     else
         res = m_origin;
-}
-
-bool Geom::Transformation::is_uniform() const {
-    return fabs(m_xaxis.dot(m_yaxis)) < M_EPSILON2 && fabs(m_xaxis.dot(m_zaxis)) < M_EPSILON2 && fabs(m_yaxis.dot(m_zaxis)) < M_EPSILON2;
-}
-
-bool Geom::Transformation::is_flipped() const {
-    return (m_xaxis.cross(m_yaxis)).dot(m_zaxis) < (treal)(0.0);
-}
-
-bool Geom::Transformation::is_flat() const {
-    return m_xaxis.get_length() < M_EPSILON || m_yaxis.get_length() < M_EPSILON || m_zaxis.get_length() < M_EPSILON;
 }
 
 void Geom::Transformation::zero_out() {

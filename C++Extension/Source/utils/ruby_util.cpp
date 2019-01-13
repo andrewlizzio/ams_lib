@@ -325,10 +325,6 @@ VALUE RU::to_value(const wchar_t* wc_str, unsigned int wc_str_len) {
 #endif
 }
 
-char* RU::value_to_c_str(VALUE value) {
-    return StringValuePtr(value);
-}
-
 // Note: the returned string must be freed after use
 wchar_t* RU::value_to_wc_str(VALUE value) {
 #ifdef HAVE_RUBY_ENCODING_H

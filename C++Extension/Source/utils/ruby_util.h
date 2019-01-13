@@ -20,6 +20,7 @@
 #include "geom_bounding_box.h"
 #include "geom_box_space.h"
 
+#include "bit_buffer.h"
 #include "buffer.h"
 #include "dynamic_array.h"
 #include "fast_queue.h"
@@ -304,7 +305,10 @@ namespace RU {
     VALUE to_value(const wchar_t* wc_str);
     VALUE to_value(const wchar_t* wc_str, unsigned int wc_str_len);
 
-    char* value_to_c_str(VALUE value);
+    inline char* value_to_c_str(VALUE value) {
+        return StringValuePtr(value);
+    }
+
     wchar_t* value_to_wc_str(VALUE value);
 
 

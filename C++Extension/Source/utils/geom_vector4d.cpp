@@ -69,17 +69,6 @@ Geom::Vector4d& Geom::Vector4d::operator=(const Vector3d& other) {
     return *this;
 }
 
-bool operator == (const Geom::Vector4d& lhs, const Geom::Vector4d& rhs) {
-    return (fabs(lhs.m_x - rhs.m_x) < M_EPSILON &&
-        fabs(lhs.m_y - rhs.m_y) < M_EPSILON &&
-        fabs(lhs.m_z - rhs.m_z) < M_EPSILON &&
-        fabs(lhs.m_w - rhs.m_w) < M_EPSILON);
-}
-
-bool operator != (const Geom::Vector4d& lhs, const Geom::Vector4d& rhs) {
-    return !(lhs == rhs);
-}
-
 Geom::Vector4d operator * (Geom::Vector4d v, treal scalar) {
     v.m_x *= scalar;
     v.m_y *= scalar;

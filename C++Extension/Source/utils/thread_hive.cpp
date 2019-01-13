@@ -208,10 +208,6 @@ void* ThreadHive::thread_task(void* arg) {
 
 #endif
 
-unsigned int ThreadHive::get_num_bees() const {
-    return m_num_bees;
-}
-
 unsigned int ThreadHive::get_num_tasks() {
     unsigned int num_tasks;
 #ifdef _WIN32

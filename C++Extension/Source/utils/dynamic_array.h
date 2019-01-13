@@ -13,7 +13,7 @@
 
 template <class T>
 class DynamicArray {
-public:
+protected:
 
     T* m_data;
     unsigned int m_capacity;
@@ -21,12 +21,17 @@ public:
 
     void grow();
     void ensure_capacity(unsigned int s);
+    void ensure_capacity_pow2(unsigned int s);
 
+public:
     DynamicArray();
     DynamicArray(unsigned int init_capacity);
     DynamicArray(const DynamicArray<T>& other);
     DynamicArray<T>& operator=(const DynamicArray<T>& other);
-    ~DynamicArray();
+    virtual ~DynamicArray();
+
+    void swap_data_with(DynamicArray<T>& other);
+    void concat(const DynamicArray<T>& other);
 
     unsigned int size_in_bytes() const;
     unsigned int size() const;
@@ -42,6 +47,10 @@ public:
     unsigned int get_append_index();
     T pop();
     void pop2(T& out);
+    void cut_unused_pow2();
+    void cut_to_size_pow2(unsigned int s);
+    void cut_to_size(unsigned int s);
+    void swap(unsigned int i, unsigned int j);
 
     // Warning: the ordering is not preserved
     void remove_at(unsigned int index);
@@ -49,6 +58,18 @@ public:
     void remove_first2(T item);
     void remove_all(const T& item);
     void remove_all2(T item);
+
+    // Initializes N spots; increments size
+    void reserve(unsigned int count);
+
+    const T& get_append_item() const;
+    T& get_append_item();
+
+    const T& first() const;
+    const T& last() const;
+
+    T& first();
+    T& last();
 
     T* pat(unsigned int index) const;
     T& operator[](unsigned int index); // does not perform boundary checks
@@ -123,38 +144,83 @@ DynamicArray<T>::~DynamicArray() {
 
 template <class T>
 void DynamicArray<T>::grow() {
-    if (m_size == m_capacity) {
+    if (m_size < m_capacity) return; // importatnt to be less than, since we always append one after growing
+
+    if ((m_capacity & (m_capacity - 1)) != 0) // if not pow2
+        m_capacity = 1;
+    while (m_capacity <= m_size) // correct
         m_capacity <<= 1;
-        T* orig_data = m_data;
 
-        m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
-        memcpy(m_data, orig_data, sizeof(T) * m_size);
+    T* orig_data = m_data;
 
-        free(orig_data);
-    }
+    m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+    memcpy((void*)m_data, (void*)orig_data, sizeof(T) * m_size);
+
+    free(orig_data);
 }
 
 template <class T>
 void DynamicArray<T>::ensure_capacity(unsigned int s) {
-    if (m_capacity < s) {
-        while (m_capacity < s)
-            m_capacity <<= 1;
-        T* orig_data = m_data;
+    if (s <= m_capacity) return;
 
-        m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
-        memcpy(m_data, orig_data, sizeof(T) * m_size);
+    m_capacity = s;
+    T* orig_data = m_data;
 
-        free(orig_data);
+    m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+    memcpy((void*)m_data, (void*)orig_data, sizeof(T) * m_size);
+
+    free(orig_data);
+}
+
+template <class T>
+void DynamicArray<T>::ensure_capacity_pow2(unsigned int s) {
+    if (s <= m_capacity) return; // should be less than or equal to, since we do not append more than requested
+
+    if ((m_capacity & (m_capacity - 1)) != 0) // if not pow2
+        m_capacity = 1;
+    while (m_capacity < s) // correct
+        m_capacity <<= 1;
+
+    T* orig_data = m_data;
+
+    m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+    memcpy((void*)m_data, (void*)orig_data, sizeof(T) * m_size);
+
+    free(orig_data);
+}
+
+template <class T>
+void DynamicArray<T>::swap_data_with(DynamicArray<T>& other) {
+    T* d = m_data;
+    unsigned int c = m_capacity;
+    unsigned int s = m_size;
+
+    m_data = other.m_data;
+    m_capacity = other.m_capacity;
+    m_size = other.m_size;
+
+    other.m_data = d;
+    other.m_capacity = c;
+    other.m_size = s;
+}
+
+template <class T>
+void DynamicArray<T>::concat(const DynamicArray<T>& other) {
+    unsigned int i;
+    ensure_capacity_pow2(m_size + other.m_size);
+    for (i = 0; i < other.m_size; ++i) {
+        new (m_data + m_size) T(other.m_data[i]);
+        ++m_size;
     }
 }
 
 template <class T>
-unsigned int DynamicArray<T>::size_in_bytes() const {
+inline unsigned int DynamicArray<T>::size_in_bytes() const {
     return sizeof(T) * m_size;
 }
 
 template <class T>
-unsigned int DynamicArray<T>::size() const {
+inline unsigned int DynamicArray<T>::size() const {
     return m_size;
 }
 
@@ -179,7 +245,7 @@ void DynamicArray<T>::reset() {
 }
 
 template <class T>
-bool DynamicArray<T>::empty() const {
+inline bool DynamicArray<T>::empty() const {
     return m_size == 0;
 }
 
@@ -253,11 +319,88 @@ void DynamicArray<T>::pop2(T& out) {
 }
 
 template <class T>
+void DynamicArray<T>::cut_unused_pow2() {
+    if (m_size == m_capacity) return;
+
+    unsigned int orig_cap = m_capacity;
+
+    m_capacity = 1;
+    while (m_capacity < m_size) m_capacity <<= 1;
+
+    if (m_capacity == orig_cap) return;
+
+    T* orig_data = m_data;
+
+    m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+    memcpy(m_data, orig_data, sizeof(T) * m_size);
+
+    free(orig_data);
+}
+
+template <class T>
+void DynamicArray<T>::cut_to_size_pow2(unsigned int s) {
+    unsigned int i;
+
+    // Deallocate unused
+    for (i = s; i < m_size; ++i) {
+        (m_data + i)->~T();
+    }
+
+    m_size = s;
+
+    unsigned int oc = m_capacity;
+    m_capacity = 1;
+    while (m_capacity < m_size) m_capacity <<= 1;
+
+    if (m_capacity == oc) return;
+
+    T* orig_data = m_data;
+
+    m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+    memcpy((void*)m_data, (void*)orig_data, sizeof(T) * m_size);
+
+    free(orig_data);
+}
+
+template <class T>
+void DynamicArray<T>::cut_to_size(unsigned int s) {
+    unsigned int i;
+
+    // Deallocate unused
+    for (i = s; i < m_size; ++i) {
+        (m_data + i)->~T();
+    }
+
+    unsigned int oc = m_capacity;
+    m_size = s;
+    if (m_size == 0)
+        m_capacity = 1;
+    else
+        m_capacity = s;
+
+    if (m_capacity == oc) return;
+
+    T* orig_data = m_data;
+
+    m_data = reinterpret_cast<T*>(malloc(sizeof(T) * m_capacity));
+    memcpy((void*)m_data, (void*)orig_data, sizeof(T) * m_size);
+
+    free(orig_data);
+}
+
+template <class T>
+void DynamicArray<T>::swap(unsigned int i, unsigned int j) {
+    T temp(m_data[i]);
+    m_data[i] = m_data[j];
+    m_data[j] = temp;
+}
+
+template <class T>
 void DynamicArray<T>::remove_at(unsigned int index) {
     (m_data + index)->~T();
     --m_size;
     if (index != m_size) {
-        memcpy(m_data + index, m_data + m_size, sizeof(T));
+        memcpy((void*)(m_data + index), (void*)(m_data + m_size), sizeof(T));
     }
 }
 
@@ -311,6 +454,16 @@ void DynamicArray<T>::remove_all2(T item) {
 }
 
 template <class T>
+void DynamicArray<T>::reserve(unsigned int count) {
+    ensure_capacity(m_size + count);
+
+    unsigned int i = m_size;
+    m_size += count;
+    for (; i < m_size; ++i)
+        new (m_data + i) T;
+}
+
+template <class T>
 unsigned int DynamicArray<T>::get_append_index() {
     grow(); // update size if necessary
 
@@ -320,17 +473,47 @@ unsigned int DynamicArray<T>::get_append_index() {
 }
 
 template <class T>
-T* DynamicArray<T>::pat(unsigned int index) const {
+inline const T& DynamicArray<T>::get_append_item() const {
+    return m_data[get_append_index()];
+}
+
+template <class T>
+inline T& DynamicArray<T>::get_append_item() {
+    return m_data[get_append_index()];
+}
+
+template <class T>
+inline const T& DynamicArray<T>::first() const {
+    return m_data[0];
+}
+
+template <class T>
+inline const T& DynamicArray<T>::last() const {
+    return m_data[m_size - 1];
+}
+
+template <class T>
+inline T& DynamicArray<T>::first() {
+    return m_data[0];
+}
+
+template <class T>
+inline T& DynamicArray<T>::last() {
+    return m_data[m_size - 1];
+}
+
+template <class T>
+inline T* DynamicArray<T>::pat(unsigned int index) const {
     return m_data + index;
 }
 
 template <class T>
-T& DynamicArray<T>::operator[](unsigned int index) {
+inline T& DynamicArray<T>::operator[](unsigned int index) {
     return m_data[index];
 }
 
 template <class T>
-const T& DynamicArray<T>::operator[](unsigned int index) const {
+inline const T& DynamicArray<T>::operator[](unsigned int index) const {
     return m_data[index];
 }
 

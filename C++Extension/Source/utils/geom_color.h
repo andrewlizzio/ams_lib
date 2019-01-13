@@ -11,6 +11,9 @@
 
 #include "geom.h"
 
+bool operator == (const Geom::Color& lhs, const Geom::Color& rhs);
+bool operator != (const Geom::Color& lhs, const Geom::Color& rhs);
+
 class Geom::Color
 {
 public:
@@ -25,11 +28,22 @@ public:
     // Operators
     Color& operator=(const Color& other);
 
-    friend bool operator==(const Color& lhs, const Color& rhs);
-    friend bool operator!=(const Color& lhs, const Color& rhs);
+    friend bool(::operator ==) (const Geom::Color& lhs, const Geom::Color& rhs);
+    friend bool(::operator !=) (const Geom::Color& lhs, const Geom::Color& rhs);
 
     // Functions
     Color transition_to(const Color& other, treal ratio);
 };
+
+
+// Define inline functions
+
+inline bool operator == (const Geom::Color& lhs, const Geom::Color& rhs) {
+    return (lhs.m_r == rhs.m_r && lhs.m_g == rhs.m_g && lhs.m_b == rhs.m_b && lhs.m_a == rhs.m_a);
+}
+
+inline bool operator != (const Geom::Color& lhs, const Geom::Color& rhs) {
+    return !(lhs == rhs);
+}
 
 #endif /* GEOM_COLOR_H */

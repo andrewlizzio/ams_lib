@@ -43,4 +43,4 @@
 
 # Remove third party from linguist
 /C++Extension/ThirdParty/* linguist-vendored
-/RubyExtension/ams_Lib/thirdparty/* linguist-vendored
+/RubyExtension/ams_ClothWorks/thirdparty/* linguist-vendored

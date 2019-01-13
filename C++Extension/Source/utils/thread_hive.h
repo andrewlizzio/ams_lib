@@ -77,4 +77,11 @@ public:
     void leave_critical_section();
 };
 
+
+// Define inline functions
+
+inline unsigned int ThreadHive::get_num_bees() const {
+    return m_num_bees;
+}
+
 #endif  /* THREAD_HIVE_H */

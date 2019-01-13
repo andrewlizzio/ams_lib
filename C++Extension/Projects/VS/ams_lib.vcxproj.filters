@@ -12,7 +12,7 @@
       <UniqueIdentifier>{a9bea5cc-0816-4f5f-b296-34d8d11dc172}</UniqueIdentifier>
     </Filter>
     <Filter Include="utils">
-      <UniqueIdentifier>{9daa586f-9c0b-405f-9ebe-f91b6c09e19d}</UniqueIdentifier>
+      <UniqueIdentifier>{235f4886-4993-4e2d-986e-3504c3c9362b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +84,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\win\stdafx.cpp">
       <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\utils\bit_buffer.cpp">
+      <Filter>utils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\utils\geom.cpp">
       <Filter>utils</Filter>
@@ -179,6 +182,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\win\targetver.h">
       <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\utils\bit_buffer.h">
+      <Filter>utils</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\utils\buffer.h">
       <Filter>utils</Filter>

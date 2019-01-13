@@ -8,6 +8,7 @@
 
 #include "geom.h"
 #include "geom_vector3d.h"
+#include "geom_transformation.h"
 
 
 /*
@@ -15,135 +16,6 @@
   Functions
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-
-int Geom::min_int(int a, int b) {
-    return b ^ ((a ^ b) & -(a < b));
-}
-
-int Geom::max_int(int a, int b) {
-    return a ^ ((a ^ b) & -(a < b));
-}
-
-int Geom::clamp_int(int val, int min_val, int max_val) {
-    return min_int(max_int(val, min_val), max_val);
-}
-
-long long Geom::min_ll(long long a, long long b) {
-    return b ^ ((a ^ b) & -(a < b));
-}
-
-long long Geom::max_ll(long long a, long long b) {
-    return a ^ ((a ^ b) & -(a < b));
-}
-
-long long Geom::clamp_ll(long long val, long long min_val, long long max_val) {
-    return min_ll(max_ll(val, min_val), max_val);
-}
-
-float Geom::min_float(float a, float b) {
-    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
-    return a;
-}
-
-float Geom::max_float(float a, float b) {
-    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
-    return a;
-}
-
-float Geom::clamp_float(float val, float min_val, float max_val) {
-    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
-    return val;
-}
-
-double Geom::min_double(double a, double b) {
-    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
-    return a;
-}
-
-double Geom::max_double(double a, double b) {
-    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
-    return a;
-}
-
-double Geom::clamp_double(double val, double min_val, double max_val) {
-    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
-    return val;
-}
-
-treal Geom::min_treal(treal a, treal b) {
-#ifdef M_GEOM_USE_DOUBLE
-    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
-#else
-    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
-#endif
-    return a;
-}
-
-treal Geom::max_treal(treal a, treal b) {
-#ifdef M_GEOM_USE_DOUBLE
-    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
-#else
-    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
-#endif
-    return a;
-}
-
-treal Geom::clamp_treal(treal val, treal min_val, treal max_val) {
-#ifdef M_GEOM_USE_DOUBLE
-    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
-#else
-    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
-#endif
-    return val;
-}
-
-void Geom::min_float2(float& a, float b) {
-    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
-}
-
-void Geom::max_float2(float& a, float b) {
-    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
-}
-
-void Geom::clamp_float2(float& val, float min_val, float max_val) {
-    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
-}
-
-void Geom::min_double2(double& a, double b) {
-    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
-}
-
-void Geom::max_double2(double& a, double b) {
-    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
-}
-
-void Geom::clamp_double2(double& val, double min_val, double max_val) {
-    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
-}
-
-void Geom::min_treal2(treal& a, treal b) {
-#ifdef M_GEOM_USE_DOUBLE
-    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
-#else
-    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
-#endif
-}
-
-void Geom::max_treal2(treal& a, treal b) {
-#ifdef M_GEOM_USE_DOUBLE
-    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
-#else
-    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
-#endif
-}
-
-void Geom::clamp_treal2(treal& val, treal min_val, treal max_val) {
-#ifdef M_GEOM_USE_DOUBLE
-    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
-#else
-    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
-#endif
-}
 
 double Geom::inv_sqrt(double x) {
     double xhalf = 0.5 * x;
@@ -161,28 +33,6 @@ float Geom::inv_sqrt(float x) {
     x = *(float*)&i;
     x = x * (1.5f - xhalf * x * x);
     return x;
-}
-
-unsigned int Geom::log2uint(unsigned int x) {
-    unsigned int v = 0;
-    while (x >>= 1) ++v;
-    return v;
-}
-
-unsigned int Geom::pow2uint(unsigned int x) {
-    return (unsigned int)(1) << x;
-}
-
-size_t Geom::round_up(size_t m, size_t x) {
-    if (x < m)
-        return m;
-    else {
-        size_t r = x % m;
-        if (r != 0)
-            return x + m - r;
-        else
-            return x;
-    }
 }
 
 int Geom::intersect_segment_plane(const Geom::Vector3d& s1, const Geom::Vector3d& s2, const Geom::Vector3d& pl_point, const Geom::Vector3d& pl_normal, Geom::Vector3d& point_out) {
@@ -226,6 +76,40 @@ int Geom::intersect_ray_plane(const Geom::Vector3d& ray_point, const Geom::Vecto
     }
 }
 
+void Geom::triplet_convert_point_to_uvwh(const Geom::Vector3d& p, const Geom::Vector3d& p0, const Geom::Vector3d& p1, const Geom::Vector3d& p2, Geom::Vector4d& uvwh_out) {
+    Geom::Vector3d rp(p - p0);
+    Geom::Vector3d e0(p1 - p0);
+    Geom::Vector3d e1(p2 - p0);
+    treal dot00 = e0.get_length_squared();
+    treal dot01 = e0.dot(e1);
+    treal dot11 = e1.get_length_squared();
+    treal f = dot00 * dot11 - dot01 * dot01;
+    treal ti;
+    if (fabs(f) > M_EPSILON)
+        ti = (treal)(1.0) / f;
+    else
+        ti = (treal)(0.0);
+    Geom::Vector3d n(e0.cross(e1).normalize());
+    
+    uvwh_out.m_w = rp.dot(n);
+    Geom::Vector3d e2(rp - n.scale(uvwh_out.m_w));
+    treal dot02 = e0.dot(e2);
+    treal dot12 = e1.dot(e2);
+
+    uvwh_out.m_y = (dot02 * dot11 - dot01 * dot12) * ti;
+    uvwh_out.m_z = (dot00 * dot12 - dot02 * dot01) * ti;
+    uvwh_out.m_x = (treal)(1.0) - uvwh_out.m_y - uvwh_out.m_z;
+}
+
+bool Geom::is_point_inside_triplet(const Geom::Vector3d& p, const Geom::Vector3d& p0, const Geom::Vector3d& p1, const Geom::Vector3d& p2) {
+    Geom::Vector4d uvwh;
+    triplet_convert_point_to_uvwh(p, p0, p1, p2, uvwh);
+    if (uvwh.m_x > (treal)(0.0) && uvwh.m_y > (treal)(0.0) && uvwh.m_z > (treal)(0.0))
+        return true;
+    else
+        return false;
+}
+
 void Geom::cpa_line_line(const Geom::Vector3d& pA, const Geom::Vector3d& vA, const Geom::Vector3d& pB, const Geom::Vector3d& vB, Geom::Vector3d& p1_out, Geom::Vector3d& p2_out) {
     Geom::Vector3d w(pA - pB);
     treal a = vA.get_length_squared();
@@ -264,4 +148,37 @@ treal Geom::cotan(const Geom::Vector3d& u, const Geom::Vector3d& v) {
     else {
         return d / sqrt(sf);
     }
+}
+
+Geom::Vector3d* Geom::points_on_circle(unsigned int num_segs, treal radius, treal rot_ang) {
+    Geom::Vector3d* pts = (Geom::Vector3d*)malloc(sizeof(Geom::Vector3d) * num_segs);
+
+    unsigned int i = 0;
+    treal delta = M_SPI2 / static_cast<treal>(num_segs);
+    treal ang = rot_ang;
+    for (; i < num_segs; ++i) {
+        pts[i].m_x = cos(ang) * radius;
+        pts[i].m_y = sin(ang) * radius;
+        pts[i].m_z = 0.0;
+        ang += delta;
+    }
+
+    return pts;
+}
+
+Geom::Vector3d* Geom::points_on_arc(unsigned int num_segs, treal radius, treal start_ang, treal end_ang) {
+    unsigned int num_pts = num_segs + 1;
+    Geom::Vector3d* pts = (Geom::Vector3d*)malloc(sizeof(Geom::Vector3d) * num_pts);
+
+    unsigned int i = 0;
+    treal delta = (end_ang - start_ang) / static_cast<treal>(num_segs);
+    treal ang = start_ang;
+    for (; i < num_pts; ++i) {
+        pts[i].m_x = cos(ang) * radius;
+        pts[i].m_y = sin(ang) * radius;
+        pts[i].m_z = 0.0;
+        ang += delta;
+    }
+
+    return pts;
 }

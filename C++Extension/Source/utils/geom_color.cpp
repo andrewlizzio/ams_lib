@@ -47,14 +47,6 @@ Geom::Color& Geom::Color::operator=(const Color& other) {
     return *this;
 }
 
-bool Geom::operator==(const Geom::Color& lhs, const Geom::Color& rhs) {
-    return (lhs.m_r == rhs.m_r && lhs.m_g == rhs.m_g && lhs.m_b == rhs.m_b && lhs.m_a == rhs.m_a);
-}
-
-bool Geom::operator!=(const Geom::Color& lhs, const Geom::Color& rhs) {
-    return !(lhs == rhs);
-}
-
 
 /*
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -146,5 +146,6 @@ AMS::Sketchup.get_main_window
 
 AMS Library releases are available at <i>Extension Warehouse</i> or <i>SketchUcation Extension Store</i>.
 
-To download from the repository, copy <tt>ams_Lib</tt> folder and <tt>ams_Lib.rb</tt>,
-located at <tt>RubyExtension/</tt>, to your plugins folder.
+To download from the repository, do the following:
+1. Compile binaries. See CompileInstructions.md for details.
+2. Copy <tt>ams_Lib</tt> folder and <tt>ams_Lib.rb</tt>, located at <tt>RubyExtension/</tt>, to your plugins folder.

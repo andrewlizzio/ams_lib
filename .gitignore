@@ -3,7 +3,10 @@
 /C++Extension/Projects/VS/x64
 /C++Extension/Projects/xCode/Release
 /C++Extension/Projects/xCode/Debug
+/RubyExtension/ams_Lib/libraries/
 
+*.pdf
+*.vs
 *.vspx
 *.user
 *.DS_Store

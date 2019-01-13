@@ -82,4 +82,39 @@ public:
     void zero_out();
 };
 
+
+// Define inline functions
+
+inline Geom::Vector4d& Geom::Transformation::operator [] (const int index) {
+    return (&m_xaxis)[index];
+}
+
+inline const Geom::Vector4d& Geom::Transformation::operator [] (const int index) const {
+    return (&m_xaxis)[index];
+}
+
+inline void Geom::Transformation::get_normal_xaxis(Geom::Vector3d& res) const {
+    res = m_xaxis.normalize();
+}
+
+inline void Geom::Transformation::get_normal_yaxis(Geom::Vector3d& res) const {
+    res = m_yaxis.normalize();
+}
+
+inline void Geom::Transformation::get_normal_zaxis(Geom::Vector3d& res) const {
+    res = m_zaxis.normalize();
+}
+
+inline bool Geom::Transformation::is_uniform() const {
+    return fabs(m_xaxis.dot(m_yaxis)) < M_EPSILON2 && fabs(m_xaxis.dot(m_zaxis)) < M_EPSILON2 && fabs(m_yaxis.dot(m_zaxis)) < M_EPSILON2;
+}
+
+inline bool Geom::Transformation::is_flipped() const {
+    return (m_xaxis.cross(m_yaxis)).dot(m_zaxis) < (treal)(0.0);
+}
+
+inline bool Geom::Transformation::is_flat() const {
+    return m_xaxis.get_length() < M_EPSILON || m_yaxis.get_length() < M_EPSILON || m_zaxis.get_length() < M_EPSILON;
+}
+
 #endif /* GEOM_TRANSFORMATION_H */

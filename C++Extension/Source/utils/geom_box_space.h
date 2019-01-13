@@ -111,6 +111,14 @@ public:
         BoxOverlapCallback overlap_callback,
         FastQueue<unsigned int>& cq,
         void* user_data) const;
+
+    void overlap_with(
+        const Geom::Vector3d& cone_point,
+        const Geom::Vector3d& cone_vector,
+        treal cone_angle, // in radians
+        BoxOverlapCallback overlap_callback,
+        FastQueue<unsigned int>& cq,
+        void* user_data) const;
 };
 
 template <class T>
@@ -288,6 +296,9 @@ void Geom::BoxSpace<T>::partition_aspects(unsigned int node_index, const char ax
         t = m_items[i];
         m_items[i] = m_items[m1];
         m_items[m1] = t;
+
+        //++m1;
+        //--i;
     }
 
     // Move all aspects with minimums less than centre to left (but to right of m1) and all others to right
@@ -304,6 +315,9 @@ void Geom::BoxSpace<T>::partition_aspects(unsigned int node_index, const char ax
         t = m_items[i];
         m_items[i] = m_items[m2];
         m_items[m2] = t;
+
+        //++m2;
+        //--i;
     }
 
     // Make this node a leaf node if less than two nodes are filled.
@@ -803,6 +817,44 @@ void Geom::BoxSpace<T>::overlap_with(
             if (m_nodes[j + 1].m_bb.intersects_ray(point, vector))
                 cq.enqueue2(j + 1);
             if (m_nodes[j + 2].m_bb.intersects_ray(point, vector))
+                cq.enqueue2(j + 2);
+        }
+    }
+}
+
+template <class T>
+void Geom::BoxSpace<T>::overlap_with(
+    const Geom::Vector3d& cone_point,
+    const Geom::Vector3d& cone_vector,
+    treal cone_angle, 
+    BoxOverlapCallback overlap_callback,
+    FastQueue<unsigned int>& cq,
+    void* user_data) const
+{
+    unsigned int i, j;
+
+    cq.clear();
+    if (m_nodes[0].m_bb.intersects_ray(cone_point, cone_vector, cone_angle))
+        cq.enqueue2(0);
+
+    while (!cq.empty()) {
+        i = cq.dequeue2();
+        if (m_nodes[i].m_next == 0) {
+            for (j = m_nodes[i].m_head; j < m_nodes[i].m_tail; ++j)
+                if (m_items[j].m_bb.intersects_ray(cone_point, cone_vector, cone_angle)) {
+                    assert(m_items[j].m_bb.is_valid());
+                    if (!overlap_callback(m_items[j].m_data, user_data))
+                        return;
+                }
+        }
+        else {
+            j = m_nodes[i].m_next;
+
+            if (m_nodes[j].m_bb.intersects_ray(cone_point, cone_vector, cone_angle))
+                cq.enqueue2(j);
+            if (m_nodes[j + 1].m_bb.intersects_ray(cone_point, cone_vector, cone_angle))
+                cq.enqueue2(j + 1);
+            if (m_nodes[j + 2].m_bb.intersects_ray(cone_point, cone_vector, cone_angle))
                 cq.enqueue2(j + 2);
         }
     }

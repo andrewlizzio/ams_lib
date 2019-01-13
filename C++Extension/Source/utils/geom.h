@@ -143,10 +143,173 @@ namespace Geom {
     // - 1 if intersection exists
     int intersect_ray_plane(const Geom::Vector3d& ray_point, const Geom::Vector3d& ray_vector, const Geom::Vector3d& plane_point, const Geom::Vector3d& plane_normal, Geom::Vector3d& point_out);
 
+    void triplet_convert_point_to_uvwh(const Geom::Vector3d& p, const Geom::Vector3d& p0, const Geom::Vector3d& p1, const Geom::Vector3d& p2, Geom::Vector4d& uvwh_out);
+    bool is_point_inside_triplet(const Geom::Vector3d& p, const Geom::Vector3d& p0, const Geom::Vector3d& p1, const Geom::Vector3d& p2);
+
     // http://geomalgorithms.com/a07-_distance.html
     void cpa_line_line(const Geom::Vector3d& pA, const Geom::Vector3d& vA, const Geom::Vector3d& pB, const Geom::Vector3d& vB, Geom::Vector3d& p1_out, Geom::Vector3d& p2_out);
 
     treal cotan(const Geom::Vector3d& u, const Geom::Vector3d& v);
+
+    // Returns num_segs points
+    Geom::Vector3d* points_on_circle(unsigned int num_segs, treal radius, treal rot_ang);
+
+    // Returns num_segs + 1 points
+    Geom::Vector3d* points_on_arc(unsigned int num_segs, treal radius, treal start_ang, treal end_ang);
+};
+
+
+// Define inline functions
+
+inline int Geom::min_int(int a, int b) {
+    return b ^ ((a ^ b) & -(a < b));
+}
+
+inline int Geom::max_int(int a, int b) {
+    return a ^ ((a ^ b) & -(a < b));
+}
+
+inline int Geom::clamp_int(int val, int min_val, int max_val) {
+    return min_int(max_int(val, min_val), max_val);
+}
+
+inline long long Geom::min_ll(long long a, long long b) {
+    return b ^ ((a ^ b) & -(a < b));
+}
+
+inline long long Geom::max_ll(long long a, long long b) {
+    return a ^ ((a ^ b) & -(a < b));
+}
+
+inline long long Geom::clamp_ll(long long val, long long min_val, long long max_val) {
+    return min_ll(max_ll(val, min_val), max_val);
+}
+
+inline float Geom::min_float(float a, float b) {
+    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
+    return a;
+}
+
+inline float Geom::max_float(float a, float b) {
+    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
+    return a;
+}
+
+inline float Geom::clamp_float(float val, float min_val, float max_val) {
+    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
+    return val;
+}
+
+inline double Geom::min_double(double a, double b) {
+    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
+    return a;
+}
+
+inline double Geom::max_double(double a, double b) {
+    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
+    return a;
+}
+
+inline double Geom::clamp_double(double val, double min_val, double max_val) {
+    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
+    return val;
+}
+
+inline treal Geom::min_treal(treal a, treal b) {
+#ifdef M_GEOM_USE_DOUBLE
+    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
+#else
+    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
+#endif
+    return a;
+}
+
+inline treal Geom::max_treal(treal a, treal b) {
+#ifdef M_GEOM_USE_DOUBLE
+    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
+#else
+    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
+#endif
+    return a;
+}
+
+inline treal Geom::clamp_treal(treal val, treal min_val, treal max_val) {
+#ifdef M_GEOM_USE_DOUBLE
+    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
+#else
+    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
+#endif
+    return val;
+}
+
+inline void Geom::min_float2(float& a, float b) {
+    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
+}
+
+inline void Geom::max_float2(float& a, float b) {
+    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
+}
+
+inline void Geom::clamp_float2(float& val, float min_val, float max_val) {
+    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
+}
+
+inline void Geom::min_double2(double& a, double b) {
+    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
+}
+
+inline void Geom::max_double2(double& a, double b) {
+    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
+}
+
+inline void Geom::clamp_double2(double& val, double min_val, double max_val) {
+    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
+}
+
+inline void Geom::min_treal2(treal& a, treal b) {
+#ifdef M_GEOM_USE_DOUBLE
+    _mm_store_sd(&a, _mm_min_sd(_mm_set_sd(a), _mm_set_sd(b)));
+#else
+    _mm_store_ss(&a, _mm_min_ss(_mm_set_ss(a), _mm_set_ss(b)));
+#endif
+}
+
+inline void Geom::max_treal2(treal& a, treal b) {
+#ifdef M_GEOM_USE_DOUBLE
+    _mm_store_sd(&a, _mm_max_sd(_mm_set_sd(a), _mm_set_sd(b)));
+#else
+    _mm_store_ss(&a, _mm_max_ss(_mm_set_ss(a), _mm_set_ss(b)));
+#endif
+}
+
+inline void Geom::clamp_treal2(treal& val, treal min_val, treal max_val) {
+#ifdef M_GEOM_USE_DOUBLE
+    _mm_store_sd(&val, _mm_min_sd(_mm_max_sd(_mm_set_sd(val), _mm_set_sd(min_val)), _mm_set_sd(max_val)));
+#else
+    _mm_store_ss(&val, _mm_min_ss(_mm_max_ss(_mm_set_ss(val), _mm_set_ss(min_val)), _mm_set_ss(max_val)));
+#endif
+}
+
+inline unsigned int Geom::log2uint(unsigned int x) {
+    unsigned int v = 0;
+    while (x >>= 1) ++v;
+    return v;
+}
+
+inline unsigned int Geom::pow2uint(unsigned int x) {
+    return (unsigned int)(1) << x;
+}
+
+inline size_t Geom::round_up(size_t m, size_t x) {
+    if (x < m)
+        return m;
+    else {
+        size_t r = x % m;
+        if (r != 0)
+            return x + m - r;
+        else
+            return x;
+    }
 }
 
 #endif /* GEOM_H */

@@ -93,4 +93,44 @@ public:
     bool is_aniparallel_to(const Vector3d& other) const;
 };
 
+// Define inline functions here
+
+inline treal& Geom::Vector3d::operator [] (const int index) {
+    return (&m_x)[index];
+}
+
+inline const treal& Geom::Vector3d::operator [] (const int index) const {
+    return (&m_x)[index];
+}
+
+inline bool operator == (const Geom::Vector3d& lhs, const Geom::Vector3d& rhs) {
+    return (fabs(lhs.m_x - rhs.m_x) < M_EPSILON &&
+        fabs(lhs.m_y - rhs.m_y) < M_EPSILON &&
+        fabs(lhs.m_z - rhs.m_z) < M_EPSILON);
+}
+
+inline bool operator != (const Geom::Vector3d& lhs, const Geom::Vector3d& rhs) {
+    return !(lhs == rhs);
+}
+
+inline bool Geom::Vector3d::is_valid() const {
+    return m_x == m_x && m_y == m_y && m_z == m_z;
+}
+
+inline bool Geom::Vector3d::is_same_direction_as(const Vector3d& other) const {
+    return normalize() == other.normalize();
+}
+
+inline bool Geom::Vector3d::is_aniparallel_to(const Vector3d& other) const {
+    return normalize() == other.normalize().reverse();
+}
+
+inline Geom::Vector3d& Geom::Vector3d::normalize_self() {
+    return set_length(1.0);
+}
+
+inline Geom::Vector3d Geom::Vector3d::scale(treal s) const {
+    return Vector3d(m_x * s, m_y * s, m_z * s);
+}
+
 #endif /* GEOM_VECTOR3D_H */

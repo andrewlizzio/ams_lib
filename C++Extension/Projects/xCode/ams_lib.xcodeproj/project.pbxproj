@@ -7,121 +7,136 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3ABF19FA219FE472005C0AA7 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CC219FE471005C0AA7 /* common.h */; };
-		3ABF19FB219FE472005C0AA7 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CC219FE471005C0AA7 /* common.h */; };
-		3ABF19FC219FE472005C0AA7 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CC219FE471005C0AA7 /* common.h */; };
-		3ABF19FD219FE472005C0AA7 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CC219FE471005C0AA7 /* common.h */; };
-		3ABF19FE219FE472005C0AA7 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CC219FE471005C0AA7 /* common.h */; };
-		3ABF19FF219FE472005C0AA7 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CD219FE471005C0AA7 /* dynamic_array.h */; };
-		3ABF1A00219FE472005C0AA7 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CD219FE471005C0AA7 /* dynamic_array.h */; };
-		3ABF1A01219FE472005C0AA7 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CD219FE471005C0AA7 /* dynamic_array.h */; };
-		3ABF1A02219FE472005C0AA7 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CD219FE471005C0AA7 /* dynamic_array.h */; };
-		3ABF1A03219FE472005C0AA7 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CD219FE471005C0AA7 /* dynamic_array.h */; };
-		3ABF1A04219FE472005C0AA7 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CE219FE471005C0AA7 /* fast_queue.h */; };
-		3ABF1A05219FE472005C0AA7 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CE219FE471005C0AA7 /* fast_queue.h */; };
-		3ABF1A06219FE472005C0AA7 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CE219FE471005C0AA7 /* fast_queue.h */; };
-		3ABF1A07219FE472005C0AA7 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CE219FE471005C0AA7 /* fast_queue.h */; };
-		3ABF1A08219FE472005C0AA7 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19CE219FE471005C0AA7 /* fast_queue.h */; };
-		3ABF1A09219FE472005C0AA7 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19CF219FE471005C0AA7 /* geom.cpp */; };
-		3ABF1A0A219FE472005C0AA7 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19CF219FE471005C0AA7 /* geom.cpp */; };
-		3ABF1A0B219FE472005C0AA7 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19CF219FE471005C0AA7 /* geom.cpp */; };
-		3ABF1A0C219FE472005C0AA7 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19CF219FE471005C0AA7 /* geom.cpp */; };
-		3ABF1A0D219FE472005C0AA7 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19CF219FE471005C0AA7 /* geom.cpp */; };
-		3ABF1A0E219FE472005C0AA7 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D0219FE471005C0AA7 /* geom.h */; };
-		3ABF1A0F219FE472005C0AA7 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D0219FE471005C0AA7 /* geom.h */; };
-		3ABF1A10219FE472005C0AA7 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D0219FE471005C0AA7 /* geom.h */; };
-		3ABF1A11219FE472005C0AA7 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D0219FE471005C0AA7 /* geom.h */; };
-		3ABF1A12219FE472005C0AA7 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D0219FE471005C0AA7 /* geom.h */; };
-		3ABF1A13219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D1219FE471005C0AA7 /* geom_bounding_box.cpp */; };
-		3ABF1A14219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D1219FE471005C0AA7 /* geom_bounding_box.cpp */; };
-		3ABF1A15219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D1219FE471005C0AA7 /* geom_bounding_box.cpp */; };
-		3ABF1A16219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D1219FE471005C0AA7 /* geom_bounding_box.cpp */; };
-		3ABF1A17219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D1219FE471005C0AA7 /* geom_bounding_box.cpp */; };
-		3ABF1A18219FE472005C0AA7 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D2219FE471005C0AA7 /* geom_bounding_box.h */; };
-		3ABF1A19219FE472005C0AA7 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D2219FE471005C0AA7 /* geom_bounding_box.h */; };
-		3ABF1A1A219FE472005C0AA7 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D2219FE471005C0AA7 /* geom_bounding_box.h */; };
-		3ABF1A1B219FE472005C0AA7 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D2219FE471005C0AA7 /* geom_bounding_box.h */; };
-		3ABF1A1C219FE472005C0AA7 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D2219FE471005C0AA7 /* geom_bounding_box.h */; };
-		3ABF1A1D219FE472005C0AA7 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D3219FE471005C0AA7 /* geom_box_space.h */; };
-		3ABF1A1E219FE472005C0AA7 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D3219FE471005C0AA7 /* geom_box_space.h */; };
-		3ABF1A1F219FE472005C0AA7 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D3219FE471005C0AA7 /* geom_box_space.h */; };
-		3ABF1A20219FE472005C0AA7 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D3219FE471005C0AA7 /* geom_box_space.h */; };
-		3ABF1A21219FE472005C0AA7 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D3219FE471005C0AA7 /* geom_box_space.h */; };
-		3ABF1A22219FE472005C0AA7 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D4219FE471005C0AA7 /* geom_color.cpp */; };
-		3ABF1A23219FE472005C0AA7 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D4219FE471005C0AA7 /* geom_color.cpp */; };
-		3ABF1A24219FE472005C0AA7 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D4219FE471005C0AA7 /* geom_color.cpp */; };
-		3ABF1A25219FE472005C0AA7 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D4219FE471005C0AA7 /* geom_color.cpp */; };
-		3ABF1A26219FE472005C0AA7 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D4219FE471005C0AA7 /* geom_color.cpp */; };
-		3ABF1A27219FE472005C0AA7 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D5219FE471005C0AA7 /* geom_color.h */; };
-		3ABF1A28219FE472005C0AA7 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D5219FE471005C0AA7 /* geom_color.h */; };
-		3ABF1A29219FE472005C0AA7 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D5219FE471005C0AA7 /* geom_color.h */; };
-		3ABF1A2A219FE472005C0AA7 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D5219FE471005C0AA7 /* geom_color.h */; };
-		3ABF1A2B219FE472005C0AA7 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D5219FE471005C0AA7 /* geom_color.h */; };
-		3ABF1A2C219FE472005C0AA7 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D6219FE471005C0AA7 /* geom_quaternion.cpp */; };
-		3ABF1A2D219FE472005C0AA7 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D6219FE471005C0AA7 /* geom_quaternion.cpp */; };
-		3ABF1A2E219FE472005C0AA7 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D6219FE471005C0AA7 /* geom_quaternion.cpp */; };
-		3ABF1A2F219FE472005C0AA7 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D6219FE471005C0AA7 /* geom_quaternion.cpp */; };
-		3ABF1A30219FE472005C0AA7 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D6219FE471005C0AA7 /* geom_quaternion.cpp */; };
-		3ABF1A31219FE472005C0AA7 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D7219FE471005C0AA7 /* geom_quaternion.h */; };
-		3ABF1A32219FE472005C0AA7 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D7219FE471005C0AA7 /* geom_quaternion.h */; };
-		3ABF1A33219FE472005C0AA7 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D7219FE471005C0AA7 /* geom_quaternion.h */; };
-		3ABF1A34219FE472005C0AA7 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D7219FE471005C0AA7 /* geom_quaternion.h */; };
-		3ABF1A35219FE472005C0AA7 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D7219FE471005C0AA7 /* geom_quaternion.h */; };
-		3ABF1A36219FE472005C0AA7 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D8219FE471005C0AA7 /* geom_transformation.cpp */; };
-		3ABF1A37219FE472005C0AA7 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D8219FE471005C0AA7 /* geom_transformation.cpp */; };
-		3ABF1A38219FE472005C0AA7 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D8219FE471005C0AA7 /* geom_transformation.cpp */; };
-		3ABF1A39219FE472005C0AA7 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D8219FE471005C0AA7 /* geom_transformation.cpp */; };
-		3ABF1A3A219FE472005C0AA7 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19D8219FE471005C0AA7 /* geom_transformation.cpp */; };
-		3ABF1A3B219FE472005C0AA7 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D9219FE471005C0AA7 /* geom_transformation.h */; };
-		3ABF1A3C219FE472005C0AA7 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D9219FE471005C0AA7 /* geom_transformation.h */; };
-		3ABF1A3D219FE472005C0AA7 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D9219FE471005C0AA7 /* geom_transformation.h */; };
-		3ABF1A3E219FE472005C0AA7 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D9219FE471005C0AA7 /* geom_transformation.h */; };
-		3ABF1A3F219FE472005C0AA7 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19D9219FE471005C0AA7 /* geom_transformation.h */; };
-		3ABF1A40219FE472005C0AA7 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DA219FE471005C0AA7 /* geom_vector3d.cpp */; };
-		3ABF1A41219FE472005C0AA7 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DA219FE471005C0AA7 /* geom_vector3d.cpp */; };
-		3ABF1A42219FE472005C0AA7 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DA219FE471005C0AA7 /* geom_vector3d.cpp */; };
-		3ABF1A43219FE472005C0AA7 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DA219FE471005C0AA7 /* geom_vector3d.cpp */; };
-		3ABF1A44219FE472005C0AA7 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DA219FE471005C0AA7 /* geom_vector3d.cpp */; };
-		3ABF1A45219FE472005C0AA7 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DB219FE471005C0AA7 /* geom_vector3d.h */; };
-		3ABF1A46219FE472005C0AA7 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DB219FE471005C0AA7 /* geom_vector3d.h */; };
-		3ABF1A47219FE472005C0AA7 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DB219FE471005C0AA7 /* geom_vector3d.h */; };
-		3ABF1A48219FE472005C0AA7 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DB219FE471005C0AA7 /* geom_vector3d.h */; };
-		3ABF1A49219FE472005C0AA7 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DB219FE471005C0AA7 /* geom_vector3d.h */; };
-		3ABF1A4A219FE472005C0AA7 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DC219FE471005C0AA7 /* geom_vector4d.cpp */; };
-		3ABF1A4B219FE472005C0AA7 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DC219FE471005C0AA7 /* geom_vector4d.cpp */; };
-		3ABF1A4C219FE472005C0AA7 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DC219FE471005C0AA7 /* geom_vector4d.cpp */; };
-		3ABF1A4D219FE472005C0AA7 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DC219FE471005C0AA7 /* geom_vector4d.cpp */; };
-		3ABF1A4E219FE472005C0AA7 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DC219FE471005C0AA7 /* geom_vector4d.cpp */; };
-		3ABF1A4F219FE472005C0AA7 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DD219FE471005C0AA7 /* geom_vector4d.h */; };
-		3ABF1A50219FE472005C0AA7 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DD219FE471005C0AA7 /* geom_vector4d.h */; };
-		3ABF1A51219FE472005C0AA7 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DD219FE471005C0AA7 /* geom_vector4d.h */; };
-		3ABF1A52219FE472005C0AA7 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DD219FE471005C0AA7 /* geom_vector4d.h */; };
-		3ABF1A53219FE472005C0AA7 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DD219FE471005C0AA7 /* geom_vector4d.h */; };
-		3ABF1A54219FE472005C0AA7 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DE219FE471005C0AA7 /* ruby_prep.h */; };
-		3ABF1A55219FE472005C0AA7 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DE219FE471005C0AA7 /* ruby_prep.h */; };
-		3ABF1A56219FE472005C0AA7 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DE219FE471005C0AA7 /* ruby_prep.h */; };
-		3ABF1A57219FE472005C0AA7 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DE219FE471005C0AA7 /* ruby_prep.h */; };
-		3ABF1A58219FE472005C0AA7 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19DE219FE471005C0AA7 /* ruby_prep.h */; };
-		3ABF1A59219FE472005C0AA7 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DF219FE471005C0AA7 /* ruby_util.cpp */; };
-		3ABF1A5A219FE472005C0AA7 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DF219FE471005C0AA7 /* ruby_util.cpp */; };
-		3ABF1A5B219FE472005C0AA7 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DF219FE471005C0AA7 /* ruby_util.cpp */; };
-		3ABF1A5C219FE472005C0AA7 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DF219FE471005C0AA7 /* ruby_util.cpp */; };
-		3ABF1A5D219FE472005C0AA7 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19DF219FE471005C0AA7 /* ruby_util.cpp */; };
-		3ABF1A5E219FE472005C0AA7 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E0219FE471005C0AA7 /* ruby_util.h */; };
-		3ABF1A5F219FE472005C0AA7 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E0219FE471005C0AA7 /* ruby_util.h */; };
-		3ABF1A60219FE472005C0AA7 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E0219FE471005C0AA7 /* ruby_util.h */; };
-		3ABF1A61219FE472005C0AA7 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E0219FE471005C0AA7 /* ruby_util.h */; };
-		3ABF1A62219FE472005C0AA7 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E0219FE471005C0AA7 /* ruby_util.h */; };
-		3ABF1A63219FE472005C0AA7 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E1219FE471005C0AA7 /* thread_hive.cpp */; };
-		3ABF1A64219FE472005C0AA7 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E1219FE471005C0AA7 /* thread_hive.cpp */; };
-		3ABF1A65219FE472005C0AA7 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E1219FE471005C0AA7 /* thread_hive.cpp */; };
-		3ABF1A66219FE472005C0AA7 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E1219FE471005C0AA7 /* thread_hive.cpp */; };
-		3ABF1A67219FE472005C0AA7 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E1219FE471005C0AA7 /* thread_hive.cpp */; };
-		3ABF1A68219FE472005C0AA7 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E2219FE471005C0AA7 /* thread_hive.h */; };
-		3ABF1A69219FE472005C0AA7 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E2219FE471005C0AA7 /* thread_hive.h */; };
-		3ABF1A6A219FE472005C0AA7 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E2219FE471005C0AA7 /* thread_hive.h */; };
-		3ABF1A6B219FE472005C0AA7 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E2219FE471005C0AA7 /* thread_hive.h */; };
-		3ABF1A6C219FE472005C0AA7 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ABF19E2219FE471005C0AA7 /* thread_hive.h */; };
+		3A23F89C21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88221EEE6F9003DB3F6 /* bit_buffer.cpp */; };
+		3A23F89D21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88221EEE6F9003DB3F6 /* bit_buffer.cpp */; };
+		3A23F89E21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88221EEE6F9003DB3F6 /* bit_buffer.cpp */; };
+		3A23F89F21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88221EEE6F9003DB3F6 /* bit_buffer.cpp */; };
+		3A23F8A021EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88221EEE6F9003DB3F6 /* bit_buffer.cpp */; };
+		3A23F8A121EEE6FA003DB3F6 /* bit_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88321EEE6F9003DB3F6 /* bit_buffer.h */; };
+		3A23F8A221EEE6FA003DB3F6 /* bit_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88321EEE6F9003DB3F6 /* bit_buffer.h */; };
+		3A23F8A321EEE6FA003DB3F6 /* bit_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88321EEE6F9003DB3F6 /* bit_buffer.h */; };
+		3A23F8A421EEE6FA003DB3F6 /* bit_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88321EEE6F9003DB3F6 /* bit_buffer.h */; };
+		3A23F8A521EEE6FA003DB3F6 /* bit_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88321EEE6F9003DB3F6 /* bit_buffer.h */; };
+		3A23F8A621EEE6FA003DB3F6 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88421EEE6F9003DB3F6 /* buffer.h */; };
+		3A23F8A721EEE6FA003DB3F6 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88421EEE6F9003DB3F6 /* buffer.h */; };
+		3A23F8A821EEE6FA003DB3F6 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88421EEE6F9003DB3F6 /* buffer.h */; };
+		3A23F8A921EEE6FA003DB3F6 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88421EEE6F9003DB3F6 /* buffer.h */; };
+		3A23F8AA21EEE6FA003DB3F6 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88421EEE6F9003DB3F6 /* buffer.h */; };
+		3A23F8AB21EEE6FA003DB3F6 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88521EEE6F9003DB3F6 /* common.h */; };
+		3A23F8AC21EEE6FA003DB3F6 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88521EEE6F9003DB3F6 /* common.h */; };
+		3A23F8AD21EEE6FA003DB3F6 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88521EEE6F9003DB3F6 /* common.h */; };
+		3A23F8AE21EEE6FA003DB3F6 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88521EEE6F9003DB3F6 /* common.h */; };
+		3A23F8AF21EEE6FA003DB3F6 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88521EEE6F9003DB3F6 /* common.h */; };
+		3A23F8B021EEE6FA003DB3F6 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88621EEE6F9003DB3F6 /* dynamic_array.h */; };
+		3A23F8B121EEE6FA003DB3F6 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88621EEE6F9003DB3F6 /* dynamic_array.h */; };
+		3A23F8B221EEE6FA003DB3F6 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88621EEE6F9003DB3F6 /* dynamic_array.h */; };
+		3A23F8B321EEE6FA003DB3F6 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88621EEE6F9003DB3F6 /* dynamic_array.h */; };
+		3A23F8B421EEE6FA003DB3F6 /* dynamic_array.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88621EEE6F9003DB3F6 /* dynamic_array.h */; };
+		3A23F8B521EEE6FA003DB3F6 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88721EEE6F9003DB3F6 /* fast_queue.h */; };
+		3A23F8B621EEE6FA003DB3F6 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88721EEE6F9003DB3F6 /* fast_queue.h */; };
+		3A23F8B721EEE6FA003DB3F6 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88721EEE6F9003DB3F6 /* fast_queue.h */; };
+		3A23F8B821EEE6FA003DB3F6 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88721EEE6F9003DB3F6 /* fast_queue.h */; };
+		3A23F8B921EEE6FA003DB3F6 /* fast_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88721EEE6F9003DB3F6 /* fast_queue.h */; };
+		3A23F8BA21EEE6FA003DB3F6 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88821EEE6F9003DB3F6 /* geom.cpp */; };
+		3A23F8BB21EEE6FA003DB3F6 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88821EEE6F9003DB3F6 /* geom.cpp */; };
+		3A23F8BC21EEE6FA003DB3F6 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88821EEE6F9003DB3F6 /* geom.cpp */; };
+		3A23F8BD21EEE6FA003DB3F6 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88821EEE6F9003DB3F6 /* geom.cpp */; };
+		3A23F8BE21EEE6FA003DB3F6 /* geom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88821EEE6F9003DB3F6 /* geom.cpp */; };
+		3A23F8BF21EEE6FA003DB3F6 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88921EEE6F9003DB3F6 /* geom.h */; };
+		3A23F8C021EEE6FA003DB3F6 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88921EEE6F9003DB3F6 /* geom.h */; };
+		3A23F8C121EEE6FA003DB3F6 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88921EEE6F9003DB3F6 /* geom.h */; };
+		3A23F8C221EEE6FA003DB3F6 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88921EEE6F9003DB3F6 /* geom.h */; };
+		3A23F8C321EEE6FA003DB3F6 /* geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88921EEE6F9003DB3F6 /* geom.h */; };
+		3A23F8C421EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88A21EEE6F9003DB3F6 /* geom_bounding_box.cpp */; };
+		3A23F8C521EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88A21EEE6F9003DB3F6 /* geom_bounding_box.cpp */; };
+		3A23F8C621EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88A21EEE6F9003DB3F6 /* geom_bounding_box.cpp */; };
+		3A23F8C721EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88A21EEE6F9003DB3F6 /* geom_bounding_box.cpp */; };
+		3A23F8C821EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88A21EEE6F9003DB3F6 /* geom_bounding_box.cpp */; };
+		3A23F8C921EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88B21EEE6F9003DB3F6 /* geom_bounding_box.h */; };
+		3A23F8CA21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88B21EEE6F9003DB3F6 /* geom_bounding_box.h */; };
+		3A23F8CB21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88B21EEE6F9003DB3F6 /* geom_bounding_box.h */; };
+		3A23F8CC21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88B21EEE6F9003DB3F6 /* geom_bounding_box.h */; };
+		3A23F8CD21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88B21EEE6F9003DB3F6 /* geom_bounding_box.h */; };
+		3A23F8CE21EEE6FA003DB3F6 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88C21EEE6F9003DB3F6 /* geom_box_space.h */; };
+		3A23F8CF21EEE6FA003DB3F6 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88C21EEE6F9003DB3F6 /* geom_box_space.h */; };
+		3A23F8D021EEE6FA003DB3F6 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88C21EEE6F9003DB3F6 /* geom_box_space.h */; };
+		3A23F8D121EEE6FA003DB3F6 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88C21EEE6F9003DB3F6 /* geom_box_space.h */; };
+		3A23F8D221EEE6FA003DB3F6 /* geom_box_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88C21EEE6F9003DB3F6 /* geom_box_space.h */; };
+		3A23F8D321EEE6FA003DB3F6 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88D21EEE6F9003DB3F6 /* geom_color.cpp */; };
+		3A23F8D421EEE6FA003DB3F6 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88D21EEE6F9003DB3F6 /* geom_color.cpp */; };
+		3A23F8D521EEE6FA003DB3F6 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88D21EEE6F9003DB3F6 /* geom_color.cpp */; };
+		3A23F8D621EEE6FA003DB3F6 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88D21EEE6F9003DB3F6 /* geom_color.cpp */; };
+		3A23F8D721EEE6FA003DB3F6 /* geom_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88D21EEE6F9003DB3F6 /* geom_color.cpp */; };
+		3A23F8D821EEE6FA003DB3F6 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88E21EEE6F9003DB3F6 /* geom_color.h */; };
+		3A23F8D921EEE6FA003DB3F6 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88E21EEE6F9003DB3F6 /* geom_color.h */; };
+		3A23F8DA21EEE6FA003DB3F6 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88E21EEE6F9003DB3F6 /* geom_color.h */; };
+		3A23F8DB21EEE6FA003DB3F6 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88E21EEE6F9003DB3F6 /* geom_color.h */; };
+		3A23F8DC21EEE6FA003DB3F6 /* geom_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F88E21EEE6F9003DB3F6 /* geom_color.h */; };
+		3A23F8DD21EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88F21EEE6F9003DB3F6 /* geom_quaternion.cpp */; };
+		3A23F8DE21EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88F21EEE6F9003DB3F6 /* geom_quaternion.cpp */; };
+		3A23F8DF21EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88F21EEE6F9003DB3F6 /* geom_quaternion.cpp */; };
+		3A23F8E021EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88F21EEE6F9003DB3F6 /* geom_quaternion.cpp */; };
+		3A23F8E121EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F88F21EEE6F9003DB3F6 /* geom_quaternion.cpp */; };
+		3A23F8E221EEE6FA003DB3F6 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89021EEE6F9003DB3F6 /* geom_quaternion.h */; };
+		3A23F8E321EEE6FA003DB3F6 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89021EEE6F9003DB3F6 /* geom_quaternion.h */; };
+		3A23F8E421EEE6FA003DB3F6 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89021EEE6F9003DB3F6 /* geom_quaternion.h */; };
+		3A23F8E521EEE6FA003DB3F6 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89021EEE6F9003DB3F6 /* geom_quaternion.h */; };
+		3A23F8E621EEE6FA003DB3F6 /* geom_quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89021EEE6F9003DB3F6 /* geom_quaternion.h */; };
+		3A23F8E721EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89121EEE6F9003DB3F6 /* geom_transformation.cpp */; };
+		3A23F8E821EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89121EEE6F9003DB3F6 /* geom_transformation.cpp */; };
+		3A23F8E921EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89121EEE6F9003DB3F6 /* geom_transformation.cpp */; };
+		3A23F8EA21EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89121EEE6F9003DB3F6 /* geom_transformation.cpp */; };
+		3A23F8EB21EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89121EEE6F9003DB3F6 /* geom_transformation.cpp */; };
+		3A23F8EC21EEE6FA003DB3F6 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89221EEE6F9003DB3F6 /* geom_transformation.h */; };
+		3A23F8ED21EEE6FA003DB3F6 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89221EEE6F9003DB3F6 /* geom_transformation.h */; };
+		3A23F8EE21EEE6FA003DB3F6 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89221EEE6F9003DB3F6 /* geom_transformation.h */; };
+		3A23F8EF21EEE6FA003DB3F6 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89221EEE6F9003DB3F6 /* geom_transformation.h */; };
+		3A23F8F021EEE6FA003DB3F6 /* geom_transformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89221EEE6F9003DB3F6 /* geom_transformation.h */; };
+		3A23F8F121EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89321EEE6F9003DB3F6 /* geom_vector3d.cpp */; };
+		3A23F8F221EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89321EEE6F9003DB3F6 /* geom_vector3d.cpp */; };
+		3A23F8F321EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89321EEE6F9003DB3F6 /* geom_vector3d.cpp */; };
+		3A23F8F421EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89321EEE6F9003DB3F6 /* geom_vector3d.cpp */; };
+		3A23F8F521EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89321EEE6F9003DB3F6 /* geom_vector3d.cpp */; };
+		3A23F8F621EEE6FA003DB3F6 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89421EEE6F9003DB3F6 /* geom_vector3d.h */; };
+		3A23F8F721EEE6FA003DB3F6 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89421EEE6F9003DB3F6 /* geom_vector3d.h */; };
+		3A23F8F821EEE6FA003DB3F6 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89421EEE6F9003DB3F6 /* geom_vector3d.h */; };
+		3A23F8F921EEE6FA003DB3F6 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89421EEE6F9003DB3F6 /* geom_vector3d.h */; };
+		3A23F8FA21EEE6FA003DB3F6 /* geom_vector3d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89421EEE6F9003DB3F6 /* geom_vector3d.h */; };
+		3A23F8FB21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89521EEE6F9003DB3F6 /* geom_vector4d.cpp */; };
+		3A23F8FC21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89521EEE6F9003DB3F6 /* geom_vector4d.cpp */; };
+		3A23F8FD21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89521EEE6F9003DB3F6 /* geom_vector4d.cpp */; };
+		3A23F8FE21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89521EEE6F9003DB3F6 /* geom_vector4d.cpp */; };
+		3A23F8FF21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89521EEE6F9003DB3F6 /* geom_vector4d.cpp */; };
+		3A23F90021EEE6FA003DB3F6 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89621EEE6FA003DB3F6 /* geom_vector4d.h */; };
+		3A23F90121EEE6FA003DB3F6 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89621EEE6FA003DB3F6 /* geom_vector4d.h */; };
+		3A23F90221EEE6FA003DB3F6 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89621EEE6FA003DB3F6 /* geom_vector4d.h */; };
+		3A23F90321EEE6FA003DB3F6 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89621EEE6FA003DB3F6 /* geom_vector4d.h */; };
+		3A23F90421EEE6FA003DB3F6 /* geom_vector4d.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89621EEE6FA003DB3F6 /* geom_vector4d.h */; };
+		3A23F90521EEE6FA003DB3F6 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89721EEE6FA003DB3F6 /* ruby_prep.h */; };
+		3A23F90621EEE6FA003DB3F6 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89721EEE6FA003DB3F6 /* ruby_prep.h */; };
+		3A23F90721EEE6FA003DB3F6 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89721EEE6FA003DB3F6 /* ruby_prep.h */; };
+		3A23F90821EEE6FA003DB3F6 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89721EEE6FA003DB3F6 /* ruby_prep.h */; };
+		3A23F90921EEE6FA003DB3F6 /* ruby_prep.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89721EEE6FA003DB3F6 /* ruby_prep.h */; };
+		3A23F90A21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89821EEE6FA003DB3F6 /* ruby_util.cpp */; };
+		3A23F90B21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89821EEE6FA003DB3F6 /* ruby_util.cpp */; };
+		3A23F90C21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89821EEE6FA003DB3F6 /* ruby_util.cpp */; };
+		3A23F90D21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89821EEE6FA003DB3F6 /* ruby_util.cpp */; };
+		3A23F90E21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89821EEE6FA003DB3F6 /* ruby_util.cpp */; };
+		3A23F90F21EEE6FA003DB3F6 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89921EEE6FA003DB3F6 /* ruby_util.h */; };
+		3A23F91021EEE6FA003DB3F6 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89921EEE6FA003DB3F6 /* ruby_util.h */; };
+		3A23F91121EEE6FA003DB3F6 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89921EEE6FA003DB3F6 /* ruby_util.h */; };
+		3A23F91221EEE6FA003DB3F6 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89921EEE6FA003DB3F6 /* ruby_util.h */; };
+		3A23F91321EEE6FA003DB3F6 /* ruby_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89921EEE6FA003DB3F6 /* ruby_util.h */; };
+		3A23F91421EEE6FA003DB3F6 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89A21EEE6FA003DB3F6 /* thread_hive.cpp */; };
+		3A23F91521EEE6FA003DB3F6 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89A21EEE6FA003DB3F6 /* thread_hive.cpp */; };
+		3A23F91621EEE6FA003DB3F6 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89A21EEE6FA003DB3F6 /* thread_hive.cpp */; };
+		3A23F91721EEE6FA003DB3F6 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89A21EEE6FA003DB3F6 /* thread_hive.cpp */; };
+		3A23F91821EEE6FA003DB3F6 /* thread_hive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A23F89A21EEE6FA003DB3F6 /* thread_hive.cpp */; };
+		3A23F91921EEE6FA003DB3F6 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89B21EEE6FA003DB3F6 /* thread_hive.h */; };
+		3A23F91A21EEE6FA003DB3F6 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89B21EEE6FA003DB3F6 /* thread_hive.h */; };
+		3A23F91B21EEE6FA003DB3F6 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89B21EEE6FA003DB3F6 /* thread_hive.h */; };
+		3A23F91C21EEE6FA003DB3F6 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89B21EEE6FA003DB3F6 /* thread_hive.h */; };
+		3A23F91D21EEE6FA003DB3F6 /* thread_hive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A23F89B21EEE6FA003DB3F6 /* thread_hive.h */; };
 		3ABF1A6D219FE472005C0AA7 /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E4219FE471005C0AA7 /* ams_cursor.cpp */; };
 		3ABF1A6E219FE472005C0AA7 /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E4219FE471005C0AA7 /* ams_cursor.cpp */; };
 		3ABF1A6F219FE472005C0AA7 /* ams_cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF19E4219FE471005C0AA7 /* ams_cursor.cpp */; };
@@ -251,31 +266,34 @@
 
 /* Begin PBXFileReference section */
 		33CDE5E5182703B200F7C6E8 /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A23F88221EEE6F9003DB3F6 /* bit_buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bit_buffer.cpp; sourceTree = "<group>"; };
+		3A23F88321EEE6F9003DB3F6 /* bit_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bit_buffer.h; sourceTree = "<group>"; };
+		3A23F88421EEE6F9003DB3F6 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		3A23F88521EEE6F9003DB3F6 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		3A23F88621EEE6F9003DB3F6 /* dynamic_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamic_array.h; sourceTree = "<group>"; };
+		3A23F88721EEE6F9003DB3F6 /* fast_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fast_queue.h; sourceTree = "<group>"; };
+		3A23F88821EEE6F9003DB3F6 /* geom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom.cpp; sourceTree = "<group>"; };
+		3A23F88921EEE6F9003DB3F6 /* geom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom.h; sourceTree = "<group>"; };
+		3A23F88A21EEE6F9003DB3F6 /* geom_bounding_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_bounding_box.cpp; sourceTree = "<group>"; };
+		3A23F88B21EEE6F9003DB3F6 /* geom_bounding_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_bounding_box.h; sourceTree = "<group>"; };
+		3A23F88C21EEE6F9003DB3F6 /* geom_box_space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_box_space.h; sourceTree = "<group>"; };
+		3A23F88D21EEE6F9003DB3F6 /* geom_color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_color.cpp; sourceTree = "<group>"; };
+		3A23F88E21EEE6F9003DB3F6 /* geom_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_color.h; sourceTree = "<group>"; };
+		3A23F88F21EEE6F9003DB3F6 /* geom_quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_quaternion.cpp; sourceTree = "<group>"; };
+		3A23F89021EEE6F9003DB3F6 /* geom_quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_quaternion.h; sourceTree = "<group>"; };
+		3A23F89121EEE6F9003DB3F6 /* geom_transformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_transformation.cpp; sourceTree = "<group>"; };
+		3A23F89221EEE6F9003DB3F6 /* geom_transformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_transformation.h; sourceTree = "<group>"; };
+		3A23F89321EEE6F9003DB3F6 /* geom_vector3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_vector3d.cpp; sourceTree = "<group>"; };
+		3A23F89421EEE6F9003DB3F6 /* geom_vector3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_vector3d.h; sourceTree = "<group>"; };
+		3A23F89521EEE6F9003DB3F6 /* geom_vector4d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_vector4d.cpp; sourceTree = "<group>"; };
+		3A23F89621EEE6FA003DB3F6 /* geom_vector4d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_vector4d.h; sourceTree = "<group>"; };
+		3A23F89721EEE6FA003DB3F6 /* ruby_prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruby_prep.h; sourceTree = "<group>"; };
+		3A23F89821EEE6FA003DB3F6 /* ruby_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ruby_util.cpp; sourceTree = "<group>"; };
+		3A23F89921EEE6FA003DB3F6 /* ruby_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruby_util.h; sourceTree = "<group>"; };
+		3A23F89A21EEE6FA003DB3F6 /* thread_hive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread_hive.cpp; sourceTree = "<group>"; };
+		3A23F89B21EEE6FA003DB3F6 /* thread_hive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread_hive.h; sourceTree = "<group>"; };
 		3A33F1881DC47FF600CA768D /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4DC2F22136292D000EA18E /* ams_lib.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ams_lib.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ABF19CC219FE471005C0AA7 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
-		3ABF19CD219FE471005C0AA7 /* dynamic_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamic_array.h; sourceTree = "<group>"; };
-		3ABF19CE219FE471005C0AA7 /* fast_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fast_queue.h; sourceTree = "<group>"; };
-		3ABF19CF219FE471005C0AA7 /* geom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom.cpp; sourceTree = "<group>"; };
-		3ABF19D0219FE471005C0AA7 /* geom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom.h; sourceTree = "<group>"; };
-		3ABF19D1219FE471005C0AA7 /* geom_bounding_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_bounding_box.cpp; sourceTree = "<group>"; };
-		3ABF19D2219FE471005C0AA7 /* geom_bounding_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_bounding_box.h; sourceTree = "<group>"; };
-		3ABF19D3219FE471005C0AA7 /* geom_box_space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_box_space.h; sourceTree = "<group>"; };
-		3ABF19D4219FE471005C0AA7 /* geom_color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_color.cpp; sourceTree = "<group>"; };
-		3ABF19D5219FE471005C0AA7 /* geom_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_color.h; sourceTree = "<group>"; };
-		3ABF19D6219FE471005C0AA7 /* geom_quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_quaternion.cpp; sourceTree = "<group>"; };
-		3ABF19D7219FE471005C0AA7 /* geom_quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_quaternion.h; sourceTree = "<group>"; };
-		3ABF19D8219FE471005C0AA7 /* geom_transformation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_transformation.cpp; sourceTree = "<group>"; };
-		3ABF19D9219FE471005C0AA7 /* geom_transformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_transformation.h; sourceTree = "<group>"; };
-		3ABF19DA219FE471005C0AA7 /* geom_vector3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_vector3d.cpp; sourceTree = "<group>"; };
-		3ABF19DB219FE471005C0AA7 /* geom_vector3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_vector3d.h; sourceTree = "<group>"; };
-		3ABF19DC219FE471005C0AA7 /* geom_vector4d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geom_vector4d.cpp; sourceTree = "<group>"; };
-		3ABF19DD219FE471005C0AA7 /* geom_vector4d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom_vector4d.h; sourceTree = "<group>"; };
-		3ABF19DE219FE471005C0AA7 /* ruby_prep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruby_prep.h; sourceTree = "<group>"; };
-		3ABF19DF219FE471005C0AA7 /* ruby_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ruby_util.cpp; sourceTree = "<group>"; };
-		3ABF19E0219FE471005C0AA7 /* ruby_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruby_util.h; sourceTree = "<group>"; };
-		3ABF19E1219FE471005C0AA7 /* thread_hive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread_hive.cpp; sourceTree = "<group>"; };
-		3ABF19E2219FE471005C0AA7 /* thread_hive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread_hive.h; sourceTree = "<group>"; };
 		3ABF19E4219FE471005C0AA7 /* ams_cursor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_cursor.cpp; sourceTree = "<group>"; };
 		3ABF19E5219FE471005C0AA7 /* ams_cursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ams_cursor.h; sourceTree = "<group>"; };
 		3ABF19E6219FE471005C0AA7 /* ams_ext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ams_ext.cpp; sourceTree = "<group>"; };
@@ -370,9 +388,9 @@
 		33CDE5DA182703B100F7C6E8 = {
 			isa = PBXGroup;
 			children = (
+				3A23F88121EEE6F9003DB3F6 /* utils */,
 				3ABF19F1219FE471005C0AA7 /* main */,
 				3ABF19E3219FE471005C0AA7 /* osx */,
-				3ABF19CB219FE471005C0AA7 /* utils */,
 				33CDE5E6182703B200F7C6E8 /* Products */,
 				3ABF1AD6219FE56E005C0AA7 /* Frameworks */,
 			);
@@ -390,32 +408,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3ABF19CB219FE471005C0AA7 /* utils */ = {
+		3A23F88121EEE6F9003DB3F6 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				3ABF19CC219FE471005C0AA7 /* common.h */,
-				3ABF19CD219FE471005C0AA7 /* dynamic_array.h */,
-				3ABF19CE219FE471005C0AA7 /* fast_queue.h */,
-				3ABF19CF219FE471005C0AA7 /* geom.cpp */,
-				3ABF19D0219FE471005C0AA7 /* geom.h */,
-				3ABF19D1219FE471005C0AA7 /* geom_bounding_box.cpp */,
-				3ABF19D2219FE471005C0AA7 /* geom_bounding_box.h */,
-				3ABF19D3219FE471005C0AA7 /* geom_box_space.h */,
-				3ABF19D4219FE471005C0AA7 /* geom_color.cpp */,
-				3ABF19D5219FE471005C0AA7 /* geom_color.h */,
-				3ABF19D6219FE471005C0AA7 /* geom_quaternion.cpp */,
-				3ABF19D7219FE471005C0AA7 /* geom_quaternion.h */,
-				3ABF19D8219FE471005C0AA7 /* geom_transformation.cpp */,
-				3ABF19D9219FE471005C0AA7 /* geom_transformation.h */,
-				3ABF19DA219FE471005C0AA7 /* geom_vector3d.cpp */,
-				3ABF19DB219FE471005C0AA7 /* geom_vector3d.h */,
-				3ABF19DC219FE471005C0AA7 /* geom_vector4d.cpp */,
-				3ABF19DD219FE471005C0AA7 /* geom_vector4d.h */,
-				3ABF19DE219FE471005C0AA7 /* ruby_prep.h */,
-				3ABF19DF219FE471005C0AA7 /* ruby_util.cpp */,
-				3ABF19E0219FE471005C0AA7 /* ruby_util.h */,
-				3ABF19E1219FE471005C0AA7 /* thread_hive.cpp */,
-				3ABF19E2219FE471005C0AA7 /* thread_hive.h */,
+				3A23F88221EEE6F9003DB3F6 /* bit_buffer.cpp */,
+				3A23F88321EEE6F9003DB3F6 /* bit_buffer.h */,
+				3A23F88421EEE6F9003DB3F6 /* buffer.h */,
+				3A23F88521EEE6F9003DB3F6 /* common.h */,
+				3A23F88621EEE6F9003DB3F6 /* dynamic_array.h */,
+				3A23F88721EEE6F9003DB3F6 /* fast_queue.h */,
+				3A23F88821EEE6F9003DB3F6 /* geom.cpp */,
+				3A23F88921EEE6F9003DB3F6 /* geom.h */,
+				3A23F88A21EEE6F9003DB3F6 /* geom_bounding_box.cpp */,
+				3A23F88B21EEE6F9003DB3F6 /* geom_bounding_box.h */,
+				3A23F88C21EEE6F9003DB3F6 /* geom_box_space.h */,
+				3A23F88D21EEE6F9003DB3F6 /* geom_color.cpp */,
+				3A23F88E21EEE6F9003DB3F6 /* geom_color.h */,
+				3A23F88F21EEE6F9003DB3F6 /* geom_quaternion.cpp */,
+				3A23F89021EEE6F9003DB3F6 /* geom_quaternion.h */,
+				3A23F89121EEE6F9003DB3F6 /* geom_transformation.cpp */,
+				3A23F89221EEE6F9003DB3F6 /* geom_transformation.h */,
+				3A23F89321EEE6F9003DB3F6 /* geom_vector3d.cpp */,
+				3A23F89421EEE6F9003DB3F6 /* geom_vector3d.h */,
+				3A23F89521EEE6F9003DB3F6 /* geom_vector4d.cpp */,
+				3A23F89621EEE6FA003DB3F6 /* geom_vector4d.h */,
+				3A23F89721EEE6FA003DB3F6 /* ruby_prep.h */,
+				3A23F89821EEE6FA003DB3F6 /* ruby_util.cpp */,
+				3A23F89921EEE6FA003DB3F6 /* ruby_util.h */,
+				3A23F89A21EEE6FA003DB3F6 /* thread_hive.cpp */,
+				3A23F89B21EEE6FA003DB3F6 /* thread_hive.h */,
 			);
 			name = utils;
 			path = ../../Source/utils;
@@ -479,30 +500,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F8B721EEE6FA003DB3F6 /* fast_queue.h in Headers */,
+				3A23F90721EEE6FA003DB3F6 /* ruby_prep.h in Headers */,
 				3ABF1A7D219FE472005C0AA7 /* ams_ext.h in Headers */,
 				3ABF1A87219FE472005C0AA7 /* ams_keyboard.h in Headers */,
-				3ABF1A46219FE472005C0AA7 /* geom_vector3d.h in Headers */,
 				3ABF1AA0219FE473005C0AA7 /* ruby_util_ext.h in Headers */,
-				3ABF1A55219FE472005C0AA7 /* ruby_prep.h in Headers */,
-				3ABF1A50219FE472005C0AA7 /* geom_vector4d.h in Headers */,
-				3ABF1A0F219FE472005C0AA7 /* geom.h in Headers */,
-				3ABF1A19219FE472005C0AA7 /* geom_bounding_box.h in Headers */,
+				3A23F91121EEE6FA003DB3F6 /* ruby_util.h in Headers */,
+				3A23F8C121EEE6FA003DB3F6 /* geom.h in Headers */,
+				3A23F8EE21EEE6FA003DB3F6 /* geom_transformation.h in Headers */,
 				3ABF1A96219FE472005C0AA7 /* ams_midi.h in Headers */,
-				3ABF1A5F219FE472005C0AA7 /* ruby_util.h in Headers */,
-				3ABF1A69219FE472005C0AA7 /* thread_hive.h in Headers */,
+				3A23F90221EEE6FA003DB3F6 /* geom_vector4d.h in Headers */,
 				3ABF1A73219FE472005C0AA7 /* ams_cursor.h in Headers */,
+				3A23F8AD21EEE6FA003DB3F6 /* common.h in Headers */,
+				3A23F8E421EEE6FA003DB3F6 /* geom_quaternion.h in Headers */,
 				3ABF1AAA219FE473005C0AA7 /* user_input.h in Headers */,
-				3ABF1A3C219FE472005C0AA7 /* geom_transformation.h in Headers */,
 				3ABF1AC8219FE473005C0AA7 /* ams_group.h in Headers */,
-				3ABF1A05219FE472005C0AA7 /* fast_queue.h in Headers */,
+				3A23F8F821EEE6FA003DB3F6 /* geom_vector3d.h in Headers */,
+				3A23F8DA21EEE6FA003DB3F6 /* geom_color.h in Headers */,
+				3A23F8CB21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */,
+				3A23F8A321EEE6FA003DB3F6 /* bit_buffer.h in Headers */,
+				3A23F8A821EEE6FA003DB3F6 /* buffer.h in Headers */,
 				3ABF1AB4219FE473005C0AA7 /* ams.h in Headers */,
 				3ABF1AD2219FE473005C0AA7 /* ams_multi_line_text.h in Headers */,
-				3ABF1A1E219FE472005C0AA7 /* geom_box_space.h in Headers */,
-				3ABF1A32219FE472005C0AA7 /* geom_quaternion.h in Headers */,
+				3A23F8D021EEE6FA003DB3F6 /* geom_box_space.h in Headers */,
+				3A23F8B221EEE6FA003DB3F6 /* dynamic_array.h in Headers */,
+				3A23F91B21EEE6FA003DB3F6 /* thread_hive.h in Headers */,
 				3ABF1ABE219FE473005C0AA7 /* ams_geometry.h in Headers */,
-				3ABF1A00219FE472005C0AA7 /* dynamic_array.h in Headers */,
-				3ABF1A28219FE472005C0AA7 /* geom_color.h in Headers */,
-				3ABF19FB219FE472005C0AA7 /* common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,30 +533,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F8B821EEE6FA003DB3F6 /* fast_queue.h in Headers */,
+				3A23F90821EEE6FA003DB3F6 /* ruby_prep.h in Headers */,
 				3ABF1A7F219FE472005C0AA7 /* ams_ext.h in Headers */,
 				3ABF1A89219FE472005C0AA7 /* ams_keyboard.h in Headers */,
-				3ABF1A48219FE472005C0AA7 /* geom_vector3d.h in Headers */,
 				3ABF1AA2219FE473005C0AA7 /* ruby_util_ext.h in Headers */,
-				3ABF1A57219FE472005C0AA7 /* ruby_prep.h in Headers */,
-				3ABF1A52219FE472005C0AA7 /* geom_vector4d.h in Headers */,
-				3ABF1A11219FE472005C0AA7 /* geom.h in Headers */,
-				3ABF1A1B219FE472005C0AA7 /* geom_bounding_box.h in Headers */,
+				3A23F91221EEE6FA003DB3F6 /* ruby_util.h in Headers */,
+				3A23F8C221EEE6FA003DB3F6 /* geom.h in Headers */,
+				3A23F8EF21EEE6FA003DB3F6 /* geom_transformation.h in Headers */,
 				3ABF1A98219FE472005C0AA7 /* ams_midi.h in Headers */,
-				3ABF1A61219FE472005C0AA7 /* ruby_util.h in Headers */,
-				3ABF1A6B219FE472005C0AA7 /* thread_hive.h in Headers */,
+				3A23F90321EEE6FA003DB3F6 /* geom_vector4d.h in Headers */,
 				3ABF1A75219FE472005C0AA7 /* ams_cursor.h in Headers */,
+				3A23F8AE21EEE6FA003DB3F6 /* common.h in Headers */,
+				3A23F8E521EEE6FA003DB3F6 /* geom_quaternion.h in Headers */,
 				3ABF1AAC219FE473005C0AA7 /* user_input.h in Headers */,
-				3ABF1A3E219FE472005C0AA7 /* geom_transformation.h in Headers */,
 				3ABF1ACA219FE473005C0AA7 /* ams_group.h in Headers */,
-				3ABF1A07219FE472005C0AA7 /* fast_queue.h in Headers */,
+				3A23F8F921EEE6FA003DB3F6 /* geom_vector3d.h in Headers */,
+				3A23F8DB21EEE6FA003DB3F6 /* geom_color.h in Headers */,
+				3A23F8CC21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */,
+				3A23F8A421EEE6FA003DB3F6 /* bit_buffer.h in Headers */,
+				3A23F8A921EEE6FA003DB3F6 /* buffer.h in Headers */,
 				3ABF1AB6219FE473005C0AA7 /* ams.h in Headers */,
 				3ABF1AD4219FE473005C0AA7 /* ams_multi_line_text.h in Headers */,
-				3ABF1A20219FE472005C0AA7 /* geom_box_space.h in Headers */,
-				3ABF1A34219FE472005C0AA7 /* geom_quaternion.h in Headers */,
+				3A23F8D121EEE6FA003DB3F6 /* geom_box_space.h in Headers */,
+				3A23F8B321EEE6FA003DB3F6 /* dynamic_array.h in Headers */,
+				3A23F91C21EEE6FA003DB3F6 /* thread_hive.h in Headers */,
 				3ABF1AC0219FE473005C0AA7 /* ams_geometry.h in Headers */,
-				3ABF1A02219FE472005C0AA7 /* dynamic_array.h in Headers */,
-				3ABF1A2A219FE472005C0AA7 /* geom_color.h in Headers */,
-				3ABF19FD219FE472005C0AA7 /* common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,30 +566,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F8B921EEE6FA003DB3F6 /* fast_queue.h in Headers */,
+				3A23F90921EEE6FA003DB3F6 /* ruby_prep.h in Headers */,
 				3ABF1A80219FE472005C0AA7 /* ams_ext.h in Headers */,
 				3ABF1A8A219FE472005C0AA7 /* ams_keyboard.h in Headers */,
-				3ABF1A49219FE472005C0AA7 /* geom_vector3d.h in Headers */,
 				3ABF1AA3219FE473005C0AA7 /* ruby_util_ext.h in Headers */,
-				3ABF1A58219FE472005C0AA7 /* ruby_prep.h in Headers */,
-				3ABF1A53219FE472005C0AA7 /* geom_vector4d.h in Headers */,
-				3ABF1A12219FE472005C0AA7 /* geom.h in Headers */,
-				3ABF1A1C219FE472005C0AA7 /* geom_bounding_box.h in Headers */,
+				3A23F91321EEE6FA003DB3F6 /* ruby_util.h in Headers */,
+				3A23F8C321EEE6FA003DB3F6 /* geom.h in Headers */,
+				3A23F8F021EEE6FA003DB3F6 /* geom_transformation.h in Headers */,
 				3ABF1A99219FE472005C0AA7 /* ams_midi.h in Headers */,
-				3ABF1A62219FE472005C0AA7 /* ruby_util.h in Headers */,
-				3ABF1A6C219FE472005C0AA7 /* thread_hive.h in Headers */,
+				3A23F90421EEE6FA003DB3F6 /* geom_vector4d.h in Headers */,
 				3ABF1A76219FE472005C0AA7 /* ams_cursor.h in Headers */,
+				3A23F8AF21EEE6FA003DB3F6 /* common.h in Headers */,
+				3A23F8E621EEE6FA003DB3F6 /* geom_quaternion.h in Headers */,
 				3ABF1AAD219FE473005C0AA7 /* user_input.h in Headers */,
-				3ABF1A3F219FE472005C0AA7 /* geom_transformation.h in Headers */,
 				3ABF1ACB219FE473005C0AA7 /* ams_group.h in Headers */,
-				3ABF1A08219FE472005C0AA7 /* fast_queue.h in Headers */,
+				3A23F8FA21EEE6FA003DB3F6 /* geom_vector3d.h in Headers */,
+				3A23F8DC21EEE6FA003DB3F6 /* geom_color.h in Headers */,
+				3A23F8CD21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */,
+				3A23F8A521EEE6FA003DB3F6 /* bit_buffer.h in Headers */,
+				3A23F8AA21EEE6FA003DB3F6 /* buffer.h in Headers */,
 				3ABF1AB7219FE473005C0AA7 /* ams.h in Headers */,
 				3ABF1AD5219FE473005C0AA7 /* ams_multi_line_text.h in Headers */,
-				3ABF1A21219FE472005C0AA7 /* geom_box_space.h in Headers */,
-				3ABF1A35219FE472005C0AA7 /* geom_quaternion.h in Headers */,
+				3A23F8D221EEE6FA003DB3F6 /* geom_box_space.h in Headers */,
+				3A23F8B421EEE6FA003DB3F6 /* dynamic_array.h in Headers */,
+				3A23F91D21EEE6FA003DB3F6 /* thread_hive.h in Headers */,
 				3ABF1AC1219FE473005C0AA7 /* ams_geometry.h in Headers */,
-				3ABF1A03219FE472005C0AA7 /* dynamic_array.h in Headers */,
-				3ABF1A2B219FE472005C0AA7 /* geom_color.h in Headers */,
-				3ABF19FE219FE472005C0AA7 /* common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,30 +599,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F8B621EEE6FA003DB3F6 /* fast_queue.h in Headers */,
+				3A23F90621EEE6FA003DB3F6 /* ruby_prep.h in Headers */,
 				3ABF1A7E219FE472005C0AA7 /* ams_ext.h in Headers */,
 				3ABF1A88219FE472005C0AA7 /* ams_keyboard.h in Headers */,
-				3ABF1A47219FE472005C0AA7 /* geom_vector3d.h in Headers */,
 				3ABF1AA1219FE473005C0AA7 /* ruby_util_ext.h in Headers */,
-				3ABF1A56219FE472005C0AA7 /* ruby_prep.h in Headers */,
-				3ABF1A51219FE472005C0AA7 /* geom_vector4d.h in Headers */,
-				3ABF1A10219FE472005C0AA7 /* geom.h in Headers */,
-				3ABF1A1A219FE472005C0AA7 /* geom_bounding_box.h in Headers */,
+				3A23F91021EEE6FA003DB3F6 /* ruby_util.h in Headers */,
+				3A23F8C021EEE6FA003DB3F6 /* geom.h in Headers */,
+				3A23F8ED21EEE6FA003DB3F6 /* geom_transformation.h in Headers */,
 				3ABF1A97219FE472005C0AA7 /* ams_midi.h in Headers */,
-				3ABF1A60219FE472005C0AA7 /* ruby_util.h in Headers */,
-				3ABF1A6A219FE472005C0AA7 /* thread_hive.h in Headers */,
+				3A23F90121EEE6FA003DB3F6 /* geom_vector4d.h in Headers */,
 				3ABF1A74219FE472005C0AA7 /* ams_cursor.h in Headers */,
+				3A23F8AC21EEE6FA003DB3F6 /* common.h in Headers */,
+				3A23F8E321EEE6FA003DB3F6 /* geom_quaternion.h in Headers */,
 				3ABF1AAB219FE473005C0AA7 /* user_input.h in Headers */,
-				3ABF1A3D219FE472005C0AA7 /* geom_transformation.h in Headers */,
 				3ABF1AC9219FE473005C0AA7 /* ams_group.h in Headers */,
-				3ABF1A06219FE472005C0AA7 /* fast_queue.h in Headers */,
+				3A23F8F721EEE6FA003DB3F6 /* geom_vector3d.h in Headers */,
+				3A23F8D921EEE6FA003DB3F6 /* geom_color.h in Headers */,
+				3A23F8CA21EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */,
+				3A23F8A221EEE6FA003DB3F6 /* bit_buffer.h in Headers */,
+				3A23F8A721EEE6FA003DB3F6 /* buffer.h in Headers */,
 				3ABF1AB5219FE473005C0AA7 /* ams.h in Headers */,
 				3ABF1AD3219FE473005C0AA7 /* ams_multi_line_text.h in Headers */,
-				3ABF1A1F219FE472005C0AA7 /* geom_box_space.h in Headers */,
-				3ABF1A33219FE472005C0AA7 /* geom_quaternion.h in Headers */,
+				3A23F8CF21EEE6FA003DB3F6 /* geom_box_space.h in Headers */,
+				3A23F8B121EEE6FA003DB3F6 /* dynamic_array.h in Headers */,
+				3A23F91A21EEE6FA003DB3F6 /* thread_hive.h in Headers */,
 				3ABF1ABF219FE473005C0AA7 /* ams_geometry.h in Headers */,
-				3ABF1A01219FE472005C0AA7 /* dynamic_array.h in Headers */,
-				3ABF1A29219FE472005C0AA7 /* geom_color.h in Headers */,
-				3ABF19FC219FE472005C0AA7 /* common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,30 +632,32 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F8B521EEE6FA003DB3F6 /* fast_queue.h in Headers */,
+				3A23F90521EEE6FA003DB3F6 /* ruby_prep.h in Headers */,
 				3ABF1A7C219FE472005C0AA7 /* ams_ext.h in Headers */,
 				3ABF1A86219FE472005C0AA7 /* ams_keyboard.h in Headers */,
-				3ABF1A45219FE472005C0AA7 /* geom_vector3d.h in Headers */,
 				3ABF1A9F219FE473005C0AA7 /* ruby_util_ext.h in Headers */,
-				3ABF1A54219FE472005C0AA7 /* ruby_prep.h in Headers */,
-				3ABF1A4F219FE472005C0AA7 /* geom_vector4d.h in Headers */,
-				3ABF1A0E219FE472005C0AA7 /* geom.h in Headers */,
-				3ABF1A18219FE472005C0AA7 /* geom_bounding_box.h in Headers */,
+				3A23F90F21EEE6FA003DB3F6 /* ruby_util.h in Headers */,
+				3A23F8BF21EEE6FA003DB3F6 /* geom.h in Headers */,
+				3A23F8EC21EEE6FA003DB3F6 /* geom_transformation.h in Headers */,
 				3ABF1A95219FE472005C0AA7 /* ams_midi.h in Headers */,
-				3ABF1A5E219FE472005C0AA7 /* ruby_util.h in Headers */,
-				3ABF1A68219FE472005C0AA7 /* thread_hive.h in Headers */,
+				3A23F90021EEE6FA003DB3F6 /* geom_vector4d.h in Headers */,
 				3ABF1A72219FE472005C0AA7 /* ams_cursor.h in Headers */,
+				3A23F8AB21EEE6FA003DB3F6 /* common.h in Headers */,
+				3A23F8E221EEE6FA003DB3F6 /* geom_quaternion.h in Headers */,
 				3ABF1AA9219FE473005C0AA7 /* user_input.h in Headers */,
-				3ABF1A3B219FE472005C0AA7 /* geom_transformation.h in Headers */,
 				3ABF1AC7219FE473005C0AA7 /* ams_group.h in Headers */,
-				3ABF1A04219FE472005C0AA7 /* fast_queue.h in Headers */,
+				3A23F8F621EEE6FA003DB3F6 /* geom_vector3d.h in Headers */,
+				3A23F8D821EEE6FA003DB3F6 /* geom_color.h in Headers */,
+				3A23F8C921EEE6FA003DB3F6 /* geom_bounding_box.h in Headers */,
+				3A23F8A121EEE6FA003DB3F6 /* bit_buffer.h in Headers */,
+				3A23F8A621EEE6FA003DB3F6 /* buffer.h in Headers */,
 				3ABF1AB3219FE473005C0AA7 /* ams.h in Headers */,
 				3ABF1AD1219FE473005C0AA7 /* ams_multi_line_text.h in Headers */,
-				3ABF1A1D219FE472005C0AA7 /* geom_box_space.h in Headers */,
-				3ABF1A31219FE472005C0AA7 /* geom_quaternion.h in Headers */,
+				3A23F8CE21EEE6FA003DB3F6 /* geom_box_space.h in Headers */,
+				3A23F8B021EEE6FA003DB3F6 /* dynamic_array.h in Headers */,
+				3A23F91921EEE6FA003DB3F6 /* thread_hive.h in Headers */,
 				3ABF1ABD219FE473005C0AA7 /* ams_geometry.h in Headers */,
-				3ABF19FF219FE472005C0AA7 /* dynamic_array.h in Headers */,
-				3ABF1A27219FE472005C0AA7 /* geom_color.h in Headers */,
-				3ABF19FA219FE472005C0AA7 /* common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,26 +801,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F91621EEE6FA003DB3F6 /* thread_hive.cpp in Sources */,
+				3A23F8D521EEE6FA003DB3F6 /* geom_color.cpp in Sources */,
+				3A23F8DF21EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */,
 				3ABF1A78219FE472005C0AA7 /* ams_ext.cpp in Sources */,
 				3ABF1AAF219FE473005C0AA7 /* ams.cpp in Sources */,
 				3ABF1A8C219FE472005C0AA7 /* ams_lib.cpp in Sources */,
-				3ABF1A4B219FE472005C0AA7 /* geom_vector4d.cpp in Sources */,
+				3A23F89E21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */,
 				3ABF1A82219FE472005C0AA7 /* ams_keyboard.cpp in Sources */,
 				3ABF1A91219FE472005C0AA7 /* ams_midi.cpp in Sources */,
-				3ABF1A23219FE472005C0AA7 /* geom_color.cpp in Sources */,
-				3ABF1A2D219FE472005C0AA7 /* geom_quaternion.cpp in Sources */,
 				3ABF1A6E219FE472005C0AA7 /* ams_cursor.cpp in Sources */,
-				3ABF1A0A219FE472005C0AA7 /* geom.cpp in Sources */,
+				3A23F8C621EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */,
 				3ABF1ACD219FE473005C0AA7 /* ams_multi_line_text.cpp in Sources */,
-				3ABF1A37219FE472005C0AA7 /* geom_transformation.cpp in Sources */,
-				3ABF1A5A219FE472005C0AA7 /* ruby_util.cpp in Sources */,
+				3A23F8FD21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */,
+				3A23F8BC21EEE6FA003DB3F6 /* geom.cpp in Sources */,
+				3A23F8E921EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */,
 				3ABF1AC3219FE473005C0AA7 /* ams_group.cpp in Sources */,
 				3ABF1AA5219FE473005C0AA7 /* user_input.c in Sources */,
 				3ABF1AB9219FE473005C0AA7 /* ams_geometry.cpp in Sources */,
-				3ABF1A64219FE472005C0AA7 /* thread_hive.cpp in Sources */,
+				3A23F90C21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */,
 				3ABF1A9B219FE472005C0AA7 /* ruby_util_ext.cpp in Sources */,
-				3ABF1A14219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */,
-				3ABF1A41219FE472005C0AA7 /* geom_vector3d.cpp in Sources */,
+				3A23F8F321EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,26 +829,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F91721EEE6FA003DB3F6 /* thread_hive.cpp in Sources */,
+				3A23F8D621EEE6FA003DB3F6 /* geom_color.cpp in Sources */,
+				3A23F8E021EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */,
 				3ABF1A7A219FE472005C0AA7 /* ams_ext.cpp in Sources */,
 				3ABF1AB1219FE473005C0AA7 /* ams.cpp in Sources */,
 				3ABF1A8E219FE472005C0AA7 /* ams_lib.cpp in Sources */,
-				3ABF1A4D219FE472005C0AA7 /* geom_vector4d.cpp in Sources */,
+				3A23F89F21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */,
 				3ABF1A84219FE472005C0AA7 /* ams_keyboard.cpp in Sources */,
 				3ABF1A93219FE472005C0AA7 /* ams_midi.cpp in Sources */,
-				3ABF1A25219FE472005C0AA7 /* geom_color.cpp in Sources */,
-				3ABF1A2F219FE472005C0AA7 /* geom_quaternion.cpp in Sources */,
 				3ABF1A70219FE472005C0AA7 /* ams_cursor.cpp in Sources */,
-				3ABF1A0C219FE472005C0AA7 /* geom.cpp in Sources */,
+				3A23F8C721EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */,
 				3ABF1ACF219FE473005C0AA7 /* ams_multi_line_text.cpp in Sources */,
-				3ABF1A39219FE472005C0AA7 /* geom_transformation.cpp in Sources */,
-				3ABF1A5C219FE472005C0AA7 /* ruby_util.cpp in Sources */,
+				3A23F8FE21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */,
+				3A23F8BD21EEE6FA003DB3F6 /* geom.cpp in Sources */,
+				3A23F8EA21EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */,
 				3ABF1AC5219FE473005C0AA7 /* ams_group.cpp in Sources */,
 				3ABF1AA7219FE473005C0AA7 /* user_input.c in Sources */,
 				3ABF1ABB219FE473005C0AA7 /* ams_geometry.cpp in Sources */,
-				3ABF1A66219FE472005C0AA7 /* thread_hive.cpp in Sources */,
+				3A23F90D21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */,
 				3ABF1A9D219FE472005C0AA7 /* ruby_util_ext.cpp in Sources */,
-				3ABF1A16219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */,
-				3ABF1A43219FE472005C0AA7 /* geom_vector3d.cpp in Sources */,
+				3A23F8F421EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,26 +857,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F91821EEE6FA003DB3F6 /* thread_hive.cpp in Sources */,
+				3A23F8D721EEE6FA003DB3F6 /* geom_color.cpp in Sources */,
+				3A23F8E121EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */,
 				3ABF1A7B219FE472005C0AA7 /* ams_ext.cpp in Sources */,
 				3ABF1AB2219FE473005C0AA7 /* ams.cpp in Sources */,
 				3ABF1A8F219FE472005C0AA7 /* ams_lib.cpp in Sources */,
-				3ABF1A4E219FE472005C0AA7 /* geom_vector4d.cpp in Sources */,
+				3A23F8A021EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */,
 				3ABF1A85219FE472005C0AA7 /* ams_keyboard.cpp in Sources */,
 				3ABF1A94219FE472005C0AA7 /* ams_midi.cpp in Sources */,
-				3ABF1A26219FE472005C0AA7 /* geom_color.cpp in Sources */,
-				3ABF1A30219FE472005C0AA7 /* geom_quaternion.cpp in Sources */,
 				3ABF1A71219FE472005C0AA7 /* ams_cursor.cpp in Sources */,
-				3ABF1A0D219FE472005C0AA7 /* geom.cpp in Sources */,
+				3A23F8C821EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */,
 				3ABF1AD0219FE473005C0AA7 /* ams_multi_line_text.cpp in Sources */,
-				3ABF1A3A219FE472005C0AA7 /* geom_transformation.cpp in Sources */,
-				3ABF1A5D219FE472005C0AA7 /* ruby_util.cpp in Sources */,
+				3A23F8FF21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */,
+				3A23F8BE21EEE6FA003DB3F6 /* geom.cpp in Sources */,
+				3A23F8EB21EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */,
 				3ABF1AC6219FE473005C0AA7 /* ams_group.cpp in Sources */,
 				3ABF1AA8219FE473005C0AA7 /* user_input.c in Sources */,
 				3ABF1ABC219FE473005C0AA7 /* ams_geometry.cpp in Sources */,
-				3ABF1A67219FE472005C0AA7 /* thread_hive.cpp in Sources */,
+				3A23F90E21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */,
 				3ABF1A9E219FE472005C0AA7 /* ruby_util_ext.cpp in Sources */,
-				3ABF1A17219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */,
-				3ABF1A44219FE472005C0AA7 /* geom_vector3d.cpp in Sources */,
+				3A23F8F521EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,26 +885,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F91521EEE6FA003DB3F6 /* thread_hive.cpp in Sources */,
+				3A23F8D421EEE6FA003DB3F6 /* geom_color.cpp in Sources */,
+				3A23F8DE21EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */,
 				3ABF1A79219FE472005C0AA7 /* ams_ext.cpp in Sources */,
 				3ABF1AB0219FE473005C0AA7 /* ams.cpp in Sources */,
 				3ABF1A8D219FE472005C0AA7 /* ams_lib.cpp in Sources */,
-				3ABF1A4C219FE472005C0AA7 /* geom_vector4d.cpp in Sources */,
+				3A23F89D21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */,
 				3ABF1A83219FE472005C0AA7 /* ams_keyboard.cpp in Sources */,
 				3ABF1A92219FE472005C0AA7 /* ams_midi.cpp in Sources */,
-				3ABF1A24219FE472005C0AA7 /* geom_color.cpp in Sources */,
-				3ABF1A2E219FE472005C0AA7 /* geom_quaternion.cpp in Sources */,
 				3ABF1A6F219FE472005C0AA7 /* ams_cursor.cpp in Sources */,
-				3ABF1A0B219FE472005C0AA7 /* geom.cpp in Sources */,
+				3A23F8C521EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */,
 				3ABF1ACE219FE473005C0AA7 /* ams_multi_line_text.cpp in Sources */,
-				3ABF1A38219FE472005C0AA7 /* geom_transformation.cpp in Sources */,
-				3ABF1A5B219FE472005C0AA7 /* ruby_util.cpp in Sources */,
+				3A23F8FC21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */,
+				3A23F8BB21EEE6FA003DB3F6 /* geom.cpp in Sources */,
+				3A23F8E821EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */,
 				3ABF1AC4219FE473005C0AA7 /* ams_group.cpp in Sources */,
 				3ABF1AA6219FE473005C0AA7 /* user_input.c in Sources */,
 				3ABF1ABA219FE473005C0AA7 /* ams_geometry.cpp in Sources */,
-				3ABF1A65219FE472005C0AA7 /* thread_hive.cpp in Sources */,
+				3A23F90B21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */,
 				3ABF1A9C219FE472005C0AA7 /* ruby_util_ext.cpp in Sources */,
-				3ABF1A15219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */,
-				3ABF1A42219FE472005C0AA7 /* geom_vector3d.cpp in Sources */,
+				3A23F8F221EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,26 +913,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23F91421EEE6FA003DB3F6 /* thread_hive.cpp in Sources */,
+				3A23F8D321EEE6FA003DB3F6 /* geom_color.cpp in Sources */,
+				3A23F8DD21EEE6FA003DB3F6 /* geom_quaternion.cpp in Sources */,
 				3ABF1A77219FE472005C0AA7 /* ams_ext.cpp in Sources */,
 				3ABF1AAE219FE473005C0AA7 /* ams.cpp in Sources */,
 				3ABF1A8B219FE472005C0AA7 /* ams_lib.cpp in Sources */,
-				3ABF1A4A219FE472005C0AA7 /* geom_vector4d.cpp in Sources */,
+				3A23F89C21EEE6FA003DB3F6 /* bit_buffer.cpp in Sources */,
 				3ABF1A81219FE472005C0AA7 /* ams_keyboard.cpp in Sources */,
 				3ABF1A90219FE472005C0AA7 /* ams_midi.cpp in Sources */,
-				3ABF1A22219FE472005C0AA7 /* geom_color.cpp in Sources */,
-				3ABF1A2C219FE472005C0AA7 /* geom_quaternion.cpp in Sources */,
 				3ABF1A6D219FE472005C0AA7 /* ams_cursor.cpp in Sources */,
-				3ABF1A09219FE472005C0AA7 /* geom.cpp in Sources */,
+				3A23F8C421EEE6FA003DB3F6 /* geom_bounding_box.cpp in Sources */,
 				3ABF1ACC219FE473005C0AA7 /* ams_multi_line_text.cpp in Sources */,
-				3ABF1A36219FE472005C0AA7 /* geom_transformation.cpp in Sources */,
-				3ABF1A59219FE472005C0AA7 /* ruby_util.cpp in Sources */,
+				3A23F8FB21EEE6FA003DB3F6 /* geom_vector4d.cpp in Sources */,
+				3A23F8BA21EEE6FA003DB3F6 /* geom.cpp in Sources */,
+				3A23F8E721EEE6FA003DB3F6 /* geom_transformation.cpp in Sources */,
 				3ABF1AC2219FE473005C0AA7 /* ams_group.cpp in Sources */,
 				3ABF1AA4219FE473005C0AA7 /* user_input.c in Sources */,
 				3ABF1AB8219FE473005C0AA7 /* ams_geometry.cpp in Sources */,
-				3ABF1A63219FE472005C0AA7 /* thread_hive.cpp in Sources */,
+				3A23F90A21EEE6FA003DB3F6 /* ruby_util.cpp in Sources */,
 				3ABF1A9A219FE472005C0AA7 /* ruby_util_ext.cpp in Sources */,
-				3ABF1A13219FE472005C0AA7 /* geom_bounding_box.cpp in Sources */,
-				3ABF1A40219FE472005C0AA7 /* geom_vector3d.cpp in Sources */,
+				3A23F8F121EEE6FA003DB3F6 /* geom_vector3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
